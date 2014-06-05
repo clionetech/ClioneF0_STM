@@ -1,0 +1,3456 @@
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 1
+
+
+   1              		.cpu cortex-m0
+   2              		.fpu softvfp
+   3              		.eabi_attribute 20, 1	@ Tag_ABI_FP_denormal
+   4              		.eabi_attribute 21, 1	@ Tag_ABI_FP_exceptions
+   5              		.eabi_attribute 23, 3	@ Tag_ABI_FP_number_model
+   6              		.eabi_attribute 24, 1	@ Tag_ABI_align8_needed
+   7              		.eabi_attribute 25, 1	@ Tag_ABI_align8_preserved
+   8              		.eabi_attribute 26, 1	@ Tag_ABI_enum_size
+   9              		.eabi_attribute 30, 4	@ Tag_ABI_optimization_goals
+  10              		.eabi_attribute 34, 0	@ Tag_CPU_unaligned_access
+  11              		.eabi_attribute 18, 4	@ Tag_ABI_PCS_wchar_t
+  12              		.file	"stm32f0xx_gpio.c"
+  13              	@ GNU C (GNU Tools for ARM Embedded Processors) version 4.8.3 20131129 (release) [ARM/embedded-4_8-
+  14              	@	compiled by GNU C version 4.2.1-sjlj (mingw32-2), GMP version 4.3.2, MPFR version 2.4.2, MPC vers
+  15              	@ GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+  16              	@ options passed:  -I .
+  17              	@ -I ..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\CMSIS\ST\STM32F0xx\Include
+  18              	@ -I ..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\CMSIS\Include
+  19              	@ -I ..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\inc
+  20              	@ -I ..\..\STM32F0-Discovery_FW_V1.0.0\Utilities\STM32F0-Discovery -I .\inc
+  21              	@ -imultilib armv6-m
+  22              	@ -iprefix c:\program files (x86)\gnu tools arm embedded\4.8 2013q4\bin\../lib/gcc/arm-none-eabi/4.
+  23              	@ -isysroot c:\program files (x86)\gnu tools arm embedded\4.8 2013q4\bin\../arm-none-eabi
+  24              	@ -MD ..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_gpio.d
+  25              	@ -MF .dep\stm32f0xx_gpio.o.d -MP
+  26              	@ -MQ ..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_gpio.o
+  27              	@ -D__USES_INITFINI__ -D STM32F0XX -D USE_STDPERIPH_DRIVER
+  28              	@ -D RUN_FROM_FLASH=1
+  29              	@ ..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_gpio.c
+  30              	@ -mcpu=cortex-m0 -mthumb
+  31              	@ -auxbase-strip ..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src\stm32f0
+  32              	@ -gdwarf-2 -Os -Wall -Wstrict-prototypes -fomit-frame-pointer
+  33              	@ -fverbose-asm
+  34              	@ options enabled:  -faggressive-loop-optimizations -fauto-inc-dec
+  35              	@ -fbranch-count-reg -fcaller-saves -fcombine-stack-adjustments -fcommon
+  36              	@ -fcompare-elim -fcprop-registers -fcrossjumping -fcse-follow-jumps
+  37              	@ -fdefer-pop -fdelete-null-pointer-checks -fdevirtualize -fdwarf2-cfi-asm
+  38              	@ -fearly-inlining -feliminate-unused-debug-types -fexpensive-optimizations
+  39              	@ -fforward-propagate -ffunction-cse -fgcse -fgcse-lm -fgnu-runtime
+  40              	@ -fguess-branch-probability -fhoist-adjacent-loads -fident -fif-conversion
+  41              	@ -fif-conversion2 -findirect-inlining -finline -finline-atomics
+  42              	@ -finline-functions -finline-functions-called-once
+  43              	@ -finline-small-functions -fipa-cp -fipa-profile -fipa-pure-const
+  44              	@ -fipa-reference -fipa-sra -fira-hoist-pressure -fira-share-save-slots
+  45              	@ -fira-share-spill-slots -fivopts -fkeep-static-consts
+  46              	@ -fleading-underscore -fmath-errno -fmerge-constants -fmerge-debug-strings
+  47              	@ -fomit-frame-pointer -foptimize-register-move -foptimize-sibling-calls
+  48              	@ -fpartial-inlining -fpeephole -fpeephole2 -fprefetch-loop-arrays
+  49              	@ -freg-struct-return -fregmove -freorder-blocks -freorder-functions
+  50              	@ -frerun-cse-after-loop -fsched-critical-path-heuristic
+  51              	@ -fsched-dep-count-heuristic -fsched-group-heuristic -fsched-interblock
+  52              	@ -fsched-last-insn-heuristic -fsched-pressure -fsched-rank-heuristic
+  53              	@ -fsched-spec -fsched-spec-insn-heuristic -fsched-stalled-insns-dep
+  54              	@ -fschedule-insns2 -fsection-anchors -fshow-column -fshrink-wrap
+  55              	@ -fsigned-zeros -fsplit-ivs-in-unroller -fsplit-wide-types
+  56              	@ -fstrict-aliasing -fstrict-overflow -fstrict-volatile-bitfields
+  57              	@ -fsync-libcalls -fthread-jumps -ftoplevel-reorder -ftrapping-math
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 2
+
+
+  58              	@ -ftree-bit-ccp -ftree-builtin-call-dce -ftree-ccp -ftree-ch
+  59              	@ -ftree-coalesce-vars -ftree-copy-prop -ftree-copyrename -ftree-cselim
+  60              	@ -ftree-dce -ftree-dominator-opts -ftree-dse -ftree-forwprop -ftree-fre
+  61              	@ -ftree-loop-if-convert -ftree-loop-im -ftree-loop-ivcanon
+  62              	@ -ftree-loop-optimize -ftree-parallelize-loops= -ftree-phiprop -ftree-pre
+  63              	@ -ftree-pta -ftree-reassoc -ftree-scev-cprop -ftree-sink
+  64              	@ -ftree-slp-vectorize -ftree-slsr -ftree-sra -ftree-switch-conversion
+  65              	@ -ftree-tail-merge -ftree-ter -ftree-vect-loop-version -ftree-vrp
+  66              	@ -funit-at-a-time -fvar-tracking -fvar-tracking-assignments -fverbose-asm
+  67              	@ -fzero-initialized-in-bss -mlittle-endian -mpic-data-is-text-relative
+  68              	@ -msched-prolog -mthumb -mvectorize-with-neon-quad
+  69              	
+  70              		.text
+  71              	.Ltext0:
+  72              		.cfi_sections	.debug_frame
+  73              		.align	1
+  74              		.global	GPIO_DeInit
+  75              		.code	16
+  76              		.thumb_func
+  77              		.type	GPIO_DeInit, %function
+  78              	GPIO_DeInit:
+  79              	.LFB32:
+  80              		.file 1 "..\\..\\STM32F0-Discovery_FW_V1.0.0\\Libraries\\STM32F0xx_StdPeriph_Driver\\src\\stm32f0x
+   1:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** /**
+   2:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   ******************************************************************************
+   3:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @file    stm32f0xx_gpio.c
+   4:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @author  MCD Application Team
+   5:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @version V1.0.0
+   6:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @date    23-March-2012
+   7:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @brief   This file provides firmware functions to manage the following 
+   8:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *          functionalities of the GPIO peripheral:
+   9:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *           + Initialization and Configuration functions
+  10:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *           + GPIO Read and Write functions
+  11:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *           + GPIO Alternate functions configuration functions
+  12:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *
+  13:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *  @verbatim
+  14:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *
+  15:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *
+  16:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****     ===========================================================================
+  17:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****                          ##### How to use this driver #####
+  18:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****     ===========================================================================
+  19:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****       [..]
+  20:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****       (#) Enable the GPIO AHB clock using RCC_AHBPeriphClockCmd()
+  21:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****       (#) Configure the GPIO pin(s) using GPIO_Init()
+  22:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****           Four possible configuration are available for each pin:
+  23:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****          (++) Input: Floating, Pull-up, Pull-down.
+  24:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****          (++) Output: Push-Pull (Pull-up, Pull-down or no Pull)
+  25:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****                       Open Drain (Pull-up, Pull-down or no Pull).
+  26:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****               In output mode, the speed is configurable: Low, Medium, Fast or High.
+  27:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****          (++) Alternate Function: Push-Pull (Pull-up, Pull-down or no Pull)
+  28:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****                                   Open Drain (Pull-up, Pull-down or no Pull).
+  29:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****          (++) Analog: required mode when a pin is to be used as ADC channel,
+  30:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****               DAC output or comparator input.
+  31:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****       (#) Peripherals alternate function:
+  32:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****          (++) For ADC, DAC and comparators, configure the desired pin in analog 
+  33:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****               mode using GPIO_InitStruct->GPIO_Mode = GPIO_Mode_AN
+  34:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****          (++) For other peripherals (TIM, USART...):
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 3
+
+
+  35:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****               (+++) Connect the pin to the desired peripherals' Alternate 
+  36:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****                     Function (AF) using GPIO_PinAFConfig() function. For PortC, 
+  37:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****                     PortD and PortF, no configuration is needed.
+  38:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****               (+++) Configure the desired pin in alternate function mode using
+  39:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****                     GPIO_InitStruct->GPIO_Mode = GPIO_Mode_AF
+  40:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****               (+++) Select the type, pull-up/pull-down and output speed via 
+  41:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****                     GPIO_PuPd, GPIO_OType and GPIO_Speed members
+  42:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****               (+++) Call GPIO_Init() function
+  43:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****       (#) To get the level of a pin configured in input mode use GPIO_ReadInputDataBit()
+  44:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****       (#) To set/reset the level of a pin configured in output mode use
+  45:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****           GPIO_SetBits()/GPIO_ResetBits()
+  46:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****       (#) During and just after reset, the alternate functions are not active and 
+  47:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****           the GPIO pins are configured in input floating mode (except JTAG pins).
+  48:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****       (#) The LSE oscillator pins OSC32_IN and OSC32_OUT can be used as 
+  49:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****           general-purpose (PC14 and PC15, respectively) when the LSE oscillator 
+  50:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****           is off. The LSE has priority over the GPIO function.
+  51:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****       (#) The HSE oscillator pins OSC_IN/OSC_OUT can be used as general-purpose 
+  52:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****           PD0 and PD1, respectively, when the HSE oscillator is off. The HSE has 
+  53:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****           priority over the GPIO function.
+  54:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****     @endverbatim
+  55:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   ******************************************************************************
+  56:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @attention
+  57:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *
+  58:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * <h2><center>&copy; COPYRIGHT 2012 STMicroelectronics</center></h2>
+  59:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *
+  60:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
+  61:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * You may not use this file except in compliance with the License.
+  62:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * You may obtain a copy of the License at:
+  63:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *
+  64:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *        http://www.st.com/software_license_agreement_liberty_v2
+  65:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *
+  66:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * Unless required by applicable law or agreed to in writing, software 
+  67:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * distributed under the License is distributed on an "AS IS" BASIS, 
+  68:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  69:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * See the License for the specific language governing permissions and
+  70:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * limitations under the License.
+  71:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *
+  72:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   ******************************************************************************
+  73:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   */
+  74:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+  75:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** /* Includes ------------------------------------------------------------------*/
+  76:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** #include "stm32f0xx_gpio.h"
+  77:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** #include "stm32f0xx_rcc.h"
+  78:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+  79:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** /** @addtogroup STM32F0xx_StdPeriph_Driver
+  80:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @{
+  81:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   */
+  82:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+  83:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** /** @defgroup GPIO 
+  84:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @brief GPIO driver modules
+  85:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @{
+  86:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   */
+  87:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+  88:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** /* Private typedef -----------------------------------------------------------*/
+  89:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** /* Private define ------------------------------------------------------------*/
+  90:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** /* Private macro -------------------------------------------------------------*/
+  91:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** /* Private variables ---------------------------------------------------------*/
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 4
+
+
+  92:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** /* Private function prototypes -----------------------------------------------*/
+  93:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** /* Private functions ---------------------------------------------------------*/
+  94:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+  95:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** /** @defgroup GPIO_Private_Functions 
+  96:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @{
+  97:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   */
+  98:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+  99:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** /** @defgroup GPIO_Group1 Initialization and Configuration
+ 100:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****  *  @brief   Initialization and Configuration
+ 101:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****  *
+ 102:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** @verbatim
+ 103:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****  ===============================================================================
+ 104:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****                     ##### Initialization and Configuration #####
+ 105:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****  ===============================================================================
+ 106:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 107:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** @endverbatim
+ 108:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @{
+ 109:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   */
+ 110:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 111:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** /**
+ 112:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @brief  Deinitializes the GPIOx peripheral registers to their default reset 
+ 113:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *         values.
+ 114:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @param  GPIOx: where x can be (A, B, C, D or F) to select the GPIO peripheral.
+ 115:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @retval None
+ 116:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   */
+ 117:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** void GPIO_DeInit(GPIO_TypeDef* GPIOx)
+ 118:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** {
+  81              		.loc 1 118 0
+  82              		.cfi_startproc
+  83              	.LVL0:
+  84 0000 08B5     		push	{r3, lr}	@
+  85              	.LCFI0:
+  86              		.cfi_def_cfa_offset 8
+  87              		.cfi_offset 3, -8
+  88              		.cfi_offset 14, -4
+ 119:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   /* Check the parameters */
+ 120:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+ 121:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 122:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   if(GPIOx == GPIOA)
+  89              		.loc 1 122 0
+  90 0002 9023     		mov	r3, #144	@ tmp136,
+  91 0004 DB05     		lsl	r3, r3, #23	@ tmp111, tmp136,
+  92 0006 9842     		cmp	r0, r3	@ GPIOx, tmp111
+  93 0008 07D1     		bne	.L2	@,
+ 123:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   {
+ 124:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****     RCC_AHBPeriphResetCmd(RCC_AHBPeriph_GPIOA, ENABLE);
+  94              		.loc 1 124 0
+  95 000a 8020     		mov	r0, #128	@ tmp134,
+  96              	.LVL1:
+  97 000c 8002     		lsl	r0, r0, #10	@, tmp134,
+  98 000e 0121     		mov	r1, #1	@,
+  99 0010 FFF7FEFF 		bl	RCC_AHBPeriphResetCmd	@
+ 100              	.LVL2:
+ 125:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****     RCC_AHBPeriphResetCmd(RCC_AHBPeriph_GPIOA, DISABLE);
+ 101              		.loc 1 125 0
+ 102 0014 8020     		mov	r0, #128	@ tmp135,
+ 103 0016 8002     		lsl	r0, r0, #10	@, tmp135,
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 5
+
+
+ 104 0018 2AE0     		b	.L7	@
+ 105              	.LVL3:
+ 106              	.L2:
+ 126:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   }
+ 127:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   else if(GPIOx == GPIOB)
+ 107              		.loc 1 127 0
+ 108 001a 174B     		ldr	r3, .L9	@ tmp114,
+ 109 001c 9842     		cmp	r0, r3	@ GPIOx, tmp114
+ 110 001e 07D1     		bne	.L4	@,
+ 128:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   {
+ 129:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****     RCC_AHBPeriphResetCmd(RCC_AHBPeriph_GPIOB, ENABLE);
+ 111              		.loc 1 129 0
+ 112 0020 8020     		mov	r0, #128	@ tmp132,
+ 113              	.LVL4:
+ 114 0022 C002     		lsl	r0, r0, #11	@, tmp132,
+ 115 0024 0121     		mov	r1, #1	@,
+ 116 0026 FFF7FEFF 		bl	RCC_AHBPeriphResetCmd	@
+ 117              	.LVL5:
+ 130:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****     RCC_AHBPeriphResetCmd(RCC_AHBPeriph_GPIOB, DISABLE);
+ 118              		.loc 1 130 0
+ 119 002a 8020     		mov	r0, #128	@ tmp133,
+ 120 002c C002     		lsl	r0, r0, #11	@, tmp133,
+ 121 002e 1FE0     		b	.L7	@
+ 122              	.LVL6:
+ 123              	.L4:
+ 131:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   }
+ 132:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   else if(GPIOx == GPIOC)
+ 124              		.loc 1 132 0
+ 125 0030 124B     		ldr	r3, .L9+4	@ tmp117,
+ 126 0032 9842     		cmp	r0, r3	@ GPIOx, tmp117
+ 127 0034 07D1     		bne	.L5	@,
+ 133:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   {
+ 134:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****     RCC_AHBPeriphResetCmd(RCC_AHBPeriph_GPIOC, ENABLE);
+ 128              		.loc 1 134 0
+ 129 0036 8020     		mov	r0, #128	@ tmp130,
+ 130              	.LVL7:
+ 131 0038 0003     		lsl	r0, r0, #12	@, tmp130,
+ 132 003a 0121     		mov	r1, #1	@,
+ 133 003c FFF7FEFF 		bl	RCC_AHBPeriphResetCmd	@
+ 134              	.LVL8:
+ 135:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****     RCC_AHBPeriphResetCmd(RCC_AHBPeriph_GPIOC, DISABLE);
+ 135              		.loc 1 135 0
+ 136 0040 8020     		mov	r0, #128	@ tmp131,
+ 137 0042 0003     		lsl	r0, r0, #12	@, tmp131,
+ 138 0044 14E0     		b	.L7	@
+ 139              	.LVL9:
+ 140              	.L5:
+ 136:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   }
+ 137:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   else if(GPIOx == GPIOD)
+ 141              		.loc 1 137 0
+ 142 0046 0E4B     		ldr	r3, .L9+8	@ tmp120,
+ 143 0048 9842     		cmp	r0, r3	@ GPIOx, tmp120
+ 144 004a 07D1     		bne	.L6	@,
+ 138:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   {
+ 139:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****     RCC_AHBPeriphResetCmd(RCC_AHBPeriph_GPIOD, ENABLE);
+ 145              		.loc 1 139 0
+ 146 004c 8020     		mov	r0, #128	@ tmp128,
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 6
+
+
+ 147              	.LVL10:
+ 148 004e 4003     		lsl	r0, r0, #13	@, tmp128,
+ 149 0050 0121     		mov	r1, #1	@,
+ 150 0052 FFF7FEFF 		bl	RCC_AHBPeriphResetCmd	@
+ 151              	.LVL11:
+ 140:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****     RCC_AHBPeriphResetCmd(RCC_AHBPeriph_GPIOD, DISABLE);
+ 152              		.loc 1 140 0
+ 153 0056 8020     		mov	r0, #128	@ tmp129,
+ 154 0058 4003     		lsl	r0, r0, #13	@, tmp129,
+ 155 005a 09E0     		b	.L7	@
+ 156              	.LVL12:
+ 157              	.L6:
+ 141:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   }
+ 142:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   else
+ 143:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   {
+ 144:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****     if(GPIOx == GPIOF)
+ 158              		.loc 1 144 0
+ 159 005c 094B     		ldr	r3, .L9+12	@ tmp123,
+ 160 005e 9842     		cmp	r0, r3	@ GPIOx, tmp123
+ 161 0060 09D1     		bne	.L1	@,
+ 145:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****     {
+ 146:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****       RCC_AHBPeriphResetCmd(RCC_AHBPeriph_GPIOF, ENABLE);
+ 162              		.loc 1 146 0
+ 163 0062 8020     		mov	r0, #128	@ tmp126,
+ 164              	.LVL13:
+ 165 0064 C003     		lsl	r0, r0, #15	@, tmp126,
+ 166 0066 0121     		mov	r1, #1	@,
+ 167 0068 FFF7FEFF 		bl	RCC_AHBPeriphResetCmd	@
+ 168              	.LVL14:
+ 147:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****       RCC_AHBPeriphResetCmd(RCC_AHBPeriph_GPIOF, DISABLE);
+ 169              		.loc 1 147 0
+ 170 006c 8020     		mov	r0, #128	@ tmp127,
+ 171 006e C003     		lsl	r0, r0, #15	@, tmp127,
+ 172              	.L7:
+ 173 0070 0021     		mov	r1, #0	@,
+ 174 0072 FFF7FEFF 		bl	RCC_AHBPeriphResetCmd	@
+ 175              	.LVL15:
+ 176              	.L1:
+ 148:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****     }
+ 149:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   }
+ 150:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** }
+ 177              		.loc 1 150 0
+ 178              		@ sp needed	@
+ 179 0076 08BD     		pop	{r3, pc}
+ 180              	.L10:
+ 181              		.align	2
+ 182              	.L9:
+ 183 0078 00040048 		.word	1207960576
+ 184 007c 00080048 		.word	1207961600
+ 185 0080 000C0048 		.word	1207962624
+ 186 0084 00140048 		.word	1207964672
+ 187              		.cfi_endproc
+ 188              	.LFE32:
+ 189              		.size	GPIO_DeInit, .-GPIO_DeInit
+ 190              		.align	1
+ 191              		.global	GPIO_Init
+ 192              		.code	16
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 7
+
+
+ 193              		.thumb_func
+ 194              		.type	GPIO_Init, %function
+ 195              	GPIO_Init:
+ 196              	.LFB33:
+ 151:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 152:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** /**
+ 153:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @brief  Initializes the GPIOx peripheral according to the specified 
+ 154:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *         parameters in the GPIO_InitStruct.
+ 155:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @param  GPIOx: where x can be (A, B, C, D or F) to select the GPIO peripheral.
+ 156:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @param  GPIO_InitStruct: pointer to a GPIO_InitTypeDef structure that contains
+ 157:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *         the configuration information for the specified GPIO peripheral.
+ 158:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @note   The configured pins can be: GPIO_Pin_0 -> GPIO_Pin_15 for GPIOA, GPIOB and GPIOC,
+ 159:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *         GPIO_Pin_0 -> GPIO_Pin_2 for GPIOD, GPIO_Pin_0 -> GPIO_Pin_3 for GPIOF.
+ 160:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @retval None
+ 161:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   */
+ 162:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** void GPIO_Init(GPIO_TypeDef* GPIOx, GPIO_InitTypeDef* GPIO_InitStruct)
+ 163:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** {
+ 197              		.loc 1 163 0
+ 198              		.cfi_startproc
+ 199              	.LVL16:
+ 200 0088 F7B5     		push	{r0, r1, r2, r4, r5, r6, r7, lr}	@
+ 201              	.LCFI1:
+ 202              		.cfi_def_cfa_offset 32
+ 203              		.cfi_offset 0, -32
+ 204              		.cfi_offset 1, -28
+ 205              		.cfi_offset 2, -24
+ 206              		.cfi_offset 4, -20
+ 207              		.cfi_offset 5, -16
+ 208              		.cfi_offset 6, -12
+ 209              		.cfi_offset 7, -8
+ 210              		.cfi_offset 14, -4
+ 164:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   uint32_t pinpos = 0x00, pos = 0x00 , currentpin = 0x00;
+ 165:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 166:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   /* Check the parameters */
+ 167:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+ 168:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   assert_param(IS_GPIO_PIN(GPIO_InitStruct->GPIO_Pin));
+ 169:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   assert_param(IS_GPIO_MODE(GPIO_InitStruct->GPIO_Mode));
+ 170:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   assert_param(IS_GPIO_PUPD(GPIO_InitStruct->GPIO_PuPd));
+ 171:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 172:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   /*-------------------------- Configure the port pins -----------------------*/
+ 173:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   /*-- GPIO Mode Configuration --*/
+ 174:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   for (pinpos = 0x00; pinpos < 0x10; pinpos++)
+ 175:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   {
+ 176:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****     pos = ((uint32_t)0x01) << pinpos;
+ 177:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 178:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****     /* Get the port pins position */
+ 179:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****     currentpin = (GPIO_InitStruct->GPIO_Pin) & pos;
+ 211              		.loc 1 179 0
+ 212 008a 0B68     		ldr	r3, [r1]	@, GPIO_InitStruct_10(D)->GPIO_Pin
+ 213 008c 0193     		str	r3, [sp, #4]	@, %sfp
+ 174:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   for (pinpos = 0x00; pinpos < 0x10; pinpos++)
+ 214              		.loc 1 174 0
+ 215 008e 0023     		mov	r3, #0	@ pinpos,
+ 216              	.LVL17:
+ 217              	.L15:
+ 176:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****     pos = ((uint32_t)0x01) << pinpos;
+ 218              		.loc 1 176 0
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 8
+
+
+ 219 0090 0124     		mov	r4, #1	@ tmp157,
+ 220              		.loc 1 179 0
+ 221 0092 019A     		ldr	r2, [sp, #4]	@ currentpin, %sfp
+ 176:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****     pos = ((uint32_t)0x01) << pinpos;
+ 222              		.loc 1 176 0
+ 223 0094 9C40     		lsl	r4, r4, r3	@ pos, tmp157, pinpos
+ 224              	.LVL18:
+ 225              		.loc 1 179 0
+ 226 0096 2240     		and	r2, r4	@ currentpin, pos
+ 227              	.LVL19:
+ 180:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 181:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****     if (currentpin == pos)
+ 228              		.loc 1 181 0
+ 229 0098 A242     		cmp	r2, r4	@ currentpin, pos
+ 230 009a 2ED1     		bne	.L12	@,
+ 182:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****     {
+ 183:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****       if ((GPIO_InitStruct->GPIO_Mode == GPIO_Mode_OUT) || (GPIO_InitStruct->GPIO_Mode == GPIO_Mode
+ 231              		.loc 1 183 0
+ 232 009c 0D79     		ldrb	r5, [r1, #4]	@ D.4970, *GPIO_InitStruct_10(D)
+ 233 009e 6C1E     		sub	r4, r5, #1	@ tmp158, D.4970,
+ 234              	.LVL20:
+ 235 00a0 E4B2     		uxtb	r4, r4	@ tmp159, tmp158
+ 236 00a2 012C     		cmp	r4, #1	@ tmp159,
+ 237 00a4 15D8     		bhi	.L13	@,
+ 184:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****       {
+ 185:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****         /* Check Speed mode parameters */
+ 186:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****         assert_param(IS_GPIO_SPEED(GPIO_InitStruct->GPIO_Speed));
+ 187:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 188:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****         /* Speed mode configuration */
+ 189:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****         GPIOx->OSPEEDR &= ~(GPIO_OSPEEDER_OSPEEDR0 << (pinpos * 2));
+ 238              		.loc 1 189 0
+ 239 00a6 8768     		ldr	r7, [r0, #8]	@ D.4969, GPIOx_15(D)->OSPEEDR
+ 240 00a8 5C00     		lsl	r4, r3, #1	@ D.4974, pinpos,
+ 241 00aa 0326     		mov	r6, #3	@,
+ 242 00ac A640     		lsl	r6, r6, r4	@,, D.4974
+ 243 00ae B743     		bic	r7, r6	@ D.4969,
+ 190:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****         GPIOx->OSPEEDR |= ((uint32_t)(GPIO_InitStruct->GPIO_Speed) << (pinpos * 2));
+ 244              		.loc 1 190 0
+ 245 00b0 4E79     		ldrb	r6, [r1, #5]	@, *GPIO_InitStruct_10(D)
+ 189:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****         GPIOx->OSPEEDR &= ~(GPIO_OSPEEDER_OSPEEDR0 << (pinpos * 2));
+ 246              		.loc 1 189 0
+ 247 00b2 8760     		str	r7, [r0, #8]	@ D.4969, GPIOx_15(D)->OSPEEDR
+ 248              		.loc 1 190 0
+ 249 00b4 8768     		ldr	r7, [r0, #8]	@ D.4969, GPIOx_15(D)->OSPEEDR
+ 250 00b6 A640     		lsl	r6, r6, r4	@,, D.4974
+ 251 00b8 341C     		mov	r4, r6	@ D.4969,
+ 252 00ba 3C43     		orr	r4, r7	@ D.4969, D.4969
+ 253 00bc 8460     		str	r4, [r0, #8]	@ D.4969, GPIOx_15(D)->OSPEEDR
+ 191:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 192:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****         /* Check Output mode parameters */
+ 193:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****         assert_param(IS_GPIO_OTYPE(GPIO_InitStruct->GPIO_OType));
+ 194:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 195:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****         /* Output mode configuration */
+ 196:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****         GPIOx->OTYPER &= ~((GPIO_OTYPER_OT_0) << ((uint16_t)pinpos));
+ 254              		.loc 1 196 0
+ 255 00be 4468     		ldr	r4, [r0, #4]	@ tmp165,
+ 256 00c0 A4B2     		uxth	r4, r4	@ D.4973, tmp165
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 9
+
+
+ 257 00c2 9443     		bic	r4, r2	@ D.4973, currentpin
+ 258 00c4 8480     		strh	r4, [r0, #4]	@ D.4973, GPIOx_15(D)->OTYPER
+ 197:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****         GPIOx->OTYPER |= (uint16_t)(((uint16_t)GPIO_InitStruct->GPIO_OType) << ((uint16_t)pinpos));
+ 259              		.loc 1 197 0
+ 260 00c6 8A79     		ldrb	r2, [r1, #6]	@ D.4974, *GPIO_InitStruct_10(D)
+ 261              	.LVL21:
+ 262 00c8 4468     		ldr	r4, [r0, #4]	@ tmp172,
+ 263 00ca 9A40     		lsl	r2, r2, r3	@ D.4974, D.4974, pinpos
+ 264 00cc 2243     		orr	r2, r4	@ tmp176, tmp172
+ 265 00ce 92B2     		uxth	r2, r2	@ D.4973, tmp176
+ 266 00d0 8280     		strh	r2, [r0, #4]	@ D.4973, GPIOx_15(D)->OTYPER
+ 267              	.L13:
+ 268 00d2 5A00     		lsl	r2, r3, #1	@ D.4974, pinpos,
+ 198:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****       }
+ 199:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 200:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****       GPIOx->MODER  &= ~(GPIO_MODER_MODER0 << (pinpos * 2));
+ 269              		.loc 1 200 0
+ 270 00d4 0324     		mov	r4, #3	@ tmp179,
+ 271 00d6 0768     		ldr	r7, [r0]	@ D.4969, GPIOx_15(D)->MODER
+ 272 00d8 9440     		lsl	r4, r4, r2	@ D.4969, tmp179, D.4974
+ 273 00da E443     		mvn	r4, r4	@ D.4969, D.4969
+ 274 00dc 2740     		and	r7, r4	@ D.4969, D.4969
+ 275 00de 0760     		str	r7, [r0]	@ D.4969, GPIOx_15(D)->MODER
+ 201:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 202:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****       GPIOx->MODER |= (((uint32_t)GPIO_InitStruct->GPIO_Mode) << (pinpos * 2));
+ 276              		.loc 1 202 0
+ 277 00e0 0768     		ldr	r7, [r0]	@ D.4969, GPIOx_15(D)->MODER
+ 278 00e2 9540     		lsl	r5, r5, r2	@ D.4969, D.4970, D.4974
+ 279 00e4 3D43     		orr	r5, r7	@ D.4969, D.4969
+ 280 00e6 0560     		str	r5, [r0]	@ D.4969, GPIOx_15(D)->MODER
+ 203:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 204:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****       /* Pull-up Pull down resistor configuration */
+ 205:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****       GPIOx->PUPDR &= ~(GPIO_PUPDR_PUPDR0 << ((uint16_t)pinpos * 2));
+ 281              		.loc 1 205 0
+ 282 00e8 C568     		ldr	r5, [r0, #12]	@ D.4969, GPIOx_15(D)->PUPDR
+ 283 00ea 2C40     		and	r4, r5	@ D.4969, D.4969
+ 206:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****       GPIOx->PUPDR |= (((uint32_t)GPIO_InitStruct->GPIO_PuPd) << (pinpos * 2));
+ 284              		.loc 1 206 0
+ 285 00ec CD79     		ldrb	r5, [r1, #7]	@ D.4969, *GPIO_InitStruct_10(D)
+ 205:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****       GPIOx->PUPDR &= ~(GPIO_PUPDR_PUPDR0 << ((uint16_t)pinpos * 2));
+ 286              		.loc 1 205 0
+ 287 00ee C460     		str	r4, [r0, #12]	@ D.4969, GPIOx_15(D)->PUPDR
+ 288              		.loc 1 206 0
+ 289 00f0 C468     		ldr	r4, [r0, #12]	@ D.4969, GPIOx_15(D)->PUPDR
+ 290 00f2 9540     		lsl	r5, r5, r2	@ D.4969, D.4969, D.4974
+ 291 00f4 2A1C     		mov	r2, r5	@ D.4969, D.4969
+ 292 00f6 2243     		orr	r2, r4	@ D.4969, D.4969
+ 293 00f8 C260     		str	r2, [r0, #12]	@ D.4969, GPIOx_15(D)->PUPDR
+ 294              	.L12:
+ 174:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   for (pinpos = 0x00; pinpos < 0x10; pinpos++)
+ 295              		.loc 1 174 0
+ 296 00fa 0133     		add	r3, r3, #1	@ pinpos,
+ 297              	.LVL22:
+ 298 00fc 102B     		cmp	r3, #16	@ pinpos,
+ 299 00fe C7D1     		bne	.L15	@,
+ 207:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****     }
+ 208:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   }
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 10
+
+
+ 209:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** }
+ 300              		.loc 1 209 0
+ 301              		@ sp needed	@
+ 302 0100 F7BD     		pop	{r0, r1, r2, r4, r5, r6, r7, pc}
+ 303              		.cfi_endproc
+ 304              	.LFE33:
+ 305              		.size	GPIO_Init, .-GPIO_Init
+ 306              		.align	1
+ 307              		.global	GPIO_StructInit
+ 308              		.code	16
+ 309              		.thumb_func
+ 310              		.type	GPIO_StructInit, %function
+ 311              	GPIO_StructInit:
+ 312              	.LFB34:
+ 210:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 211:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** /**
+ 212:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @brief  Fills each GPIO_InitStruct member with its default value.
+ 213:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @param  GPIO_InitStruct: pointer to a GPIO_InitTypeDef structure which will 
+ 214:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *         be initialized.
+ 215:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @retval None
+ 216:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   */
+ 217:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** void GPIO_StructInit(GPIO_InitTypeDef* GPIO_InitStruct)
+ 218:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** {
+ 313              		.loc 1 218 0
+ 314              		.cfi_startproc
+ 315              	.LVL23:
+ 219:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   /* Reset GPIO init structure parameters values */
+ 220:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   GPIO_InitStruct->GPIO_Pin  = GPIO_Pin_All;
+ 316              		.loc 1 220 0
+ 317 0102 044B     		ldr	r3, .L17	@ tmp111,
+ 221:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   GPIO_InitStruct->GPIO_Mode = GPIO_Mode_IN;
+ 222:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   GPIO_InitStruct->GPIO_Speed = GPIO_Speed_Level_2;
+ 318              		.loc 1 222 0
+ 319 0104 0222     		mov	r2, #2	@ tmp114,
+ 220:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   GPIO_InitStruct->GPIO_Pin  = GPIO_Pin_All;
+ 320              		.loc 1 220 0
+ 321 0106 0360     		str	r3, [r0]	@ tmp111, GPIO_InitStruct_2(D)->GPIO_Pin
+ 221:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   GPIO_InitStruct->GPIO_Mode = GPIO_Mode_IN;
+ 322              		.loc 1 221 0
+ 323 0108 0023     		mov	r3, #0	@ tmp112,
+ 324 010a 0371     		strb	r3, [r0, #4]	@ tmp112, GPIO_InitStruct_2(D)->GPIO_Mode
+ 325              		.loc 1 222 0
+ 326 010c 4271     		strb	r2, [r0, #5]	@ tmp114, GPIO_InitStruct_2(D)->GPIO_Speed
+ 223:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   GPIO_InitStruct->GPIO_OType = GPIO_OType_PP;
+ 327              		.loc 1 223 0
+ 328 010e 8371     		strb	r3, [r0, #6]	@ tmp112, GPIO_InitStruct_2(D)->GPIO_OType
+ 224:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   GPIO_InitStruct->GPIO_PuPd = GPIO_PuPd_NOPULL;
+ 329              		.loc 1 224 0
+ 330 0110 C371     		strb	r3, [r0, #7]	@ tmp112, GPIO_InitStruct_2(D)->GPIO_PuPd
+ 225:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** }
+ 331              		.loc 1 225 0
+ 332              		@ sp needed	@
+ 333 0112 7047     		bx	lr
+ 334              	.L18:
+ 335              		.align	2
+ 336              	.L17:
+ 337 0114 FFFF0000 		.word	65535
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 11
+
+
+ 338              		.cfi_endproc
+ 339              	.LFE34:
+ 340              		.size	GPIO_StructInit, .-GPIO_StructInit
+ 341              		.align	1
+ 342              		.global	GPIO_PinLockConfig
+ 343              		.code	16
+ 344              		.thumb_func
+ 345              		.type	GPIO_PinLockConfig, %function
+ 346              	GPIO_PinLockConfig:
+ 347              	.LFB35:
+ 226:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 227:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** /**
+ 228:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @brief  Locks GPIO Pins configuration registers.
+ 229:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *         The locked registers are GPIOx_MODER, GPIOx_OTYPER, GPIOx_OSPEEDR,
+ 230:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *         GPIOx_PUPDR, GPIOx_AFRL and GPIOx_AFRH.
+ 231:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @note   The configuration of the locked GPIO pins can no longer be modified
+ 232:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *         until the next reset.
+ 233:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @param  GPIOx: where x can be (A or B) to select the GPIO peripheral.
+ 234:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @param  GPIO_Pin: specifies the port bit to be written.
+ 235:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *   This parameter can be any combination of GPIO_Pin_x where x can be (0..15).
+ 236:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @retval None
+ 237:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   */
+ 238:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** void GPIO_PinLockConfig(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
+ 239:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** {
+ 348              		.loc 1 239 0
+ 349              		.cfi_startproc
+ 350              	.LVL24:
+ 240:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   __IO uint32_t tmp = 0x00010000;
+ 351              		.loc 1 240 0
+ 352 0118 8023     		mov	r3, #128	@ tmp120,
+ 239:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** {
+ 353              		.loc 1 239 0
+ 354 011a 82B0     		sub	sp, sp, #8	@,,
+ 355              	.LCFI2:
+ 356              		.cfi_def_cfa_offset 8
+ 357              		.loc 1 240 0
+ 358 011c 5B02     		lsl	r3, r3, #9	@ tmp119, tmp120,
+ 359 011e 0193     		str	r3, [sp, #4]	@ tmp119, tmp
+ 241:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 242:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   /* Check the parameters */
+ 243:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   assert_param(IS_GPIO_LIST_PERIPH(GPIOx));
+ 244:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   assert_param(IS_GPIO_PIN(GPIO_Pin));
+ 245:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 246:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   tmp |= GPIO_Pin;
+ 360              		.loc 1 246 0
+ 361 0120 019B     		ldr	r3, [sp, #4]	@ tmp.1, tmp
+ 362 0122 0B43     		orr	r3, r1	@ tmp.2, GPIO_Pin
+ 363 0124 0193     		str	r3, [sp, #4]	@ tmp.2, tmp
+ 247:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   /* Set LCKK bit */
+ 248:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   GPIOx->LCKR = tmp;
+ 364              		.loc 1 248 0
+ 365 0126 019B     		ldr	r3, [sp, #4]	@ tmp.3, tmp
+ 366 0128 C361     		str	r3, [r0, #28]	@ tmp.3, GPIOx_9(D)->LCKR
+ 249:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   /* Reset LCKK bit */
+ 250:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   GPIOx->LCKR =  GPIO_Pin;
+ 367              		.loc 1 250 0
+ 368 012a C161     		str	r1, [r0, #28]	@ GPIO_Pin, GPIOx_9(D)->LCKR
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 12
+
+
+ 251:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   /* Set LCKK bit */
+ 252:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   GPIOx->LCKR = tmp;
+ 369              		.loc 1 252 0
+ 370 012c 019B     		ldr	r3, [sp, #4]	@ tmp.4, tmp
+ 371 012e C361     		str	r3, [r0, #28]	@ tmp.4, GPIOx_9(D)->LCKR
+ 253:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   /* Read LCKK bit */
+ 254:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   tmp = GPIOx->LCKR;
+ 372              		.loc 1 254 0
+ 373 0130 C369     		ldr	r3, [r0, #28]	@ tmp.5, GPIOx_9(D)->LCKR
+ 374 0132 0193     		str	r3, [sp, #4]	@ tmp.5, tmp
+ 255:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   /* Read LCKK bit */
+ 256:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   tmp = GPIOx->LCKR;
+ 375              		.loc 1 256 0
+ 376 0134 C369     		ldr	r3, [r0, #28]	@ tmp.6, GPIOx_9(D)->LCKR
+ 377 0136 0193     		str	r3, [sp, #4]	@ tmp.6, tmp
+ 257:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** }
+ 378              		.loc 1 257 0
+ 379 0138 02B0     		add	sp, sp, #8	@,,
+ 380              		@ sp needed	@
+ 381 013a 7047     		bx	lr
+ 382              		.cfi_endproc
+ 383              	.LFE35:
+ 384              		.size	GPIO_PinLockConfig, .-GPIO_PinLockConfig
+ 385              		.align	1
+ 386              		.global	GPIO_ReadInputDataBit
+ 387              		.code	16
+ 388              		.thumb_func
+ 389              		.type	GPIO_ReadInputDataBit, %function
+ 390              	GPIO_ReadInputDataBit:
+ 391              	.LFB36:
+ 258:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 259:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** /**
+ 260:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @}
+ 261:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   */
+ 262:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 263:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** /** @defgroup GPIO_Group2 GPIO Read and Write
+ 264:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****  *  @brief   GPIO Read and Write
+ 265:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****  *
+ 266:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** @verbatim   
+ 267:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****  ===============================================================================
+ 268:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****                       ##### GPIO Read and Write #####
+ 269:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****  ===============================================================================  
+ 270:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 271:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** @endverbatim
+ 272:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @{
+ 273:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   */
+ 274:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 275:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** /**
+ 276:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @brief  Reads the specified input port pin.
+ 277:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @param  GPIOx: where x can be (A, B, C, D or F) to select the GPIO peripheral.
+ 278:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @param  GPIO_Pin: specifies the port bit to read.
+ 279:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @note   This parameter can be GPIO_Pin_x where x can be:(0..15) for GPIOA, 
+ 280:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *         GPIOB or GPIOC,(0..2) for GPIOD and(0..3) for GPIOF.
+ 281:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @retval The input port pin value.
+ 282:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   */
+ 283:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** uint8_t GPIO_ReadInputDataBit(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
+ 284:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** {
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 13
+
+
+ 392              		.loc 1 284 0
+ 393              		.cfi_startproc
+ 394              	.LVL25:
+ 285:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   uint8_t bitstatus = 0x00;
+ 286:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 287:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   /* Check the parameters */
+ 288:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+ 289:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   assert_param(IS_GET_GPIO_PIN(GPIO_Pin));
+ 290:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 291:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   if ((GPIOx->IDR & GPIO_Pin) != (uint32_t)Bit_RESET)
+ 395              		.loc 1 291 0
+ 396 013c 0069     		ldr	r0, [r0, #16]	@ tmp117,
+ 397              	.LVL26:
+ 292:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   {
+ 293:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****     bitstatus = (uint8_t)Bit_SET;
+ 294:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   }
+ 295:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   else
+ 296:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   {
+ 297:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****     bitstatus = (uint8_t)Bit_RESET;
+ 298:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   }
+ 299:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   return bitstatus;
+ 300:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** }
+ 398              		.loc 1 300 0
+ 399              		@ sp needed	@
+ 291:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   if ((GPIOx->IDR & GPIO_Pin) != (uint32_t)Bit_RESET)
+ 400              		.loc 1 291 0
+ 401 013e 0840     		and	r0, r1	@ tmp120, GPIO_Pin
+ 402              	.LVL27:
+ 403 0140 431E     		sub	r3, r0, #1	@ tmp122, tmp120
+ 404 0142 9841     		sbc	r0, r0, r3	@ tmp121, tmp120, tmp122
+ 299:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   return bitstatus;
+ 405              		.loc 1 299 0
+ 406 0144 C0B2     		uxtb	r0, r0	@ D.4986, tmp121
+ 407              		.loc 1 300 0
+ 408 0146 7047     		bx	lr
+ 409              		.cfi_endproc
+ 410              	.LFE36:
+ 411              		.size	GPIO_ReadInputDataBit, .-GPIO_ReadInputDataBit
+ 412              		.align	1
+ 413              		.global	GPIO_ReadInputData
+ 414              		.code	16
+ 415              		.thumb_func
+ 416              		.type	GPIO_ReadInputData, %function
+ 417              	GPIO_ReadInputData:
+ 418              	.LFB37:
+ 301:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 302:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** /**
+ 303:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @brief  Reads the specified input port pin.
+ 304:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @param  GPIOx: where x can be (A, B, C, D or F) to select the GPIO peripheral.
+ 305:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @retval The input port pin value.
+ 306:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   */
+ 307:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** uint16_t GPIO_ReadInputData(GPIO_TypeDef* GPIOx)
+ 308:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** {
+ 419              		.loc 1 308 0
+ 420              		.cfi_startproc
+ 421              	.LVL28:
+ 309:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   /* Check the parameters */
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 14
+
+
+ 310:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+ 311:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 312:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   return ((uint16_t)GPIOx->IDR);
+ 422              		.loc 1 312 0
+ 423 0148 0069     		ldr	r0, [r0, #16]	@ tmp113,
+ 424              	.LVL29:
+ 313:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** }
+ 425              		.loc 1 313 0
+ 426              		@ sp needed	@
+ 312:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   return ((uint16_t)GPIOx->IDR);
+ 427              		.loc 1 312 0
+ 428 014a 80B2     		uxth	r0, r0	@ D.4990, tmp113
+ 429              		.loc 1 313 0
+ 430 014c 7047     		bx	lr
+ 431              		.cfi_endproc
+ 432              	.LFE37:
+ 433              		.size	GPIO_ReadInputData, .-GPIO_ReadInputData
+ 434              		.align	1
+ 435              		.global	GPIO_ReadOutputDataBit
+ 436              		.code	16
+ 437              		.thumb_func
+ 438              		.type	GPIO_ReadOutputDataBit, %function
+ 439              	GPIO_ReadOutputDataBit:
+ 440              	.LFB38:
+ 314:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 315:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** /**
+ 316:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @brief  Reads the specified output data port bit.
+ 317:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @param  GPIOx: where x can be (A, B, C, D or F) to select the GPIO peripheral.
+ 318:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @param  GPIO_Pin: Specifies the port bit to read.
+ 319:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @note   This parameter can be GPIO_Pin_x where x can be:(0..15) for GPIOA, 
+ 320:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *         GPIOB or GPIOC,(0..2) for GPIOD and(0..3) for GPIOF.
+ 321:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @retval The output port pin value.
+ 322:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   */
+ 323:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** uint8_t GPIO_ReadOutputDataBit(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
+ 324:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** {
+ 441              		.loc 1 324 0
+ 442              		.cfi_startproc
+ 443              	.LVL30:
+ 325:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   uint8_t bitstatus = 0x00;
+ 326:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 327:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   /* Check the parameters */
+ 328:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+ 329:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   assert_param(IS_GET_GPIO_PIN(GPIO_Pin));
+ 330:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 331:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   if ((GPIOx->ODR & GPIO_Pin) != (uint32_t)Bit_RESET)
+ 444              		.loc 1 331 0
+ 445 014e 4069     		ldr	r0, [r0, #20]	@ tmp117,
+ 446              	.LVL31:
+ 332:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   {
+ 333:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****     bitstatus = (uint8_t)Bit_SET;
+ 334:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   }
+ 335:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   else
+ 336:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   {
+ 337:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****     bitstatus = (uint8_t)Bit_RESET;
+ 338:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   }
+ 339:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   return bitstatus;
+ 340:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** }
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 15
+
+
+ 447              		.loc 1 340 0
+ 448              		@ sp needed	@
+ 331:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   if ((GPIOx->ODR & GPIO_Pin) != (uint32_t)Bit_RESET)
+ 449              		.loc 1 331 0
+ 450 0150 0840     		and	r0, r1	@ tmp120, GPIO_Pin
+ 451              	.LVL32:
+ 452 0152 431E     		sub	r3, r0, #1	@ tmp122, tmp120
+ 453 0154 9841     		sbc	r0, r0, r3	@ tmp121, tmp120, tmp122
+ 339:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   return bitstatus;
+ 454              		.loc 1 339 0
+ 455 0156 C0B2     		uxtb	r0, r0	@ D.4994, tmp121
+ 456              		.loc 1 340 0
+ 457 0158 7047     		bx	lr
+ 458              		.cfi_endproc
+ 459              	.LFE38:
+ 460              		.size	GPIO_ReadOutputDataBit, .-GPIO_ReadOutputDataBit
+ 461              		.align	1
+ 462              		.global	GPIO_ReadOutputData
+ 463              		.code	16
+ 464              		.thumb_func
+ 465              		.type	GPIO_ReadOutputData, %function
+ 466              	GPIO_ReadOutputData:
+ 467              	.LFB39:
+ 341:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 342:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** /**
+ 343:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @brief  Reads the specified GPIO output data port.
+ 344:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @param  GPIOx: where x can be (A, B, C, D or F) to select the GPIO peripheral.
+ 345:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @retval GPIO output data port value.
+ 346:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   */
+ 347:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** uint16_t GPIO_ReadOutputData(GPIO_TypeDef* GPIOx)
+ 348:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** {
+ 468              		.loc 1 348 0
+ 469              		.cfi_startproc
+ 470              	.LVL33:
+ 349:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   /* Check the parameters */
+ 350:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+ 351:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 352:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   return ((uint16_t)GPIOx->ODR);
+ 471              		.loc 1 352 0
+ 472 015a 4069     		ldr	r0, [r0, #20]	@ tmp113,
+ 473              	.LVL34:
+ 353:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** }
+ 474              		.loc 1 353 0
+ 475              		@ sp needed	@
+ 352:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   return ((uint16_t)GPIOx->ODR);
+ 476              		.loc 1 352 0
+ 477 015c 80B2     		uxth	r0, r0	@ D.4998, tmp113
+ 478              		.loc 1 353 0
+ 479 015e 7047     		bx	lr
+ 480              		.cfi_endproc
+ 481              	.LFE39:
+ 482              		.size	GPIO_ReadOutputData, .-GPIO_ReadOutputData
+ 483              		.align	1
+ 484              		.global	GPIO_SetBits
+ 485              		.code	16
+ 486              		.thumb_func
+ 487              		.type	GPIO_SetBits, %function
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 16
+
+
+ 488              	GPIO_SetBits:
+ 489              	.LFB40:
+ 354:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 355:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** /**
+ 356:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @brief  Sets the selected data port bits.
+ 357:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @param  GPIOx: where x can be (A, B, C, D or F) to select the GPIO peripheral.
+ 358:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @param  GPIO_Pin: specifies the port bits to be written.
+ 359:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @note   This parameter can be GPIO_Pin_x where x can be:(0..15) for GPIOA, 
+ 360:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *         GPIOB or GPIOC,(0..2) for GPIOD and(0..3) for GPIOF.
+ 361:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @retval None
+ 362:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   */
+ 363:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** void GPIO_SetBits(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
+ 364:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** {
+ 490              		.loc 1 364 0
+ 491              		.cfi_startproc
+ 492              	.LVL35:
+ 365:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   /* Check the parameters */
+ 366:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+ 367:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   assert_param(IS_GPIO_PIN(GPIO_Pin));
+ 368:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 369:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   GPIOx->BSRR = GPIO_Pin;
+ 493              		.loc 1 369 0
+ 494 0160 8161     		str	r1, [r0, #24]	@ GPIO_Pin, GPIOx_4(D)->BSRR
+ 370:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** }
+ 495              		.loc 1 370 0
+ 496              		@ sp needed	@
+ 497 0162 7047     		bx	lr
+ 498              		.cfi_endproc
+ 499              	.LFE40:
+ 500              		.size	GPIO_SetBits, .-GPIO_SetBits
+ 501              		.align	1
+ 502              		.global	GPIO_ResetBits
+ 503              		.code	16
+ 504              		.thumb_func
+ 505              		.type	GPIO_ResetBits, %function
+ 506              	GPIO_ResetBits:
+ 507              	.LFB41:
+ 371:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 372:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** /**
+ 373:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @brief  Clears the selected data port bits.
+ 374:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @param  GPIOx: where x can be (A, B, C, D or F) to select the GPIO peripheral.
+ 375:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @param  GPIO_Pin: specifies the port bits to be written.
+ 376:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @note   This parameter can be GPIO_Pin_x where x can be: (0..15) for GPIOA, 
+ 377:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *         GPIOB or GPIOC,(0..2) for GPIOD and(0..3) for GPIOF.
+ 378:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @retval None
+ 379:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   */
+ 380:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** void GPIO_ResetBits(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin)
+ 381:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** {
+ 508              		.loc 1 381 0
+ 509              		.cfi_startproc
+ 510              	.LVL36:
+ 382:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   /* Check the parameters */
+ 383:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+ 384:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   assert_param(IS_GPIO_PIN(GPIO_Pin));
+ 385:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 386:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   GPIOx->BRR = GPIO_Pin;
+ 511              		.loc 1 386 0
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 17
+
+
+ 512 0164 0185     		strh	r1, [r0, #40]	@ GPIO_Pin, GPIOx_2(D)->BRR
+ 387:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** }
+ 513              		.loc 1 387 0
+ 514              		@ sp needed	@
+ 515 0166 7047     		bx	lr
+ 516              		.cfi_endproc
+ 517              	.LFE41:
+ 518              		.size	GPIO_ResetBits, .-GPIO_ResetBits
+ 519              		.align	1
+ 520              		.global	GPIO_WriteBit
+ 521              		.code	16
+ 522              		.thumb_func
+ 523              		.type	GPIO_WriteBit, %function
+ 524              	GPIO_WriteBit:
+ 525              	.LFB42:
+ 388:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 389:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** /**
+ 390:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @brief  Sets or clears the selected data port bit.
+ 391:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @param  GPIOx: where x can be (A, B, C, D or F) to select the GPIO peripheral.
+ 392:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @param  GPIO_Pin: specifies the port bit to be written.
+ 393:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @param  BitVal: specifies the value to be written to the selected bit.
+ 394:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *   This parameter can be one of the BitAction enumeration values:
+ 395:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *     @arg Bit_RESET: to clear the port pin
+ 396:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *     @arg Bit_SET: to set the port pin
+ 397:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @note   The GPIO_Pin parameter can be GPIO_Pin_x where x can be: (0..15) for GPIOA, 
+ 398:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *         GPIOB or GPIOC,(0..2) for GPIOD and(0..3) for GPIOF.  
+ 399:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @retval None
+ 400:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   */
+ 401:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** void GPIO_WriteBit(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, BitAction BitVal)
+ 402:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** {
+ 526              		.loc 1 402 0
+ 527              		.cfi_startproc
+ 528              	.LVL37:
+ 403:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   /* Check the parameters */
+ 404:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+ 405:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   assert_param(IS_GET_GPIO_PIN(GPIO_Pin));
+ 406:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   assert_param(IS_GPIO_BIT_ACTION(BitVal));
+ 407:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 408:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   if (BitVal != Bit_RESET)
+ 529              		.loc 1 408 0
+ 530 0168 002A     		cmp	r2, #0	@ BitVal,
+ 531 016a 01D0     		beq	.L27	@,
+ 409:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   {
+ 410:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****     GPIOx->BSRR = GPIO_Pin;
+ 532              		.loc 1 410 0
+ 533 016c 8161     		str	r1, [r0, #24]	@ GPIO_Pin, GPIOx_6(D)->BSRR
+ 534 016e 00E0     		b	.L26	@
+ 535              	.L27:
+ 411:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   }
+ 412:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   else
+ 413:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   {
+ 414:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****     GPIOx->BRR = GPIO_Pin ;
+ 536              		.loc 1 414 0
+ 537 0170 0185     		strh	r1, [r0, #40]	@ GPIO_Pin, GPIOx_6(D)->BRR
+ 538              	.L26:
+ 415:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   }
+ 416:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** }
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 18
+
+
+ 539              		.loc 1 416 0
+ 540              		@ sp needed	@
+ 541 0172 7047     		bx	lr
+ 542              		.cfi_endproc
+ 543              	.LFE42:
+ 544              		.size	GPIO_WriteBit, .-GPIO_WriteBit
+ 545              		.align	1
+ 546              		.global	GPIO_Write
+ 547              		.code	16
+ 548              		.thumb_func
+ 549              		.type	GPIO_Write, %function
+ 550              	GPIO_Write:
+ 551              	.LFB43:
+ 417:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 418:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** /**
+ 419:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @brief  Writes data to the specified GPIO data port.
+ 420:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @param  GPIOx: where x can be (A, B, C, D or F) to select the GPIO peripheral.
+ 421:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @param  PortVal: specifies the value to be written to the port output data 
+ 422:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *                  register.
+ 423:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @retval None
+ 424:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   */
+ 425:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** void GPIO_Write(GPIO_TypeDef* GPIOx, uint16_t PortVal)
+ 426:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** {
+ 552              		.loc 1 426 0
+ 553              		.cfi_startproc
+ 554              	.LVL38:
+ 427:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   /* Check the parameters */
+ 428:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   assert_param(IS_GPIO_ALL_PERIPH(GPIOx));
+ 429:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 430:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   GPIOx->ODR = PortVal;
+ 555              		.loc 1 430 0
+ 556 0174 8182     		strh	r1, [r0, #20]	@ PortVal, GPIOx_2(D)->ODR
+ 431:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** }
+ 557              		.loc 1 431 0
+ 558              		@ sp needed	@
+ 559 0176 7047     		bx	lr
+ 560              		.cfi_endproc
+ 561              	.LFE43:
+ 562              		.size	GPIO_Write, .-GPIO_Write
+ 563              		.align	1
+ 564              		.global	GPIO_PinAFConfig
+ 565              		.code	16
+ 566              		.thumb_func
+ 567              		.type	GPIO_PinAFConfig, %function
+ 568              	GPIO_PinAFConfig:
+ 569              	.LFB44:
+ 432:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 433:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** /**
+ 434:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @}
+ 435:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   */
+ 436:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 437:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** /** @defgroup GPIO_Group3 GPIO Alternate functions configuration functions
+ 438:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****  *  @brief   GPIO Alternate functions configuration functions
+ 439:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****  *
+ 440:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** @verbatim   
+ 441:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****  ===============================================================================
+ 442:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****           ##### GPIO Alternate functions configuration functions #####
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 19
+
+
+ 443:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****  ===============================================================================  
+ 444:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 445:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** @endverbatim
+ 446:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @{
+ 447:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   */
+ 448:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 449:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** /**
+ 450:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @brief  Writes data to the specified GPIO data port.
+ 451:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @param  GPIOx: where x can be (A or B) to select the GPIO peripheral.
+ 452:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @param  GPIO_PinSource: specifies the pin for the Alternate function.
+ 453:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *   This parameter can be GPIO_PinSourcex where x can be (0..15).
+ 454:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   * @param  GPIO_AF: selects the pin to used as Alternate function.
+ 455:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   *   This parameter can be one of the following value:
+ 456:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****  *     @arg GPIO_AF_0:WKUP, EVENTOUT, TIM15, SPI1, TIM17,MCO, SWDAT, SWCLK, TIM14,
+ 457:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****  *                    BOOT,USART1, CEC, IR_OUT, SPI2 
+ 458:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****  *     @arg GPIO_AF_1:USART2, CEC, Tim3, USART1, USART2,EVENTOUT, I2C1, I2C2, TIM15 
+ 459:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****  *     @arg GPIO_AF_2:TIM2, TIM1, EVENTOUT, TIM16, TIM17.
+ 460:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****  *     @arg GPIO_AF_3:TS, I2C1, TIM15, EVENTOUT 
+ 461:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****  *     @arg GPIO_AF_4:TIM14.
+ 462:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****  *     @arg GPIO_AF_5:TIM16, TIM17.
+ 463:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****  *     @arg GPIO_AF_6:EVENTOUT.
+ 464:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****  *     @arg GPIO_AF_7:COMP1 OUT, COMP2 OUT 
+ 465:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****  * @note  The pin should already been configured in Alternate Function mode(AF)
+ 466:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****  *        using GPIO_InitStruct->GPIO_Mode = GPIO_Mode_AF
+ 467:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****  * @note  Refer to the Alternate function mapping table in the device datasheet 
+ 468:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****  *        for the detailed mapping of the system and peripherals'alternate 
+ 469:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****  *        function I/O pins.
+ 470:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****  * @retval None
+ 471:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****  */
+ 472:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** void GPIO_PinAFConfig(GPIO_TypeDef* GPIOx, uint16_t GPIO_PinSource, uint8_t GPIO_AF)
+ 473:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** {
+ 570              		.loc 1 473 0
+ 571              		.cfi_startproc
+ 572              	.LVL39:
+ 474:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   uint32_t temp = 0x00;
+ 475:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   uint32_t temp_2 = 0x00;
+ 476:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 477:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   /* Check the parameters */
+ 478:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   assert_param(IS_GPIO_LIST_PERIPH(GPIOx));
+ 479:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   assert_param(IS_GPIO_PIN_SOURCE(GPIO_PinSource));
+ 480:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   assert_param(IS_GPIO_AF(GPIO_AF));
+ 481:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** 
+ 482:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   temp = ((uint32_t)(GPIO_AF) << ((uint32_t)((uint32_t)GPIO_PinSource & (uint32_t)0x07) * 4));
+ 573              		.loc 1 482 0
+ 574 0178 0723     		mov	r3, #7	@ tmp130,
+ 575 017a 0B40     		and	r3, r1	@ D.5012, GPIO_PinSource
+ 576 017c C908     		lsr	r1, r1, #3	@ D.5015, GPIO_PinSource,
+ 577              	.LVL40:
+ 578 017e 8900     		lsl	r1, r1, #2	@ D.5015, D.5015,
+ 579 0180 4018     		add	r0, r0, r1	@ D.5016, GPIOx, D.5015
+ 580              	.LVL41:
+ 473:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** {
+ 581              		.loc 1 473 0
+ 582 0182 10B5     		push	{r4, lr}	@
+ 583              	.LCFI3:
+ 584              		.cfi_def_cfa_offset 8
+ 585              		.cfi_offset 4, -8
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 20
+
+
+ 586              		.cfi_offset 14, -4
+ 483:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   GPIOx->AFR[GPIO_PinSource >> 0x03] &= ~((uint32_t)0xF << ((uint32_t)((uint32_t)GPIO_PinSource & (
+ 587              		.loc 1 483 0
+ 588 0184 016A     		ldr	r1, [r0, #32]	@ D.5012, MEM[(struct GPIO_TypeDef *)_23 + 32B]
+ 482:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   temp = ((uint32_t)(GPIO_AF) << ((uint32_t)((uint32_t)GPIO_PinSource & (uint32_t)0x07) * 4));
+ 589              		.loc 1 482 0
+ 590 0186 9B00     		lsl	r3, r3, #2	@ D.5013, D.5012,
+ 591              	.LVL42:
+ 592              		.loc 1 483 0
+ 593 0188 0F24     		mov	r4, #15	@ tmp136,
+ 594 018a 9C40     		lsl	r4, r4, r3	@ D.5012, tmp136, D.5013
+ 595 018c A143     		bic	r1, r4	@ D.5012, D.5012
+ 596 018e 0162     		str	r1, [r0, #32]	@ D.5012, MEM[(struct GPIO_TypeDef *)_23 + 32B]
+ 484:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   temp_2 = GPIOx->AFR[GPIO_PinSource >> 0x03] | temp;
+ 597              		.loc 1 484 0
+ 598 0190 016A     		ldr	r1, [r0, #32]	@ D.5012, MEM[(struct GPIO_TypeDef *)_23 + 32B]
+ 482:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   temp = ((uint32_t)(GPIO_AF) << ((uint32_t)((uint32_t)GPIO_PinSource & (uint32_t)0x07) * 4));
+ 599              		.loc 1 482 0
+ 600 0192 9A40     		lsl	r2, r2, r3	@ GPIO_AF, GPIO_AF, D.5013
+ 601              	.LVL43:
+ 602 0194 131C     		mov	r3, r2	@ temp, GPIO_AF
+ 603              		.loc 1 484 0
+ 604 0196 0B43     		orr	r3, r1	@ temp_2, D.5012
+ 605              	.LVL44:
+ 485:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c ****   GPIOx->AFR[GPIO_PinSource >> 0x03] = temp_2;
+ 606              		.loc 1 485 0
+ 607 0198 0362     		str	r3, [r0, #32]	@ temp_2, MEM[(struct GPIO_TypeDef *)_23 + 32B]
+ 486:..\..\STM32F0-Discovery_FW_V1.0.0\Libraries\STM32F0xx_StdPeriph_Driver\src/stm32f0xx_gpio.c **** }
+ 608              		.loc 1 486 0
+ 609              		@ sp needed	@
+ 610 019a 10BD     		pop	{r4, pc}
+ 611              		.cfi_endproc
+ 612              	.LFE44:
+ 613              		.size	GPIO_PinAFConfig, .-GPIO_PinAFConfig
+ 614              	.Letext0:
+ 615              		.file 2 "c:\\program files (x86)\\gnu tools arm embedded\\4.8 2013q4\\arm-none-eabi\\include\\stdi
+ 616              		.file 3 "..\\..\\STM32F0-Discovery_FW_V1.0.0\\Libraries\\CMSIS\\ST\\STM32F0xx\\Include/stm32f0xx.h
+ 617              		.file 4 "..\\..\\STM32F0-Discovery_FW_V1.0.0\\Libraries\\STM32F0xx_StdPeriph_Driver\\inc/stm32f0xx
+ 618              		.file 5 "..\\..\\STM32F0-Discovery_FW_V1.0.0\\Libraries\\STM32F0xx_StdPeriph_Driver\\inc/stm32f0xx
+ 619              		.section	.debug_info,"",%progbits
+ 620              	.Ldebug_info0:
+ 621 0000 C0060000 		.4byte	0x6c0
+ 622 0004 0200     		.2byte	0x2
+ 623 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 624 000a 04       		.byte	0x4
+ 625 000b 01       		.uleb128 0x1
+ 626 000c CD000000 		.4byte	.LASF76
+ 627 0010 01       		.byte	0x1
+ 628 0011 26030000 		.4byte	.LASF77
+ 629 0015 63040000 		.4byte	.LASF78
+ 630 0019 00000000 		.4byte	.Ltext0
+ 631 001d 9C010000 		.4byte	.Letext0
+ 632 0021 00000000 		.4byte	.Ldebug_line0
+ 633 0025 02       		.uleb128 0x2
+ 634 0026 01       		.byte	0x1
+ 635 0027 06       		.byte	0x6
+ 636 0028 96000000 		.4byte	.LASF0
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 21
+
+
+ 637 002c 03       		.uleb128 0x3
+ 638 002d 44040000 		.4byte	.LASF3
+ 639 0031 02       		.byte	0x2
+ 640 0032 2A       		.byte	0x2a
+ 641 0033 37000000 		.4byte	0x37
+ 642 0037 02       		.uleb128 0x2
+ 643 0038 01       		.byte	0x1
+ 644 0039 08       		.byte	0x8
+ 645 003a 08030000 		.4byte	.LASF1
+ 646 003e 02       		.uleb128 0x2
+ 647 003f 02       		.byte	0x2
+ 648 0040 05       		.byte	0x5
+ 649 0041 16030000 		.4byte	.LASF2
+ 650 0045 03       		.uleb128 0x3
+ 651 0046 C4000000 		.4byte	.LASF4
+ 652 004a 02       		.byte	0x2
+ 653 004b 36       		.byte	0x36
+ 654 004c 50000000 		.4byte	0x50
+ 655 0050 02       		.uleb128 0x2
+ 656 0051 02       		.byte	0x2
+ 657 0052 07       		.byte	0x7
+ 658 0053 0B020000 		.4byte	.LASF5
+ 659 0057 02       		.uleb128 0x2
+ 660 0058 04       		.byte	0x4
+ 661 0059 05       		.byte	0x5
+ 662 005a B4000000 		.4byte	.LASF6
+ 663 005e 03       		.uleb128 0x3
+ 664 005f 82030000 		.4byte	.LASF7
+ 665 0063 02       		.byte	0x2
+ 666 0064 50       		.byte	0x50
+ 667 0065 69000000 		.4byte	0x69
+ 668 0069 02       		.uleb128 0x2
+ 669 006a 04       		.byte	0x4
+ 670 006b 07       		.byte	0x7
+ 671 006c DD010000 		.4byte	.LASF8
+ 672 0070 02       		.uleb128 0x2
+ 673 0071 08       		.byte	0x8
+ 674 0072 05       		.byte	0x5
+ 675 0073 88000000 		.4byte	.LASF9
+ 676 0077 02       		.uleb128 0x2
+ 677 0078 08       		.byte	0x8
+ 678 0079 07       		.byte	0x7
+ 679 007a 3B000000 		.4byte	.LASF10
+ 680 007e 04       		.uleb128 0x4
+ 681 007f 04       		.byte	0x4
+ 682 0080 05       		.byte	0x5
+ 683 0081 696E7400 		.ascii	"int\000"
+ 684 0085 02       		.uleb128 0x2
+ 685 0086 04       		.byte	0x4
+ 686 0087 07       		.byte	0x7
+ 687 0088 C0010000 		.4byte	.LASF11
+ 688 008c 02       		.uleb128 0x2
+ 689 008d 04       		.byte	0x4
+ 690 008e 07       		.byte	0x7
+ 691 008f 74020000 		.4byte	.LASF12
+ 692 0093 05       		.uleb128 0x5
+ 693 0094 5E000000 		.4byte	0x5e
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 22
+
+
+ 694 0098 06       		.uleb128 0x6
+ 695 0099 5E000000 		.4byte	0x5e
+ 696 009d A8000000 		.4byte	0xa8
+ 697 00a1 07       		.uleb128 0x7
+ 698 00a2 8C000000 		.4byte	0x8c
+ 699 00a6 01       		.byte	0x1
+ 700 00a7 00       		.byte	0
+ 701 00a8 08       		.uleb128 0x8
+ 702 00a9 01       		.byte	0x1
+ 703 00aa 03       		.byte	0x3
+ 704 00ab E1       		.byte	0xe1
+ 705 00ac BD000000 		.4byte	0xbd
+ 706 00b0 09       		.uleb128 0x9
+ 707 00b1 2D000000 		.4byte	.LASF13
+ 708 00b5 00       		.sleb128 0
+ 709 00b6 09       		.uleb128 0x9
+ 710 00b7 BD000000 		.4byte	.LASF14
+ 711 00bb 01       		.sleb128 1
+ 712 00bc 00       		.byte	0
+ 713 00bd 03       		.uleb128 0x3
+ 714 00be B0020000 		.4byte	.LASF15
+ 715 00c2 03       		.byte	0x3
+ 716 00c3 E1       		.byte	0xe1
+ 717 00c4 A8000000 		.4byte	0xa8
+ 718 00c8 05       		.uleb128 0x5
+ 719 00c9 45000000 		.4byte	0x45
+ 720 00cd 0A       		.uleb128 0xa
+ 721 00ce 2C       		.byte	0x2c
+ 722 00cf 03       		.byte	0x3
+ 723 00d0 8C01     		.2byte	0x18c
+ 724 00d2 A9010000 		.4byte	0x1a9
+ 725 00d6 0B       		.uleb128 0xb
+ 726 00d7 35000000 		.4byte	.LASF16
+ 727 00db 03       		.byte	0x3
+ 728 00dc 8E01     		.2byte	0x18e
+ 729 00de 93000000 		.4byte	0x93
+ 730 00e2 02       		.byte	0x2
+ 731 00e3 23       		.byte	0x23
+ 732 00e4 00       		.uleb128 0
+ 733 00e5 0B       		.uleb128 0xb
+ 734 00e6 18000000 		.4byte	.LASF17
+ 735 00ea 03       		.byte	0x3
+ 736 00eb 8F01     		.2byte	0x18f
+ 737 00ed C8000000 		.4byte	0xc8
+ 738 00f1 02       		.byte	0x2
+ 739 00f2 23       		.byte	0x23
+ 740 00f3 04       		.uleb128 0x4
+ 741 00f4 0B       		.uleb128 0xb
+ 742 00f5 E0020000 		.4byte	.LASF18
+ 743 00f9 03       		.byte	0x3
+ 744 00fa 9001     		.2byte	0x190
+ 745 00fc 45000000 		.4byte	0x45
+ 746 0100 02       		.byte	0x2
+ 747 0101 23       		.byte	0x23
+ 748 0102 06       		.uleb128 0x6
+ 749 0103 0B       		.uleb128 0xb
+ 750 0104 63010000 		.4byte	.LASF19
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 23
+
+
+ 751 0108 03       		.byte	0x3
+ 752 0109 9101     		.2byte	0x191
+ 753 010b 93000000 		.4byte	0x93
+ 754 010f 02       		.byte	0x2
+ 755 0110 23       		.byte	0x23
+ 756 0111 08       		.uleb128 0x8
+ 757 0112 0B       		.uleb128 0xb
+ 758 0113 00000000 		.4byte	.LASF20
+ 759 0117 03       		.byte	0x3
+ 760 0118 9201     		.2byte	0x192
+ 761 011a 93000000 		.4byte	0x93
+ 762 011e 02       		.byte	0x2
+ 763 011f 23       		.byte	0x23
+ 764 0120 0C       		.uleb128 0xc
+ 765 0121 0C       		.uleb128 0xc
+ 766 0122 49445200 		.ascii	"IDR\000"
+ 767 0126 03       		.byte	0x3
+ 768 0127 9301     		.2byte	0x193
+ 769 0129 C8000000 		.4byte	0xc8
+ 770 012d 02       		.byte	0x2
+ 771 012e 23       		.byte	0x23
+ 772 012f 10       		.uleb128 0x10
+ 773 0130 0B       		.uleb128 0xb
+ 774 0131 EA020000 		.4byte	.LASF21
+ 775 0135 03       		.byte	0x3
+ 776 0136 9401     		.2byte	0x194
+ 777 0138 45000000 		.4byte	0x45
+ 778 013c 02       		.byte	0x2
+ 779 013d 23       		.byte	0x23
+ 780 013e 12       		.uleb128 0x12
+ 781 013f 0C       		.uleb128 0xc
+ 782 0140 4F445200 		.ascii	"ODR\000"
+ 783 0144 03       		.byte	0x3
+ 784 0145 9501     		.2byte	0x195
+ 785 0147 C8000000 		.4byte	0xc8
+ 786 014b 02       		.byte	0x2
+ 787 014c 23       		.byte	0x23
+ 788 014d 14       		.uleb128 0x14
+ 789 014e 0B       		.uleb128 0xb
+ 790 014f F4020000 		.4byte	.LASF22
+ 791 0153 03       		.byte	0x3
+ 792 0154 9601     		.2byte	0x196
+ 793 0156 45000000 		.4byte	0x45
+ 794 015a 02       		.byte	0x2
+ 795 015b 23       		.byte	0x23
+ 796 015c 16       		.uleb128 0x16
+ 797 015d 0B       		.uleb128 0xb
+ 798 015e A2000000 		.4byte	.LASF23
+ 799 0162 03       		.byte	0x3
+ 800 0163 9701     		.2byte	0x197
+ 801 0165 93000000 		.4byte	0x93
+ 802 0169 02       		.byte	0x2
+ 803 016a 23       		.byte	0x23
+ 804 016b 18       		.uleb128 0x18
+ 805 016c 0B       		.uleb128 0xb
+ 806 016d 06000000 		.4byte	.LASF24
+ 807 0171 03       		.byte	0x3
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 24
+
+
+ 808 0172 9801     		.2byte	0x198
+ 809 0174 93000000 		.4byte	0x93
+ 810 0178 02       		.byte	0x2
+ 811 0179 23       		.byte	0x23
+ 812 017a 1C       		.uleb128 0x1c
+ 813 017b 0C       		.uleb128 0xc
+ 814 017c 41465200 		.ascii	"AFR\000"
+ 815 0180 03       		.byte	0x3
+ 816 0181 9901     		.2byte	0x199
+ 817 0183 A9010000 		.4byte	0x1a9
+ 818 0187 02       		.byte	0x2
+ 819 0188 23       		.byte	0x23
+ 820 0189 20       		.uleb128 0x20
+ 821 018a 0C       		.uleb128 0xc
+ 822 018b 42525200 		.ascii	"BRR\000"
+ 823 018f 03       		.byte	0x3
+ 824 0190 9A01     		.2byte	0x19a
+ 825 0192 C8000000 		.4byte	0xc8
+ 826 0196 02       		.byte	0x2
+ 827 0197 23       		.byte	0x23
+ 828 0198 28       		.uleb128 0x28
+ 829 0199 0B       		.uleb128 0xb
+ 830 019a FE020000 		.4byte	.LASF25
+ 831 019e 03       		.byte	0x3
+ 832 019f 9B01     		.2byte	0x19b
+ 833 01a1 45000000 		.4byte	0x45
+ 834 01a5 02       		.byte	0x2
+ 835 01a6 23       		.byte	0x23
+ 836 01a7 2A       		.uleb128 0x2a
+ 837 01a8 00       		.byte	0
+ 838 01a9 05       		.uleb128 0x5
+ 839 01aa 98000000 		.4byte	0x98
+ 840 01ae 0D       		.uleb128 0xd
+ 841 01af EF010000 		.4byte	.LASF26
+ 842 01b3 03       		.byte	0x3
+ 843 01b4 9C01     		.2byte	0x19c
+ 844 01b6 CD000000 		.4byte	0xcd
+ 845 01ba 08       		.uleb128 0x8
+ 846 01bb 01       		.byte	0x1
+ 847 01bc 04       		.byte	0x4
+ 848 01bd 3E       		.byte	0x3e
+ 849 01be DB010000 		.4byte	0x1db
+ 850 01c2 09       		.uleb128 0x9
+ 851 01c3 A7000000 		.4byte	.LASF27
+ 852 01c7 00       		.sleb128 0
+ 853 01c8 09       		.uleb128 0x9
+ 854 01c9 AF040000 		.4byte	.LASF28
+ 855 01cd 01       		.sleb128 1
+ 856 01ce 09       		.uleb128 0x9
+ 857 01cf 52000000 		.4byte	.LASF29
+ 858 01d3 02       		.sleb128 2
+ 859 01d4 09       		.uleb128 0x9
+ 860 01d5 6A000000 		.4byte	.LASF30
+ 861 01d9 03       		.sleb128 3
+ 862 01da 00       		.byte	0
+ 863 01db 03       		.uleb128 0x3
+ 864 01dc 91040000 		.4byte	.LASF31
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 25
+
+
+ 865 01e0 04       		.byte	0x4
+ 866 01e1 43       		.byte	0x43
+ 867 01e2 BA010000 		.4byte	0x1ba
+ 868 01e6 08       		.uleb128 0x8
+ 869 01e7 01       		.byte	0x1
+ 870 01e8 04       		.byte	0x4
+ 871 01e9 4F       		.byte	0x4f
+ 872 01ea FB010000 		.4byte	0x1fb
+ 873 01ee 09       		.uleb128 0x9
+ 874 01ef 1F000000 		.4byte	.LASF32
+ 875 01f3 00       		.sleb128 0
+ 876 01f4 09       		.uleb128 0x9
+ 877 01f5 10040000 		.4byte	.LASF33
+ 878 01f9 01       		.sleb128 1
+ 879 01fa 00       		.byte	0
+ 880 01fb 03       		.uleb128 0x3
+ 881 01fc 51010000 		.4byte	.LASF34
+ 882 0200 04       		.byte	0x4
+ 883 0201 52       		.byte	0x52
+ 884 0202 E6010000 		.4byte	0x1e6
+ 885 0206 08       		.uleb128 0x8
+ 886 0207 01       		.byte	0x1
+ 887 0208 04       		.byte	0x4
+ 888 0209 5E       		.byte	0x5e
+ 889 020a 21020000 		.4byte	0x221
+ 890 020e 09       		.uleb128 0x9
+ 891 020f A1030000 		.4byte	.LASF35
+ 892 0213 01       		.sleb128 1
+ 893 0214 09       		.uleb128 0x9
+ 894 0215 B4030000 		.4byte	.LASF36
+ 895 0219 02       		.sleb128 2
+ 896 021a 09       		.uleb128 0x9
+ 897 021b C7030000 		.4byte	.LASF37
+ 898 021f 03       		.sleb128 3
+ 899 0220 00       		.byte	0
+ 900 0221 03       		.uleb128 0x3
+ 901 0222 A0010000 		.4byte	.LASF38
+ 902 0226 04       		.byte	0x4
+ 903 0227 62       		.byte	0x62
+ 904 0228 06020000 		.4byte	0x206
+ 905 022c 08       		.uleb128 0x8
+ 906 022d 01       		.byte	0x1
+ 907 022e 04       		.byte	0x4
+ 908 022f 6E       		.byte	0x6e
+ 909 0230 47020000 		.4byte	0x247
+ 910 0234 09       		.uleb128 0x9
+ 911 0235 52020000 		.4byte	.LASF39
+ 912 0239 00       		.sleb128 0
+ 913 023a 09       		.uleb128 0x9
+ 914 023b 0B000000 		.4byte	.LASF40
+ 915 023f 01       		.sleb128 1
+ 916 0240 09       		.uleb128 0x9
+ 917 0241 4C040000 		.4byte	.LASF41
+ 918 0245 02       		.sleb128 2
+ 919 0246 00       		.byte	0
+ 920 0247 03       		.uleb128 0x3
+ 921 0248 2E020000 		.4byte	.LASF42
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 26
+
+
+ 922 024c 04       		.byte	0x4
+ 923 024d 72       		.byte	0x72
+ 924 024e 2C020000 		.4byte	0x22c
+ 925 0252 08       		.uleb128 0x8
+ 926 0253 01       		.byte	0x1
+ 927 0254 04       		.byte	0x4
+ 928 0255 7E       		.byte	0x7e
+ 929 0256 67020000 		.4byte	0x267
+ 930 025a 09       		.uleb128 0x9
+ 931 025b C0020000 		.4byte	.LASF43
+ 932 025f 00       		.sleb128 0
+ 933 0260 09       		.uleb128 0x9
+ 934 0261 4A020000 		.4byte	.LASF44
+ 935 0265 01       		.sleb128 1
+ 936 0266 00       		.byte	0
+ 937 0267 03       		.uleb128 0x3
+ 938 0268 96010000 		.4byte	.LASF45
+ 939 026c 04       		.byte	0x4
+ 940 026d 81       		.byte	0x81
+ 941 026e 52020000 		.4byte	0x252
+ 942 0272 0E       		.uleb128 0xe
+ 943 0273 08       		.byte	0x8
+ 944 0274 04       		.byte	0x4
+ 945 0275 8B       		.byte	0x8b
+ 946 0276 C1020000 		.4byte	0x2c1
+ 947 027a 0F       		.uleb128 0xf
+ 948 027b B2010000 		.4byte	.LASF46
+ 949 027f 04       		.byte	0x4
+ 950 0280 8D       		.byte	0x8d
+ 951 0281 5E000000 		.4byte	0x5e
+ 952 0285 02       		.byte	0x2
+ 953 0286 23       		.byte	0x23
+ 954 0287 00       		.uleb128 0
+ 955 0288 0F       		.uleb128 0xf
+ 956 0289 F0030000 		.4byte	.LASF47
+ 957 028d 04       		.byte	0x4
+ 958 028e 90       		.byte	0x90
+ 959 028f DB010000 		.4byte	0x1db
+ 960 0293 02       		.byte	0x2
+ 961 0294 23       		.byte	0x23
+ 962 0295 04       		.uleb128 0x4
+ 963 0296 0F       		.uleb128 0xf
+ 964 0297 5F000000 		.4byte	.LASF48
+ 965 029b 04       		.byte	0x4
+ 966 029c 93       		.byte	0x93
+ 967 029d 21020000 		.4byte	0x221
+ 968 02a1 02       		.byte	0x2
+ 969 02a2 23       		.byte	0x23
+ 970 02a3 05       		.uleb128 0x5
+ 971 02a4 0F       		.uleb128 0xf
+ 972 02a5 7D020000 		.4byte	.LASF49
+ 973 02a9 04       		.byte	0x4
+ 974 02aa 96       		.byte	0x96
+ 975 02ab FB010000 		.4byte	0x1fb
+ 976 02af 02       		.byte	0x2
+ 977 02b0 23       		.byte	0x23
+ 978 02b1 06       		.uleb128 0x6
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 27
+
+
+ 979 02b2 0F       		.uleb128 0xf
+ 980 02b3 8B030000 		.4byte	.LASF50
+ 981 02b7 04       		.byte	0x4
+ 982 02b8 99       		.byte	0x99
+ 983 02b9 47020000 		.4byte	0x247
+ 984 02bd 02       		.byte	0x2
+ 985 02be 23       		.byte	0x23
+ 986 02bf 07       		.uleb128 0x7
+ 987 02c0 00       		.byte	0
+ 988 02c1 03       		.uleb128 0x3
+ 989 02c2 9F020000 		.4byte	.LASF51
+ 990 02c6 04       		.byte	0x4
+ 991 02c7 9B       		.byte	0x9b
+ 992 02c8 72020000 		.4byte	0x272
+ 993 02cc 10       		.uleb128 0x10
+ 994 02cd 01       		.byte	0x1
+ 995 02ce 95030000 		.4byte	.LASF52
+ 996 02d2 01       		.byte	0x1
+ 997 02d3 75       		.byte	0x75
+ 998 02d4 01       		.byte	0x1
+ 999 02d5 00000000 		.4byte	.LFB32
+ 1000 02d9 88000000 		.4byte	.LFE32
+ 1001 02dd 00000000 		.4byte	.LLST0
+ 1002 02e1 01       		.byte	0x1
+ 1003 02e2 87030000 		.4byte	0x387
+ 1004 02e6 11       		.uleb128 0x11
+ 1005 02e7 20030000 		.4byte	.LASF54
+ 1006 02eb 01       		.byte	0x1
+ 1007 02ec 75       		.byte	0x75
+ 1008 02ed 87030000 		.4byte	0x387
+ 1009 02f1 20000000 		.4byte	.LLST1
+ 1010 02f5 12       		.uleb128 0x12
+ 1011 02f6 14000000 		.4byte	.LVL2
+ 1012 02fa AD060000 		.4byte	0x6ad
+ 1013 02fe 0F030000 		.4byte	0x30f
+ 1014 0302 13       		.uleb128 0x13
+ 1015 0303 01       		.byte	0x1
+ 1016 0304 51       		.byte	0x51
+ 1017 0305 01       		.byte	0x1
+ 1018 0306 31       		.byte	0x31
+ 1019 0307 13       		.uleb128 0x13
+ 1020 0308 01       		.byte	0x1
+ 1021 0309 50       		.byte	0x50
+ 1022 030a 03       		.byte	0x3
+ 1023 030b 40       		.byte	0x40
+ 1024 030c 3D       		.byte	0x3d
+ 1025 030d 24       		.byte	0x24
+ 1026 030e 00       		.byte	0
+ 1027 030f 12       		.uleb128 0x12
+ 1028 0310 2A000000 		.4byte	.LVL5
+ 1029 0314 AD060000 		.4byte	0x6ad
+ 1030 0318 29030000 		.4byte	0x329
+ 1031 031c 13       		.uleb128 0x13
+ 1032 031d 01       		.byte	0x1
+ 1033 031e 51       		.byte	0x51
+ 1034 031f 01       		.byte	0x1
+ 1035 0320 31       		.byte	0x31
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 28
+
+
+ 1036 0321 13       		.uleb128 0x13
+ 1037 0322 01       		.byte	0x1
+ 1038 0323 50       		.byte	0x50
+ 1039 0324 03       		.byte	0x3
+ 1040 0325 40       		.byte	0x40
+ 1041 0326 3E       		.byte	0x3e
+ 1042 0327 24       		.byte	0x24
+ 1043 0328 00       		.byte	0
+ 1044 0329 12       		.uleb128 0x12
+ 1045 032a 40000000 		.4byte	.LVL8
+ 1046 032e AD060000 		.4byte	0x6ad
+ 1047 0332 43030000 		.4byte	0x343
+ 1048 0336 13       		.uleb128 0x13
+ 1049 0337 01       		.byte	0x1
+ 1050 0338 51       		.byte	0x51
+ 1051 0339 01       		.byte	0x1
+ 1052 033a 31       		.byte	0x31
+ 1053 033b 13       		.uleb128 0x13
+ 1054 033c 01       		.byte	0x1
+ 1055 033d 50       		.byte	0x50
+ 1056 033e 03       		.byte	0x3
+ 1057 033f 40       		.byte	0x40
+ 1058 0340 3F       		.byte	0x3f
+ 1059 0341 24       		.byte	0x24
+ 1060 0342 00       		.byte	0
+ 1061 0343 12       		.uleb128 0x12
+ 1062 0344 56000000 		.4byte	.LVL11
+ 1063 0348 AD060000 		.4byte	0x6ad
+ 1064 034c 5D030000 		.4byte	0x35d
+ 1065 0350 13       		.uleb128 0x13
+ 1066 0351 01       		.byte	0x1
+ 1067 0352 51       		.byte	0x51
+ 1068 0353 01       		.byte	0x1
+ 1069 0354 31       		.byte	0x31
+ 1070 0355 13       		.uleb128 0x13
+ 1071 0356 01       		.byte	0x1
+ 1072 0357 50       		.byte	0x50
+ 1073 0358 03       		.byte	0x3
+ 1074 0359 40       		.byte	0x40
+ 1075 035a 40       		.byte	0x40
+ 1076 035b 24       		.byte	0x24
+ 1077 035c 00       		.byte	0
+ 1078 035d 12       		.uleb128 0x12
+ 1079 035e 6C000000 		.4byte	.LVL14
+ 1080 0362 AD060000 		.4byte	0x6ad
+ 1081 0366 77030000 		.4byte	0x377
+ 1082 036a 13       		.uleb128 0x13
+ 1083 036b 01       		.byte	0x1
+ 1084 036c 51       		.byte	0x51
+ 1085 036d 01       		.byte	0x1
+ 1086 036e 31       		.byte	0x31
+ 1087 036f 13       		.uleb128 0x13
+ 1088 0370 01       		.byte	0x1
+ 1089 0371 50       		.byte	0x50
+ 1090 0372 03       		.byte	0x3
+ 1091 0373 40       		.byte	0x40
+ 1092 0374 42       		.byte	0x42
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 29
+
+
+ 1093 0375 24       		.byte	0x24
+ 1094 0376 00       		.byte	0
+ 1095 0377 14       		.uleb128 0x14
+ 1096 0378 76000000 		.4byte	.LVL15
+ 1097 037c AD060000 		.4byte	0x6ad
+ 1098 0380 13       		.uleb128 0x13
+ 1099 0381 01       		.byte	0x1
+ 1100 0382 51       		.byte	0x51
+ 1101 0383 01       		.byte	0x1
+ 1102 0384 30       		.byte	0x30
+ 1103 0385 00       		.byte	0
+ 1104 0386 00       		.byte	0
+ 1105 0387 15       		.uleb128 0x15
+ 1106 0388 04       		.byte	0x4
+ 1107 0389 AE010000 		.4byte	0x1ae
+ 1108 038d 10       		.uleb128 0x10
+ 1109 038e 01       		.byte	0x1
+ 1110 038f 77000000 		.4byte	.LASF53
+ 1111 0393 01       		.byte	0x1
+ 1112 0394 A2       		.byte	0xa2
+ 1113 0395 01       		.byte	0x1
+ 1114 0396 88000000 		.4byte	.LFB33
+ 1115 039a 02010000 		.4byte	.LFE33
+ 1116 039e A5000000 		.4byte	.LLST2
+ 1117 03a2 01       		.byte	0x1
+ 1118 03a3 EF030000 		.4byte	0x3ef
+ 1119 03a7 16       		.uleb128 0x16
+ 1120 03a8 20030000 		.4byte	.LASF54
+ 1121 03ac 01       		.byte	0x1
+ 1122 03ad A2       		.byte	0xa2
+ 1123 03ae 87030000 		.4byte	0x387
+ 1124 03b2 01       		.byte	0x1
+ 1125 03b3 50       		.byte	0x50
+ 1126 03b4 16       		.uleb128 0x16
+ 1127 03b5 CD010000 		.4byte	.LASF55
+ 1128 03b9 01       		.byte	0x1
+ 1129 03ba A2       		.byte	0xa2
+ 1130 03bb EF030000 		.4byte	0x3ef
+ 1131 03bf 01       		.byte	0x1
+ 1132 03c0 51       		.byte	0x51
+ 1133 03c1 17       		.uleb128 0x17
+ 1134 03c2 E9030000 		.4byte	.LASF56
+ 1135 03c6 01       		.byte	0x1
+ 1136 03c7 A4       		.byte	0xa4
+ 1137 03c8 5E000000 		.4byte	0x5e
+ 1138 03cc C5000000 		.4byte	.LLST3
+ 1139 03d0 18       		.uleb128 0x18
+ 1140 03d1 706F7300 		.ascii	"pos\000"
+ 1141 03d5 01       		.byte	0x1
+ 1142 03d6 A4       		.byte	0xa4
+ 1143 03d7 5E000000 		.4byte	0x5e
+ 1144 03db E4000000 		.4byte	.LLST4
+ 1145 03df 17       		.uleb128 0x17
+ 1146 03e0 81010000 		.4byte	.LASF57
+ 1147 03e4 01       		.byte	0x1
+ 1148 03e5 A4       		.byte	0xa4
+ 1149 03e6 5E000000 		.4byte	0x5e
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 30
+
+
+ 1150 03ea 21010000 		.4byte	.LLST5
+ 1151 03ee 00       		.byte	0
+ 1152 03ef 15       		.uleb128 0x15
+ 1153 03f0 04       		.byte	0x4
+ 1154 03f1 C1020000 		.4byte	0x2c1
+ 1155 03f5 19       		.uleb128 0x19
+ 1156 03f6 01       		.byte	0x1
+ 1157 03f7 1E020000 		.4byte	.LASF58
+ 1158 03fb 01       		.byte	0x1
+ 1159 03fc D9       		.byte	0xd9
+ 1160 03fd 01       		.byte	0x1
+ 1161 03fe 02010000 		.4byte	.LFB34
+ 1162 0402 18010000 		.4byte	.LFE34
+ 1163 0406 02       		.byte	0x2
+ 1164 0407 7D       		.byte	0x7d
+ 1165 0408 00       		.sleb128 0
+ 1166 0409 01       		.byte	0x1
+ 1167 040a 1C040000 		.4byte	0x41c
+ 1168 040e 16       		.uleb128 0x16
+ 1169 040f CD010000 		.4byte	.LASF55
+ 1170 0413 01       		.byte	0x1
+ 1171 0414 D9       		.byte	0xd9
+ 1172 0415 EF030000 		.4byte	0x3ef
+ 1173 0419 01       		.byte	0x1
+ 1174 041a 50       		.byte	0x50
+ 1175 041b 00       		.byte	0
+ 1176 041c 10       		.uleb128 0x10
+ 1177 041d 01       		.byte	0x1
+ 1178 041e 1E040000 		.4byte	.LASF59
+ 1179 0422 01       		.byte	0x1
+ 1180 0423 EE       		.byte	0xee
+ 1181 0424 01       		.byte	0x1
+ 1182 0425 18010000 		.4byte	.LFB35
+ 1183 0429 3C010000 		.4byte	.LFE35
+ 1184 042d 66010000 		.4byte	.LLST6
+ 1185 0431 01       		.byte	0x1
+ 1186 0432 5F040000 		.4byte	0x45f
+ 1187 0436 16       		.uleb128 0x16
+ 1188 0437 20030000 		.4byte	.LASF54
+ 1189 043b 01       		.byte	0x1
+ 1190 043c EE       		.byte	0xee
+ 1191 043d 87030000 		.4byte	0x387
+ 1192 0441 01       		.byte	0x1
+ 1193 0442 50       		.byte	0x50
+ 1194 0443 16       		.uleb128 0x16
+ 1195 0444 B2010000 		.4byte	.LASF46
+ 1196 0448 01       		.byte	0x1
+ 1197 0449 EE       		.byte	0xee
+ 1198 044a 45000000 		.4byte	0x45
+ 1199 044e 01       		.byte	0x1
+ 1200 044f 51       		.byte	0x51
+ 1201 0450 1A       		.uleb128 0x1a
+ 1202 0451 746D7000 		.ascii	"tmp\000"
+ 1203 0455 01       		.byte	0x1
+ 1204 0456 F0       		.byte	0xf0
+ 1205 0457 93000000 		.4byte	0x93
+ 1206 045b 02       		.byte	0x2
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 31
+
+
+ 1207 045c 91       		.byte	0x91
+ 1208 045d 7C       		.sleb128 -4
+ 1209 045e 00       		.byte	0
+ 1210 045f 1B       		.uleb128 0x1b
+ 1211 0460 01       		.byte	0x1
+ 1212 0461 FA030000 		.4byte	.LASF61
+ 1213 0465 01       		.byte	0x1
+ 1214 0466 1B01     		.2byte	0x11b
+ 1215 0468 01       		.byte	0x1
+ 1216 0469 2C000000 		.4byte	0x2c
+ 1217 046d 3C010000 		.4byte	.LFB36
+ 1218 0471 48010000 		.4byte	.LFE36
+ 1219 0475 02       		.byte	0x2
+ 1220 0476 7D       		.byte	0x7d
+ 1221 0477 00       		.sleb128 0
+ 1222 0478 01       		.byte	0x1
+ 1223 0479 AC040000 		.4byte	0x4ac
+ 1224 047d 1C       		.uleb128 0x1c
+ 1225 047e 20030000 		.4byte	.LASF54
+ 1226 0482 01       		.byte	0x1
+ 1227 0483 1B01     		.2byte	0x11b
+ 1228 0485 87030000 		.4byte	0x387
+ 1229 0489 86010000 		.4byte	.LLST7
+ 1230 048d 1D       		.uleb128 0x1d
+ 1231 048e B2010000 		.4byte	.LASF46
+ 1232 0492 01       		.byte	0x1
+ 1233 0493 1B01     		.2byte	0x11b
+ 1234 0495 45000000 		.4byte	0x45
+ 1235 0499 01       		.byte	0x1
+ 1236 049a 51       		.byte	0x51
+ 1237 049b 1E       		.uleb128 0x1e
+ 1238 049c 8C010000 		.4byte	.LASF60
+ 1239 04a0 01       		.byte	0x1
+ 1240 04a1 1D01     		.2byte	0x11d
+ 1241 04a3 2C000000 		.4byte	0x2c
+ 1242 04a7 A7010000 		.4byte	.LLST8
+ 1243 04ab 00       		.byte	0
+ 1244 04ac 1B       		.uleb128 0x1b
+ 1245 04ad 01       		.byte	0x1
+ 1246 04ae 31040000 		.4byte	.LASF62
+ 1247 04b2 01       		.byte	0x1
+ 1248 04b3 3301     		.2byte	0x133
+ 1249 04b5 01       		.byte	0x1
+ 1250 04b6 45000000 		.4byte	0x45
+ 1251 04ba 48010000 		.4byte	.LFB37
+ 1252 04be 4E010000 		.4byte	.LFE37
+ 1253 04c2 02       		.byte	0x2
+ 1254 04c3 7D       		.byte	0x7d
+ 1255 04c4 00       		.sleb128 0
+ 1256 04c5 01       		.byte	0x1
+ 1257 04c6 DB040000 		.4byte	0x4db
+ 1258 04ca 1C       		.uleb128 0x1c
+ 1259 04cb 20030000 		.4byte	.LASF54
+ 1260 04cf 01       		.byte	0x1
+ 1261 04d0 3301     		.2byte	0x133
+ 1262 04d2 87030000 		.4byte	0x387
+ 1263 04d6 CF010000 		.4byte	.LLST9
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 32
+
+
+ 1264 04da 00       		.byte	0
+ 1265 04db 1B       		.uleb128 0x1b
+ 1266 04dc 01       		.byte	0x1
+ 1267 04dd 88020000 		.4byte	.LASF63
+ 1268 04e1 01       		.byte	0x1
+ 1269 04e2 4301     		.2byte	0x143
+ 1270 04e4 01       		.byte	0x1
+ 1271 04e5 2C000000 		.4byte	0x2c
+ 1272 04e9 4E010000 		.4byte	.LFB38
+ 1273 04ed 5A010000 		.4byte	.LFE38
+ 1274 04f1 02       		.byte	0x2
+ 1275 04f2 7D       		.byte	0x7d
+ 1276 04f3 00       		.sleb128 0
+ 1277 04f4 01       		.byte	0x1
+ 1278 04f5 28050000 		.4byte	0x528
+ 1279 04f9 1C       		.uleb128 0x1c
+ 1280 04fa 20030000 		.4byte	.LASF54
+ 1281 04fe 01       		.byte	0x1
+ 1282 04ff 4301     		.2byte	0x143
+ 1283 0501 87030000 		.4byte	0x387
+ 1284 0505 F0010000 		.4byte	.LLST10
+ 1285 0509 1D       		.uleb128 0x1d
+ 1286 050a B2010000 		.4byte	.LASF46
+ 1287 050e 01       		.byte	0x1
+ 1288 050f 4301     		.2byte	0x143
+ 1289 0511 45000000 		.4byte	0x45
+ 1290 0515 01       		.byte	0x1
+ 1291 0516 51       		.byte	0x51
+ 1292 0517 1E       		.uleb128 0x1e
+ 1293 0518 8C010000 		.4byte	.LASF60
+ 1294 051c 01       		.byte	0x1
+ 1295 051d 4501     		.2byte	0x145
+ 1296 051f 2C000000 		.4byte	0x2c
+ 1297 0523 11020000 		.4byte	.LLST11
+ 1298 0527 00       		.byte	0
+ 1299 0528 1B       		.uleb128 0x1b
+ 1300 0529 01       		.byte	0x1
+ 1301 052a BD040000 		.4byte	.LASF64
+ 1302 052e 01       		.byte	0x1
+ 1303 052f 5B01     		.2byte	0x15b
+ 1304 0531 01       		.byte	0x1
+ 1305 0532 45000000 		.4byte	0x45
+ 1306 0536 5A010000 		.4byte	.LFB39
+ 1307 053a 60010000 		.4byte	.LFE39
+ 1308 053e 02       		.byte	0x2
+ 1309 053f 7D       		.byte	0x7d
+ 1310 0540 00       		.sleb128 0
+ 1311 0541 01       		.byte	0x1
+ 1312 0542 57050000 		.4byte	0x557
+ 1313 0546 1C       		.uleb128 0x1c
+ 1314 0547 20030000 		.4byte	.LASF54
+ 1315 054b 01       		.byte	0x1
+ 1316 054c 5B01     		.2byte	0x15b
+ 1317 054e 87030000 		.4byte	0x387
+ 1318 0552 39020000 		.4byte	.LLST12
+ 1319 0556 00       		.byte	0
+ 1320 0557 1F       		.uleb128 0x1f
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 33
+
+
+ 1321 0558 01       		.byte	0x1
+ 1322 0559 A2040000 		.4byte	.LASF65
+ 1323 055d 01       		.byte	0x1
+ 1324 055e 6B01     		.2byte	0x16b
+ 1325 0560 01       		.byte	0x1
+ 1326 0561 60010000 		.4byte	.LFB40
+ 1327 0565 64010000 		.4byte	.LFE40
+ 1328 0569 02       		.byte	0x2
+ 1329 056a 7D       		.byte	0x7d
+ 1330 056b 00       		.sleb128 0
+ 1331 056c 01       		.byte	0x1
+ 1332 056d 8E050000 		.4byte	0x58e
+ 1333 0571 1D       		.uleb128 0x1d
+ 1334 0572 20030000 		.4byte	.LASF54
+ 1335 0576 01       		.byte	0x1
+ 1336 0577 6B01     		.2byte	0x16b
+ 1337 0579 87030000 		.4byte	0x387
+ 1338 057d 01       		.byte	0x1
+ 1339 057e 50       		.byte	0x50
+ 1340 057f 1D       		.uleb128 0x1d
+ 1341 0580 B2010000 		.4byte	.LASF46
+ 1342 0584 01       		.byte	0x1
+ 1343 0585 6B01     		.2byte	0x16b
+ 1344 0587 45000000 		.4byte	0x45
+ 1345 058b 01       		.byte	0x1
+ 1346 058c 51       		.byte	0x51
+ 1347 058d 00       		.byte	0
+ 1348 058e 1F       		.uleb128 0x1f
+ 1349 058f 01       		.byte	0x1
+ 1350 0590 DA030000 		.4byte	.LASF66
+ 1351 0594 01       		.byte	0x1
+ 1352 0595 7C01     		.2byte	0x17c
+ 1353 0597 01       		.byte	0x1
+ 1354 0598 64010000 		.4byte	.LFB41
+ 1355 059c 68010000 		.4byte	.LFE41
+ 1356 05a0 02       		.byte	0x2
+ 1357 05a1 7D       		.byte	0x7d
+ 1358 05a2 00       		.sleb128 0
+ 1359 05a3 01       		.byte	0x1
+ 1360 05a4 C5050000 		.4byte	0x5c5
+ 1361 05a8 1D       		.uleb128 0x1d
+ 1362 05a9 20030000 		.4byte	.LASF54
+ 1363 05ad 01       		.byte	0x1
+ 1364 05ae 7C01     		.2byte	0x17c
+ 1365 05b0 87030000 		.4byte	0x387
+ 1366 05b4 01       		.byte	0x1
+ 1367 05b5 50       		.byte	0x50
+ 1368 05b6 1D       		.uleb128 0x1d
+ 1369 05b7 B2010000 		.4byte	.LASF46
+ 1370 05bb 01       		.byte	0x1
+ 1371 05bc 7C01     		.2byte	0x17c
+ 1372 05be 45000000 		.4byte	0x45
+ 1373 05c2 01       		.byte	0x1
+ 1374 05c3 51       		.byte	0x51
+ 1375 05c4 00       		.byte	0
+ 1376 05c5 1F       		.uleb128 0x1f
+ 1377 05c6 01       		.byte	0x1
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 34
+
+
+ 1378 05c7 D2020000 		.4byte	.LASF67
+ 1379 05cb 01       		.byte	0x1
+ 1380 05cc 9101     		.2byte	0x191
+ 1381 05ce 01       		.byte	0x1
+ 1382 05cf 68010000 		.4byte	.LFB42
+ 1383 05d3 74010000 		.4byte	.LFE42
+ 1384 05d7 02       		.byte	0x2
+ 1385 05d8 7D       		.byte	0x7d
+ 1386 05d9 00       		.sleb128 0
+ 1387 05da 01       		.byte	0x1
+ 1388 05db 0A060000 		.4byte	0x60a
+ 1389 05df 1D       		.uleb128 0x1d
+ 1390 05e0 20030000 		.4byte	.LASF54
+ 1391 05e4 01       		.byte	0x1
+ 1392 05e5 9101     		.2byte	0x191
+ 1393 05e7 87030000 		.4byte	0x387
+ 1394 05eb 01       		.byte	0x1
+ 1395 05ec 50       		.byte	0x50
+ 1396 05ed 1D       		.uleb128 0x1d
+ 1397 05ee B2010000 		.4byte	.LASF46
+ 1398 05f2 01       		.byte	0x1
+ 1399 05f3 9101     		.2byte	0x191
+ 1400 05f5 45000000 		.4byte	0x45
+ 1401 05f9 01       		.byte	0x1
+ 1402 05fa 51       		.byte	0x51
+ 1403 05fb 1D       		.uleb128 0x1d
+ 1404 05fc 81000000 		.4byte	.LASF68
+ 1405 0600 01       		.byte	0x1
+ 1406 0601 9101     		.2byte	0x191
+ 1407 0603 67020000 		.4byte	0x267
+ 1408 0607 01       		.byte	0x1
+ 1409 0608 52       		.byte	0x52
+ 1410 0609 00       		.byte	0
+ 1411 060a 1F       		.uleb128 0x1f
+ 1412 060b 01       		.byte	0x1
+ 1413 060c 3F020000 		.4byte	.LASF69
+ 1414 0610 01       		.byte	0x1
+ 1415 0611 A901     		.2byte	0x1a9
+ 1416 0613 01       		.byte	0x1
+ 1417 0614 74010000 		.4byte	.LFB43
+ 1418 0618 78010000 		.4byte	.LFE43
+ 1419 061c 02       		.byte	0x2
+ 1420 061d 7D       		.byte	0x7d
+ 1421 061e 00       		.sleb128 0
+ 1422 061f 01       		.byte	0x1
+ 1423 0620 41060000 		.4byte	0x641
+ 1424 0624 1D       		.uleb128 0x1d
+ 1425 0625 20030000 		.4byte	.LASF54
+ 1426 0629 01       		.byte	0x1
+ 1427 062a A901     		.2byte	0x1a9
+ 1428 062c 87030000 		.4byte	0x387
+ 1429 0630 01       		.byte	0x1
+ 1430 0631 50       		.byte	0x50
+ 1431 0632 1D       		.uleb128 0x1d
+ 1432 0633 5B040000 		.4byte	.LASF70
+ 1433 0637 01       		.byte	0x1
+ 1434 0638 A901     		.2byte	0x1a9
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 35
+
+
+ 1435 063a 45000000 		.4byte	0x45
+ 1436 063e 01       		.byte	0x1
+ 1437 063f 51       		.byte	0x51
+ 1438 0640 00       		.byte	0
+ 1439 0641 20       		.uleb128 0x20
+ 1440 0642 01       		.byte	0x1
+ 1441 0643 63020000 		.4byte	.LASF71
+ 1442 0647 01       		.byte	0x1
+ 1443 0648 D801     		.2byte	0x1d8
+ 1444 064a 01       		.byte	0x1
+ 1445 064b 78010000 		.4byte	.LFB44
+ 1446 064f 9C010000 		.4byte	.LFE44
+ 1447 0653 5A020000 		.4byte	.LLST13
+ 1448 0657 01       		.byte	0x1
+ 1449 0658 AD060000 		.4byte	0x6ad
+ 1450 065c 1C       		.uleb128 0x1c
+ 1451 065d 20030000 		.4byte	.LASF54
+ 1452 0661 01       		.byte	0x1
+ 1453 0662 D801     		.2byte	0x1d8
+ 1454 0664 87030000 		.4byte	0x387
+ 1455 0668 7A020000 		.4byte	.LLST14
+ 1456 066c 1C       		.uleb128 0x1c
+ 1457 066d FC010000 		.4byte	.LASF72
+ 1458 0671 01       		.byte	0x1
+ 1459 0672 D801     		.2byte	0x1d8
+ 1460 0674 45000000 		.4byte	0x45
+ 1461 0678 9B020000 		.4byte	.LLST15
+ 1462 067c 1C       		.uleb128 0x1c
+ 1463 067d CA020000 		.4byte	.LASF73
+ 1464 0681 01       		.byte	0x1
+ 1465 0682 D801     		.2byte	0x1d8
+ 1466 0684 2C000000 		.4byte	0x2c
+ 1467 0688 BC020000 		.4byte	.LLST16
+ 1468 068c 1E       		.uleb128 0x1e
+ 1469 068d BB010000 		.4byte	.LASF74
+ 1470 0691 01       		.byte	0x1
+ 1471 0692 DA01     		.2byte	0x1da
+ 1472 0694 5E000000 		.4byte	0x5e
+ 1473 0698 DD020000 		.4byte	.LLST17
+ 1474 069c 1E       		.uleb128 0x1e
+ 1475 069d 8A040000 		.4byte	.LASF75
+ 1476 06a1 01       		.byte	0x1
+ 1477 06a2 DB01     		.2byte	0x1db
+ 1478 06a4 5E000000 		.4byte	0x5e
+ 1479 06a8 04030000 		.4byte	.LLST18
+ 1480 06ac 00       		.byte	0
+ 1481 06ad 21       		.uleb128 0x21
+ 1482 06ae 01       		.byte	0x1
+ 1483 06af 6B010000 		.4byte	.LASF79
+ 1484 06b3 05       		.byte	0x5
+ 1485 06b4 F201     		.2byte	0x1f2
+ 1486 06b6 01       		.byte	0x1
+ 1487 06b7 01       		.byte	0x1
+ 1488 06b8 22       		.uleb128 0x22
+ 1489 06b9 5E000000 		.4byte	0x5e
+ 1490 06bd 22       		.uleb128 0x22
+ 1491 06be BD000000 		.4byte	0xbd
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 36
+
+
+ 1492 06c2 00       		.byte	0
+ 1493 06c3 00       		.byte	0
+ 1494              		.section	.debug_abbrev,"",%progbits
+ 1495              	.Ldebug_abbrev0:
+ 1496 0000 01       		.uleb128 0x1
+ 1497 0001 11       		.uleb128 0x11
+ 1498 0002 01       		.byte	0x1
+ 1499 0003 25       		.uleb128 0x25
+ 1500 0004 0E       		.uleb128 0xe
+ 1501 0005 13       		.uleb128 0x13
+ 1502 0006 0B       		.uleb128 0xb
+ 1503 0007 03       		.uleb128 0x3
+ 1504 0008 0E       		.uleb128 0xe
+ 1505 0009 1B       		.uleb128 0x1b
+ 1506 000a 0E       		.uleb128 0xe
+ 1507 000b 11       		.uleb128 0x11
+ 1508 000c 01       		.uleb128 0x1
+ 1509 000d 12       		.uleb128 0x12
+ 1510 000e 01       		.uleb128 0x1
+ 1511 000f 10       		.uleb128 0x10
+ 1512 0010 06       		.uleb128 0x6
+ 1513 0011 00       		.byte	0
+ 1514 0012 00       		.byte	0
+ 1515 0013 02       		.uleb128 0x2
+ 1516 0014 24       		.uleb128 0x24
+ 1517 0015 00       		.byte	0
+ 1518 0016 0B       		.uleb128 0xb
+ 1519 0017 0B       		.uleb128 0xb
+ 1520 0018 3E       		.uleb128 0x3e
+ 1521 0019 0B       		.uleb128 0xb
+ 1522 001a 03       		.uleb128 0x3
+ 1523 001b 0E       		.uleb128 0xe
+ 1524 001c 00       		.byte	0
+ 1525 001d 00       		.byte	0
+ 1526 001e 03       		.uleb128 0x3
+ 1527 001f 16       		.uleb128 0x16
+ 1528 0020 00       		.byte	0
+ 1529 0021 03       		.uleb128 0x3
+ 1530 0022 0E       		.uleb128 0xe
+ 1531 0023 3A       		.uleb128 0x3a
+ 1532 0024 0B       		.uleb128 0xb
+ 1533 0025 3B       		.uleb128 0x3b
+ 1534 0026 0B       		.uleb128 0xb
+ 1535 0027 49       		.uleb128 0x49
+ 1536 0028 13       		.uleb128 0x13
+ 1537 0029 00       		.byte	0
+ 1538 002a 00       		.byte	0
+ 1539 002b 04       		.uleb128 0x4
+ 1540 002c 24       		.uleb128 0x24
+ 1541 002d 00       		.byte	0
+ 1542 002e 0B       		.uleb128 0xb
+ 1543 002f 0B       		.uleb128 0xb
+ 1544 0030 3E       		.uleb128 0x3e
+ 1545 0031 0B       		.uleb128 0xb
+ 1546 0032 03       		.uleb128 0x3
+ 1547 0033 08       		.uleb128 0x8
+ 1548 0034 00       		.byte	0
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 37
+
+
+ 1549 0035 00       		.byte	0
+ 1550 0036 05       		.uleb128 0x5
+ 1551 0037 35       		.uleb128 0x35
+ 1552 0038 00       		.byte	0
+ 1553 0039 49       		.uleb128 0x49
+ 1554 003a 13       		.uleb128 0x13
+ 1555 003b 00       		.byte	0
+ 1556 003c 00       		.byte	0
+ 1557 003d 06       		.uleb128 0x6
+ 1558 003e 01       		.uleb128 0x1
+ 1559 003f 01       		.byte	0x1
+ 1560 0040 49       		.uleb128 0x49
+ 1561 0041 13       		.uleb128 0x13
+ 1562 0042 01       		.uleb128 0x1
+ 1563 0043 13       		.uleb128 0x13
+ 1564 0044 00       		.byte	0
+ 1565 0045 00       		.byte	0
+ 1566 0046 07       		.uleb128 0x7
+ 1567 0047 21       		.uleb128 0x21
+ 1568 0048 00       		.byte	0
+ 1569 0049 49       		.uleb128 0x49
+ 1570 004a 13       		.uleb128 0x13
+ 1571 004b 2F       		.uleb128 0x2f
+ 1572 004c 0B       		.uleb128 0xb
+ 1573 004d 00       		.byte	0
+ 1574 004e 00       		.byte	0
+ 1575 004f 08       		.uleb128 0x8
+ 1576 0050 04       		.uleb128 0x4
+ 1577 0051 01       		.byte	0x1
+ 1578 0052 0B       		.uleb128 0xb
+ 1579 0053 0B       		.uleb128 0xb
+ 1580 0054 3A       		.uleb128 0x3a
+ 1581 0055 0B       		.uleb128 0xb
+ 1582 0056 3B       		.uleb128 0x3b
+ 1583 0057 0B       		.uleb128 0xb
+ 1584 0058 01       		.uleb128 0x1
+ 1585 0059 13       		.uleb128 0x13
+ 1586 005a 00       		.byte	0
+ 1587 005b 00       		.byte	0
+ 1588 005c 09       		.uleb128 0x9
+ 1589 005d 28       		.uleb128 0x28
+ 1590 005e 00       		.byte	0
+ 1591 005f 03       		.uleb128 0x3
+ 1592 0060 0E       		.uleb128 0xe
+ 1593 0061 1C       		.uleb128 0x1c
+ 1594 0062 0D       		.uleb128 0xd
+ 1595 0063 00       		.byte	0
+ 1596 0064 00       		.byte	0
+ 1597 0065 0A       		.uleb128 0xa
+ 1598 0066 13       		.uleb128 0x13
+ 1599 0067 01       		.byte	0x1
+ 1600 0068 0B       		.uleb128 0xb
+ 1601 0069 0B       		.uleb128 0xb
+ 1602 006a 3A       		.uleb128 0x3a
+ 1603 006b 0B       		.uleb128 0xb
+ 1604 006c 3B       		.uleb128 0x3b
+ 1605 006d 05       		.uleb128 0x5
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 38
+
+
+ 1606 006e 01       		.uleb128 0x1
+ 1607 006f 13       		.uleb128 0x13
+ 1608 0070 00       		.byte	0
+ 1609 0071 00       		.byte	0
+ 1610 0072 0B       		.uleb128 0xb
+ 1611 0073 0D       		.uleb128 0xd
+ 1612 0074 00       		.byte	0
+ 1613 0075 03       		.uleb128 0x3
+ 1614 0076 0E       		.uleb128 0xe
+ 1615 0077 3A       		.uleb128 0x3a
+ 1616 0078 0B       		.uleb128 0xb
+ 1617 0079 3B       		.uleb128 0x3b
+ 1618 007a 05       		.uleb128 0x5
+ 1619 007b 49       		.uleb128 0x49
+ 1620 007c 13       		.uleb128 0x13
+ 1621 007d 38       		.uleb128 0x38
+ 1622 007e 0A       		.uleb128 0xa
+ 1623 007f 00       		.byte	0
+ 1624 0080 00       		.byte	0
+ 1625 0081 0C       		.uleb128 0xc
+ 1626 0082 0D       		.uleb128 0xd
+ 1627 0083 00       		.byte	0
+ 1628 0084 03       		.uleb128 0x3
+ 1629 0085 08       		.uleb128 0x8
+ 1630 0086 3A       		.uleb128 0x3a
+ 1631 0087 0B       		.uleb128 0xb
+ 1632 0088 3B       		.uleb128 0x3b
+ 1633 0089 05       		.uleb128 0x5
+ 1634 008a 49       		.uleb128 0x49
+ 1635 008b 13       		.uleb128 0x13
+ 1636 008c 38       		.uleb128 0x38
+ 1637 008d 0A       		.uleb128 0xa
+ 1638 008e 00       		.byte	0
+ 1639 008f 00       		.byte	0
+ 1640 0090 0D       		.uleb128 0xd
+ 1641 0091 16       		.uleb128 0x16
+ 1642 0092 00       		.byte	0
+ 1643 0093 03       		.uleb128 0x3
+ 1644 0094 0E       		.uleb128 0xe
+ 1645 0095 3A       		.uleb128 0x3a
+ 1646 0096 0B       		.uleb128 0xb
+ 1647 0097 3B       		.uleb128 0x3b
+ 1648 0098 05       		.uleb128 0x5
+ 1649 0099 49       		.uleb128 0x49
+ 1650 009a 13       		.uleb128 0x13
+ 1651 009b 00       		.byte	0
+ 1652 009c 00       		.byte	0
+ 1653 009d 0E       		.uleb128 0xe
+ 1654 009e 13       		.uleb128 0x13
+ 1655 009f 01       		.byte	0x1
+ 1656 00a0 0B       		.uleb128 0xb
+ 1657 00a1 0B       		.uleb128 0xb
+ 1658 00a2 3A       		.uleb128 0x3a
+ 1659 00a3 0B       		.uleb128 0xb
+ 1660 00a4 3B       		.uleb128 0x3b
+ 1661 00a5 0B       		.uleb128 0xb
+ 1662 00a6 01       		.uleb128 0x1
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 39
+
+
+ 1663 00a7 13       		.uleb128 0x13
+ 1664 00a8 00       		.byte	0
+ 1665 00a9 00       		.byte	0
+ 1666 00aa 0F       		.uleb128 0xf
+ 1667 00ab 0D       		.uleb128 0xd
+ 1668 00ac 00       		.byte	0
+ 1669 00ad 03       		.uleb128 0x3
+ 1670 00ae 0E       		.uleb128 0xe
+ 1671 00af 3A       		.uleb128 0x3a
+ 1672 00b0 0B       		.uleb128 0xb
+ 1673 00b1 3B       		.uleb128 0x3b
+ 1674 00b2 0B       		.uleb128 0xb
+ 1675 00b3 49       		.uleb128 0x49
+ 1676 00b4 13       		.uleb128 0x13
+ 1677 00b5 38       		.uleb128 0x38
+ 1678 00b6 0A       		.uleb128 0xa
+ 1679 00b7 00       		.byte	0
+ 1680 00b8 00       		.byte	0
+ 1681 00b9 10       		.uleb128 0x10
+ 1682 00ba 2E       		.uleb128 0x2e
+ 1683 00bb 01       		.byte	0x1
+ 1684 00bc 3F       		.uleb128 0x3f
+ 1685 00bd 0C       		.uleb128 0xc
+ 1686 00be 03       		.uleb128 0x3
+ 1687 00bf 0E       		.uleb128 0xe
+ 1688 00c0 3A       		.uleb128 0x3a
+ 1689 00c1 0B       		.uleb128 0xb
+ 1690 00c2 3B       		.uleb128 0x3b
+ 1691 00c3 0B       		.uleb128 0xb
+ 1692 00c4 27       		.uleb128 0x27
+ 1693 00c5 0C       		.uleb128 0xc
+ 1694 00c6 11       		.uleb128 0x11
+ 1695 00c7 01       		.uleb128 0x1
+ 1696 00c8 12       		.uleb128 0x12
+ 1697 00c9 01       		.uleb128 0x1
+ 1698 00ca 40       		.uleb128 0x40
+ 1699 00cb 06       		.uleb128 0x6
+ 1700 00cc 9742     		.uleb128 0x2117
+ 1701 00ce 0C       		.uleb128 0xc
+ 1702 00cf 01       		.uleb128 0x1
+ 1703 00d0 13       		.uleb128 0x13
+ 1704 00d1 00       		.byte	0
+ 1705 00d2 00       		.byte	0
+ 1706 00d3 11       		.uleb128 0x11
+ 1707 00d4 05       		.uleb128 0x5
+ 1708 00d5 00       		.byte	0
+ 1709 00d6 03       		.uleb128 0x3
+ 1710 00d7 0E       		.uleb128 0xe
+ 1711 00d8 3A       		.uleb128 0x3a
+ 1712 00d9 0B       		.uleb128 0xb
+ 1713 00da 3B       		.uleb128 0x3b
+ 1714 00db 0B       		.uleb128 0xb
+ 1715 00dc 49       		.uleb128 0x49
+ 1716 00dd 13       		.uleb128 0x13
+ 1717 00de 02       		.uleb128 0x2
+ 1718 00df 06       		.uleb128 0x6
+ 1719 00e0 00       		.byte	0
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 40
+
+
+ 1720 00e1 00       		.byte	0
+ 1721 00e2 12       		.uleb128 0x12
+ 1722 00e3 898201   		.uleb128 0x4109
+ 1723 00e6 01       		.byte	0x1
+ 1724 00e7 11       		.uleb128 0x11
+ 1725 00e8 01       		.uleb128 0x1
+ 1726 00e9 31       		.uleb128 0x31
+ 1727 00ea 13       		.uleb128 0x13
+ 1728 00eb 01       		.uleb128 0x1
+ 1729 00ec 13       		.uleb128 0x13
+ 1730 00ed 00       		.byte	0
+ 1731 00ee 00       		.byte	0
+ 1732 00ef 13       		.uleb128 0x13
+ 1733 00f0 8A8201   		.uleb128 0x410a
+ 1734 00f3 00       		.byte	0
+ 1735 00f4 02       		.uleb128 0x2
+ 1736 00f5 0A       		.uleb128 0xa
+ 1737 00f6 9142     		.uleb128 0x2111
+ 1738 00f8 0A       		.uleb128 0xa
+ 1739 00f9 00       		.byte	0
+ 1740 00fa 00       		.byte	0
+ 1741 00fb 14       		.uleb128 0x14
+ 1742 00fc 898201   		.uleb128 0x4109
+ 1743 00ff 01       		.byte	0x1
+ 1744 0100 11       		.uleb128 0x11
+ 1745 0101 01       		.uleb128 0x1
+ 1746 0102 31       		.uleb128 0x31
+ 1747 0103 13       		.uleb128 0x13
+ 1748 0104 00       		.byte	0
+ 1749 0105 00       		.byte	0
+ 1750 0106 15       		.uleb128 0x15
+ 1751 0107 0F       		.uleb128 0xf
+ 1752 0108 00       		.byte	0
+ 1753 0109 0B       		.uleb128 0xb
+ 1754 010a 0B       		.uleb128 0xb
+ 1755 010b 49       		.uleb128 0x49
+ 1756 010c 13       		.uleb128 0x13
+ 1757 010d 00       		.byte	0
+ 1758 010e 00       		.byte	0
+ 1759 010f 16       		.uleb128 0x16
+ 1760 0110 05       		.uleb128 0x5
+ 1761 0111 00       		.byte	0
+ 1762 0112 03       		.uleb128 0x3
+ 1763 0113 0E       		.uleb128 0xe
+ 1764 0114 3A       		.uleb128 0x3a
+ 1765 0115 0B       		.uleb128 0xb
+ 1766 0116 3B       		.uleb128 0x3b
+ 1767 0117 0B       		.uleb128 0xb
+ 1768 0118 49       		.uleb128 0x49
+ 1769 0119 13       		.uleb128 0x13
+ 1770 011a 02       		.uleb128 0x2
+ 1771 011b 0A       		.uleb128 0xa
+ 1772 011c 00       		.byte	0
+ 1773 011d 00       		.byte	0
+ 1774 011e 17       		.uleb128 0x17
+ 1775 011f 34       		.uleb128 0x34
+ 1776 0120 00       		.byte	0
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 41
+
+
+ 1777 0121 03       		.uleb128 0x3
+ 1778 0122 0E       		.uleb128 0xe
+ 1779 0123 3A       		.uleb128 0x3a
+ 1780 0124 0B       		.uleb128 0xb
+ 1781 0125 3B       		.uleb128 0x3b
+ 1782 0126 0B       		.uleb128 0xb
+ 1783 0127 49       		.uleb128 0x49
+ 1784 0128 13       		.uleb128 0x13
+ 1785 0129 02       		.uleb128 0x2
+ 1786 012a 06       		.uleb128 0x6
+ 1787 012b 00       		.byte	0
+ 1788 012c 00       		.byte	0
+ 1789 012d 18       		.uleb128 0x18
+ 1790 012e 34       		.uleb128 0x34
+ 1791 012f 00       		.byte	0
+ 1792 0130 03       		.uleb128 0x3
+ 1793 0131 08       		.uleb128 0x8
+ 1794 0132 3A       		.uleb128 0x3a
+ 1795 0133 0B       		.uleb128 0xb
+ 1796 0134 3B       		.uleb128 0x3b
+ 1797 0135 0B       		.uleb128 0xb
+ 1798 0136 49       		.uleb128 0x49
+ 1799 0137 13       		.uleb128 0x13
+ 1800 0138 02       		.uleb128 0x2
+ 1801 0139 06       		.uleb128 0x6
+ 1802 013a 00       		.byte	0
+ 1803 013b 00       		.byte	0
+ 1804 013c 19       		.uleb128 0x19
+ 1805 013d 2E       		.uleb128 0x2e
+ 1806 013e 01       		.byte	0x1
+ 1807 013f 3F       		.uleb128 0x3f
+ 1808 0140 0C       		.uleb128 0xc
+ 1809 0141 03       		.uleb128 0x3
+ 1810 0142 0E       		.uleb128 0xe
+ 1811 0143 3A       		.uleb128 0x3a
+ 1812 0144 0B       		.uleb128 0xb
+ 1813 0145 3B       		.uleb128 0x3b
+ 1814 0146 0B       		.uleb128 0xb
+ 1815 0147 27       		.uleb128 0x27
+ 1816 0148 0C       		.uleb128 0xc
+ 1817 0149 11       		.uleb128 0x11
+ 1818 014a 01       		.uleb128 0x1
+ 1819 014b 12       		.uleb128 0x12
+ 1820 014c 01       		.uleb128 0x1
+ 1821 014d 40       		.uleb128 0x40
+ 1822 014e 0A       		.uleb128 0xa
+ 1823 014f 9742     		.uleb128 0x2117
+ 1824 0151 0C       		.uleb128 0xc
+ 1825 0152 01       		.uleb128 0x1
+ 1826 0153 13       		.uleb128 0x13
+ 1827 0154 00       		.byte	0
+ 1828 0155 00       		.byte	0
+ 1829 0156 1A       		.uleb128 0x1a
+ 1830 0157 34       		.uleb128 0x34
+ 1831 0158 00       		.byte	0
+ 1832 0159 03       		.uleb128 0x3
+ 1833 015a 08       		.uleb128 0x8
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 42
+
+
+ 1834 015b 3A       		.uleb128 0x3a
+ 1835 015c 0B       		.uleb128 0xb
+ 1836 015d 3B       		.uleb128 0x3b
+ 1837 015e 0B       		.uleb128 0xb
+ 1838 015f 49       		.uleb128 0x49
+ 1839 0160 13       		.uleb128 0x13
+ 1840 0161 02       		.uleb128 0x2
+ 1841 0162 0A       		.uleb128 0xa
+ 1842 0163 00       		.byte	0
+ 1843 0164 00       		.byte	0
+ 1844 0165 1B       		.uleb128 0x1b
+ 1845 0166 2E       		.uleb128 0x2e
+ 1846 0167 01       		.byte	0x1
+ 1847 0168 3F       		.uleb128 0x3f
+ 1848 0169 0C       		.uleb128 0xc
+ 1849 016a 03       		.uleb128 0x3
+ 1850 016b 0E       		.uleb128 0xe
+ 1851 016c 3A       		.uleb128 0x3a
+ 1852 016d 0B       		.uleb128 0xb
+ 1853 016e 3B       		.uleb128 0x3b
+ 1854 016f 05       		.uleb128 0x5
+ 1855 0170 27       		.uleb128 0x27
+ 1856 0171 0C       		.uleb128 0xc
+ 1857 0172 49       		.uleb128 0x49
+ 1858 0173 13       		.uleb128 0x13
+ 1859 0174 11       		.uleb128 0x11
+ 1860 0175 01       		.uleb128 0x1
+ 1861 0176 12       		.uleb128 0x12
+ 1862 0177 01       		.uleb128 0x1
+ 1863 0178 40       		.uleb128 0x40
+ 1864 0179 0A       		.uleb128 0xa
+ 1865 017a 9742     		.uleb128 0x2117
+ 1866 017c 0C       		.uleb128 0xc
+ 1867 017d 01       		.uleb128 0x1
+ 1868 017e 13       		.uleb128 0x13
+ 1869 017f 00       		.byte	0
+ 1870 0180 00       		.byte	0
+ 1871 0181 1C       		.uleb128 0x1c
+ 1872 0182 05       		.uleb128 0x5
+ 1873 0183 00       		.byte	0
+ 1874 0184 03       		.uleb128 0x3
+ 1875 0185 0E       		.uleb128 0xe
+ 1876 0186 3A       		.uleb128 0x3a
+ 1877 0187 0B       		.uleb128 0xb
+ 1878 0188 3B       		.uleb128 0x3b
+ 1879 0189 05       		.uleb128 0x5
+ 1880 018a 49       		.uleb128 0x49
+ 1881 018b 13       		.uleb128 0x13
+ 1882 018c 02       		.uleb128 0x2
+ 1883 018d 06       		.uleb128 0x6
+ 1884 018e 00       		.byte	0
+ 1885 018f 00       		.byte	0
+ 1886 0190 1D       		.uleb128 0x1d
+ 1887 0191 05       		.uleb128 0x5
+ 1888 0192 00       		.byte	0
+ 1889 0193 03       		.uleb128 0x3
+ 1890 0194 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 43
+
+
+ 1891 0195 3A       		.uleb128 0x3a
+ 1892 0196 0B       		.uleb128 0xb
+ 1893 0197 3B       		.uleb128 0x3b
+ 1894 0198 05       		.uleb128 0x5
+ 1895 0199 49       		.uleb128 0x49
+ 1896 019a 13       		.uleb128 0x13
+ 1897 019b 02       		.uleb128 0x2
+ 1898 019c 0A       		.uleb128 0xa
+ 1899 019d 00       		.byte	0
+ 1900 019e 00       		.byte	0
+ 1901 019f 1E       		.uleb128 0x1e
+ 1902 01a0 34       		.uleb128 0x34
+ 1903 01a1 00       		.byte	0
+ 1904 01a2 03       		.uleb128 0x3
+ 1905 01a3 0E       		.uleb128 0xe
+ 1906 01a4 3A       		.uleb128 0x3a
+ 1907 01a5 0B       		.uleb128 0xb
+ 1908 01a6 3B       		.uleb128 0x3b
+ 1909 01a7 05       		.uleb128 0x5
+ 1910 01a8 49       		.uleb128 0x49
+ 1911 01a9 13       		.uleb128 0x13
+ 1912 01aa 02       		.uleb128 0x2
+ 1913 01ab 06       		.uleb128 0x6
+ 1914 01ac 00       		.byte	0
+ 1915 01ad 00       		.byte	0
+ 1916 01ae 1F       		.uleb128 0x1f
+ 1917 01af 2E       		.uleb128 0x2e
+ 1918 01b0 01       		.byte	0x1
+ 1919 01b1 3F       		.uleb128 0x3f
+ 1920 01b2 0C       		.uleb128 0xc
+ 1921 01b3 03       		.uleb128 0x3
+ 1922 01b4 0E       		.uleb128 0xe
+ 1923 01b5 3A       		.uleb128 0x3a
+ 1924 01b6 0B       		.uleb128 0xb
+ 1925 01b7 3B       		.uleb128 0x3b
+ 1926 01b8 05       		.uleb128 0x5
+ 1927 01b9 27       		.uleb128 0x27
+ 1928 01ba 0C       		.uleb128 0xc
+ 1929 01bb 11       		.uleb128 0x11
+ 1930 01bc 01       		.uleb128 0x1
+ 1931 01bd 12       		.uleb128 0x12
+ 1932 01be 01       		.uleb128 0x1
+ 1933 01bf 40       		.uleb128 0x40
+ 1934 01c0 0A       		.uleb128 0xa
+ 1935 01c1 9742     		.uleb128 0x2117
+ 1936 01c3 0C       		.uleb128 0xc
+ 1937 01c4 01       		.uleb128 0x1
+ 1938 01c5 13       		.uleb128 0x13
+ 1939 01c6 00       		.byte	0
+ 1940 01c7 00       		.byte	0
+ 1941 01c8 20       		.uleb128 0x20
+ 1942 01c9 2E       		.uleb128 0x2e
+ 1943 01ca 01       		.byte	0x1
+ 1944 01cb 3F       		.uleb128 0x3f
+ 1945 01cc 0C       		.uleb128 0xc
+ 1946 01cd 03       		.uleb128 0x3
+ 1947 01ce 0E       		.uleb128 0xe
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 44
+
+
+ 1948 01cf 3A       		.uleb128 0x3a
+ 1949 01d0 0B       		.uleb128 0xb
+ 1950 01d1 3B       		.uleb128 0x3b
+ 1951 01d2 05       		.uleb128 0x5
+ 1952 01d3 27       		.uleb128 0x27
+ 1953 01d4 0C       		.uleb128 0xc
+ 1954 01d5 11       		.uleb128 0x11
+ 1955 01d6 01       		.uleb128 0x1
+ 1956 01d7 12       		.uleb128 0x12
+ 1957 01d8 01       		.uleb128 0x1
+ 1958 01d9 40       		.uleb128 0x40
+ 1959 01da 06       		.uleb128 0x6
+ 1960 01db 9742     		.uleb128 0x2117
+ 1961 01dd 0C       		.uleb128 0xc
+ 1962 01de 01       		.uleb128 0x1
+ 1963 01df 13       		.uleb128 0x13
+ 1964 01e0 00       		.byte	0
+ 1965 01e1 00       		.byte	0
+ 1966 01e2 21       		.uleb128 0x21
+ 1967 01e3 2E       		.uleb128 0x2e
+ 1968 01e4 01       		.byte	0x1
+ 1969 01e5 3F       		.uleb128 0x3f
+ 1970 01e6 0C       		.uleb128 0xc
+ 1971 01e7 03       		.uleb128 0x3
+ 1972 01e8 0E       		.uleb128 0xe
+ 1973 01e9 3A       		.uleb128 0x3a
+ 1974 01ea 0B       		.uleb128 0xb
+ 1975 01eb 3B       		.uleb128 0x3b
+ 1976 01ec 05       		.uleb128 0x5
+ 1977 01ed 27       		.uleb128 0x27
+ 1978 01ee 0C       		.uleb128 0xc
+ 1979 01ef 3C       		.uleb128 0x3c
+ 1980 01f0 0C       		.uleb128 0xc
+ 1981 01f1 00       		.byte	0
+ 1982 01f2 00       		.byte	0
+ 1983 01f3 22       		.uleb128 0x22
+ 1984 01f4 05       		.uleb128 0x5
+ 1985 01f5 00       		.byte	0
+ 1986 01f6 49       		.uleb128 0x49
+ 1987 01f7 13       		.uleb128 0x13
+ 1988 01f8 00       		.byte	0
+ 1989 01f9 00       		.byte	0
+ 1990 01fa 00       		.byte	0
+ 1991              		.section	.debug_loc,"",%progbits
+ 1992              	.Ldebug_loc0:
+ 1993              	.LLST0:
+ 1994 0000 00000000 		.4byte	.LFB32-.Ltext0
+ 1995 0004 02000000 		.4byte	.LCFI0-.Ltext0
+ 1996 0008 0200     		.2byte	0x2
+ 1997 000a 7D       		.byte	0x7d
+ 1998 000b 00       		.sleb128 0
+ 1999 000c 02000000 		.4byte	.LCFI0-.Ltext0
+ 2000 0010 88000000 		.4byte	.LFE32-.Ltext0
+ 2001 0014 0200     		.2byte	0x2
+ 2002 0016 7D       		.byte	0x7d
+ 2003 0017 08       		.sleb128 8
+ 2004 0018 00000000 		.4byte	0
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 45
+
+
+ 2005 001c 00000000 		.4byte	0
+ 2006              	.LLST1:
+ 2007 0020 00000000 		.4byte	.LVL0-.Ltext0
+ 2008 0024 0C000000 		.4byte	.LVL1-.Ltext0
+ 2009 0028 0100     		.2byte	0x1
+ 2010 002a 50       		.byte	0x50
+ 2011 002b 0C000000 		.4byte	.LVL1-.Ltext0
+ 2012 002f 1A000000 		.4byte	.LVL3-.Ltext0
+ 2013 0033 0400     		.2byte	0x4
+ 2014 0035 F3       		.byte	0xf3
+ 2015 0036 01       		.uleb128 0x1
+ 2016 0037 50       		.byte	0x50
+ 2017 0038 9F       		.byte	0x9f
+ 2018 0039 1A000000 		.4byte	.LVL3-.Ltext0
+ 2019 003d 22000000 		.4byte	.LVL4-.Ltext0
+ 2020 0041 0100     		.2byte	0x1
+ 2021 0043 50       		.byte	0x50
+ 2022 0044 22000000 		.4byte	.LVL4-.Ltext0
+ 2023 0048 30000000 		.4byte	.LVL6-.Ltext0
+ 2024 004c 0400     		.2byte	0x4
+ 2025 004e F3       		.byte	0xf3
+ 2026 004f 01       		.uleb128 0x1
+ 2027 0050 50       		.byte	0x50
+ 2028 0051 9F       		.byte	0x9f
+ 2029 0052 30000000 		.4byte	.LVL6-.Ltext0
+ 2030 0056 38000000 		.4byte	.LVL7-.Ltext0
+ 2031 005a 0100     		.2byte	0x1
+ 2032 005c 50       		.byte	0x50
+ 2033 005d 38000000 		.4byte	.LVL7-.Ltext0
+ 2034 0061 46000000 		.4byte	.LVL9-.Ltext0
+ 2035 0065 0400     		.2byte	0x4
+ 2036 0067 F3       		.byte	0xf3
+ 2037 0068 01       		.uleb128 0x1
+ 2038 0069 50       		.byte	0x50
+ 2039 006a 9F       		.byte	0x9f
+ 2040 006b 46000000 		.4byte	.LVL9-.Ltext0
+ 2041 006f 4E000000 		.4byte	.LVL10-.Ltext0
+ 2042 0073 0100     		.2byte	0x1
+ 2043 0075 50       		.byte	0x50
+ 2044 0076 4E000000 		.4byte	.LVL10-.Ltext0
+ 2045 007a 5C000000 		.4byte	.LVL12-.Ltext0
+ 2046 007e 0400     		.2byte	0x4
+ 2047 0080 F3       		.byte	0xf3
+ 2048 0081 01       		.uleb128 0x1
+ 2049 0082 50       		.byte	0x50
+ 2050 0083 9F       		.byte	0x9f
+ 2051 0084 5C000000 		.4byte	.LVL12-.Ltext0
+ 2052 0088 64000000 		.4byte	.LVL13-.Ltext0
+ 2053 008c 0100     		.2byte	0x1
+ 2054 008e 50       		.byte	0x50
+ 2055 008f 64000000 		.4byte	.LVL13-.Ltext0
+ 2056 0093 88000000 		.4byte	.LFE32-.Ltext0
+ 2057 0097 0400     		.2byte	0x4
+ 2058 0099 F3       		.byte	0xf3
+ 2059 009a 01       		.uleb128 0x1
+ 2060 009b 50       		.byte	0x50
+ 2061 009c 9F       		.byte	0x9f
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 46
+
+
+ 2062 009d 00000000 		.4byte	0
+ 2063 00a1 00000000 		.4byte	0
+ 2064              	.LLST2:
+ 2065 00a5 88000000 		.4byte	.LFB33-.Ltext0
+ 2066 00a9 8A000000 		.4byte	.LCFI1-.Ltext0
+ 2067 00ad 0200     		.2byte	0x2
+ 2068 00af 7D       		.byte	0x7d
+ 2069 00b0 00       		.sleb128 0
+ 2070 00b1 8A000000 		.4byte	.LCFI1-.Ltext0
+ 2071 00b5 02010000 		.4byte	.LFE33-.Ltext0
+ 2072 00b9 0200     		.2byte	0x2
+ 2073 00bb 7D       		.byte	0x7d
+ 2074 00bc 20       		.sleb128 32
+ 2075 00bd 00000000 		.4byte	0
+ 2076 00c1 00000000 		.4byte	0
+ 2077              	.LLST3:
+ 2078 00c5 88000000 		.4byte	.LVL16-.Ltext0
+ 2079 00c9 90000000 		.4byte	.LVL17-.Ltext0
+ 2080 00cd 0200     		.2byte	0x2
+ 2081 00cf 30       		.byte	0x30
+ 2082 00d0 9F       		.byte	0x9f
+ 2083 00d1 90000000 		.4byte	.LVL17-.Ltext0
+ 2084 00d5 02010000 		.4byte	.LFE33-.Ltext0
+ 2085 00d9 0100     		.2byte	0x1
+ 2086 00db 53       		.byte	0x53
+ 2087 00dc 00000000 		.4byte	0
+ 2088 00e0 00000000 		.4byte	0
+ 2089              	.LLST4:
+ 2090 00e4 88000000 		.4byte	.LVL16-.Ltext0
+ 2091 00e8 90000000 		.4byte	.LVL17-.Ltext0
+ 2092 00ec 0200     		.2byte	0x2
+ 2093 00ee 30       		.byte	0x30
+ 2094 00ef 9F       		.byte	0x9f
+ 2095 00f0 96000000 		.4byte	.LVL18-.Ltext0
+ 2096 00f4 A0000000 		.4byte	.LVL20-.Ltext0
+ 2097 00f8 0100     		.2byte	0x1
+ 2098 00fa 54       		.byte	0x54
+ 2099 00fb A0000000 		.4byte	.LVL20-.Ltext0
+ 2100 00ff FC000000 		.4byte	.LVL22-.Ltext0
+ 2101 0103 0500     		.2byte	0x5
+ 2102 0105 31       		.byte	0x31
+ 2103 0106 73       		.byte	0x73
+ 2104 0107 00       		.sleb128 0
+ 2105 0108 24       		.byte	0x24
+ 2106 0109 9F       		.byte	0x9f
+ 2107 010a FC000000 		.4byte	.LVL22-.Ltext0
+ 2108 010e 02010000 		.4byte	.LFE33-.Ltext0
+ 2109 0112 0500     		.2byte	0x5
+ 2110 0114 31       		.byte	0x31
+ 2111 0115 73       		.byte	0x73
+ 2112 0116 7F       		.sleb128 -1
+ 2113 0117 24       		.byte	0x24
+ 2114 0118 9F       		.byte	0x9f
+ 2115 0119 00000000 		.4byte	0
+ 2116 011d 00000000 		.4byte	0
+ 2117              	.LLST5:
+ 2118 0121 88000000 		.4byte	.LVL16-.Ltext0
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 47
+
+
+ 2119 0125 90000000 		.4byte	.LVL17-.Ltext0
+ 2120 0129 0200     		.2byte	0x2
+ 2121 012b 30       		.byte	0x30
+ 2122 012c 9F       		.byte	0x9f
+ 2123 012d 98000000 		.4byte	.LVL19-.Ltext0
+ 2124 0131 C8000000 		.4byte	.LVL21-.Ltext0
+ 2125 0135 0100     		.2byte	0x1
+ 2126 0137 52       		.byte	0x52
+ 2127 0138 C8000000 		.4byte	.LVL21-.Ltext0
+ 2128 013c FC000000 		.4byte	.LVL22-.Ltext0
+ 2129 0140 0900     		.2byte	0x9
+ 2130 0142 31       		.byte	0x31
+ 2131 0143 73       		.byte	0x73
+ 2132 0144 00       		.sleb128 0
+ 2133 0145 24       		.byte	0x24
+ 2134 0146 7D       		.byte	0x7d
+ 2135 0147 04       		.sleb128 4
+ 2136 0148 06       		.byte	0x6
+ 2137 0149 1A       		.byte	0x1a
+ 2138 014a 9F       		.byte	0x9f
+ 2139 014b FC000000 		.4byte	.LVL22-.Ltext0
+ 2140 014f 02010000 		.4byte	.LFE33-.Ltext0
+ 2141 0153 0900     		.2byte	0x9
+ 2142 0155 31       		.byte	0x31
+ 2143 0156 73       		.byte	0x73
+ 2144 0157 7F       		.sleb128 -1
+ 2145 0158 24       		.byte	0x24
+ 2146 0159 7D       		.byte	0x7d
+ 2147 015a 04       		.sleb128 4
+ 2148 015b 06       		.byte	0x6
+ 2149 015c 1A       		.byte	0x1a
+ 2150 015d 9F       		.byte	0x9f
+ 2151 015e 00000000 		.4byte	0
+ 2152 0162 00000000 		.4byte	0
+ 2153              	.LLST6:
+ 2154 0166 18010000 		.4byte	.LFB35-.Ltext0
+ 2155 016a 1C010000 		.4byte	.LCFI2-.Ltext0
+ 2156 016e 0200     		.2byte	0x2
+ 2157 0170 7D       		.byte	0x7d
+ 2158 0171 00       		.sleb128 0
+ 2159 0172 1C010000 		.4byte	.LCFI2-.Ltext0
+ 2160 0176 3C010000 		.4byte	.LFE35-.Ltext0
+ 2161 017a 0200     		.2byte	0x2
+ 2162 017c 7D       		.byte	0x7d
+ 2163 017d 08       		.sleb128 8
+ 2164 017e 00000000 		.4byte	0
+ 2165 0182 00000000 		.4byte	0
+ 2166              	.LLST7:
+ 2167 0186 3C010000 		.4byte	.LVL25-.Ltext0
+ 2168 018a 3E010000 		.4byte	.LVL26-.Ltext0
+ 2169 018e 0100     		.2byte	0x1
+ 2170 0190 50       		.byte	0x50
+ 2171 0191 3E010000 		.4byte	.LVL26-.Ltext0
+ 2172 0195 48010000 		.4byte	.LFE36-.Ltext0
+ 2173 0199 0400     		.2byte	0x4
+ 2174 019b F3       		.byte	0xf3
+ 2175 019c 01       		.uleb128 0x1
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 48
+
+
+ 2176 019d 50       		.byte	0x50
+ 2177 019e 9F       		.byte	0x9f
+ 2178 019f 00000000 		.4byte	0
+ 2179 01a3 00000000 		.4byte	0
+ 2180              	.LLST8:
+ 2181 01a7 3C010000 		.4byte	.LVL25-.Ltext0
+ 2182 01ab 3E010000 		.4byte	.LVL26-.Ltext0
+ 2183 01af 0200     		.2byte	0x2
+ 2184 01b1 30       		.byte	0x30
+ 2185 01b2 9F       		.byte	0x9f
+ 2186 01b3 3E010000 		.4byte	.LVL26-.Ltext0
+ 2187 01b7 40010000 		.4byte	.LVL27-.Ltext0
+ 2188 01bb 0A00     		.2byte	0xa
+ 2189 01bd 71       		.byte	0x71
+ 2190 01be 00       		.sleb128 0
+ 2191 01bf 70       		.byte	0x70
+ 2192 01c0 00       		.sleb128 0
+ 2193 01c1 1A       		.byte	0x1a
+ 2194 01c2 40       		.byte	0x40
+ 2195 01c3 24       		.byte	0x24
+ 2196 01c4 30       		.byte	0x30
+ 2197 01c5 2E       		.byte	0x2e
+ 2198 01c6 9F       		.byte	0x9f
+ 2199 01c7 00000000 		.4byte	0
+ 2200 01cb 00000000 		.4byte	0
+ 2201              	.LLST9:
+ 2202 01cf 48010000 		.4byte	.LVL28-.Ltext0
+ 2203 01d3 4A010000 		.4byte	.LVL29-.Ltext0
+ 2204 01d7 0100     		.2byte	0x1
+ 2205 01d9 50       		.byte	0x50
+ 2206 01da 4A010000 		.4byte	.LVL29-.Ltext0
+ 2207 01de 4E010000 		.4byte	.LFE37-.Ltext0
+ 2208 01e2 0400     		.2byte	0x4
+ 2209 01e4 F3       		.byte	0xf3
+ 2210 01e5 01       		.uleb128 0x1
+ 2211 01e6 50       		.byte	0x50
+ 2212 01e7 9F       		.byte	0x9f
+ 2213 01e8 00000000 		.4byte	0
+ 2214 01ec 00000000 		.4byte	0
+ 2215              	.LLST10:
+ 2216 01f0 4E010000 		.4byte	.LVL30-.Ltext0
+ 2217 01f4 50010000 		.4byte	.LVL31-.Ltext0
+ 2218 01f8 0100     		.2byte	0x1
+ 2219 01fa 50       		.byte	0x50
+ 2220 01fb 50010000 		.4byte	.LVL31-.Ltext0
+ 2221 01ff 5A010000 		.4byte	.LFE38-.Ltext0
+ 2222 0203 0400     		.2byte	0x4
+ 2223 0205 F3       		.byte	0xf3
+ 2224 0206 01       		.uleb128 0x1
+ 2225 0207 50       		.byte	0x50
+ 2226 0208 9F       		.byte	0x9f
+ 2227 0209 00000000 		.4byte	0
+ 2228 020d 00000000 		.4byte	0
+ 2229              	.LLST11:
+ 2230 0211 4E010000 		.4byte	.LVL30-.Ltext0
+ 2231 0215 50010000 		.4byte	.LVL31-.Ltext0
+ 2232 0219 0200     		.2byte	0x2
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 49
+
+
+ 2233 021b 30       		.byte	0x30
+ 2234 021c 9F       		.byte	0x9f
+ 2235 021d 50010000 		.4byte	.LVL31-.Ltext0
+ 2236 0221 52010000 		.4byte	.LVL32-.Ltext0
+ 2237 0225 0A00     		.2byte	0xa
+ 2238 0227 71       		.byte	0x71
+ 2239 0228 00       		.sleb128 0
+ 2240 0229 70       		.byte	0x70
+ 2241 022a 00       		.sleb128 0
+ 2242 022b 1A       		.byte	0x1a
+ 2243 022c 40       		.byte	0x40
+ 2244 022d 24       		.byte	0x24
+ 2245 022e 30       		.byte	0x30
+ 2246 022f 2E       		.byte	0x2e
+ 2247 0230 9F       		.byte	0x9f
+ 2248 0231 00000000 		.4byte	0
+ 2249 0235 00000000 		.4byte	0
+ 2250              	.LLST12:
+ 2251 0239 5A010000 		.4byte	.LVL33-.Ltext0
+ 2252 023d 5C010000 		.4byte	.LVL34-.Ltext0
+ 2253 0241 0100     		.2byte	0x1
+ 2254 0243 50       		.byte	0x50
+ 2255 0244 5C010000 		.4byte	.LVL34-.Ltext0
+ 2256 0248 60010000 		.4byte	.LFE39-.Ltext0
+ 2257 024c 0400     		.2byte	0x4
+ 2258 024e F3       		.byte	0xf3
+ 2259 024f 01       		.uleb128 0x1
+ 2260 0250 50       		.byte	0x50
+ 2261 0251 9F       		.byte	0x9f
+ 2262 0252 00000000 		.4byte	0
+ 2263 0256 00000000 		.4byte	0
+ 2264              	.LLST13:
+ 2265 025a 78010000 		.4byte	.LFB44-.Ltext0
+ 2266 025e 84010000 		.4byte	.LCFI3-.Ltext0
+ 2267 0262 0200     		.2byte	0x2
+ 2268 0264 7D       		.byte	0x7d
+ 2269 0265 00       		.sleb128 0
+ 2270 0266 84010000 		.4byte	.LCFI3-.Ltext0
+ 2271 026a 9C010000 		.4byte	.LFE44-.Ltext0
+ 2272 026e 0200     		.2byte	0x2
+ 2273 0270 7D       		.byte	0x7d
+ 2274 0271 08       		.sleb128 8
+ 2275 0272 00000000 		.4byte	0
+ 2276 0276 00000000 		.4byte	0
+ 2277              	.LLST14:
+ 2278 027a 78010000 		.4byte	.LVL39-.Ltext0
+ 2279 027e 82010000 		.4byte	.LVL41-.Ltext0
+ 2280 0282 0100     		.2byte	0x1
+ 2281 0284 50       		.byte	0x50
+ 2282 0285 82010000 		.4byte	.LVL41-.Ltext0
+ 2283 0289 9C010000 		.4byte	.LFE44-.Ltext0
+ 2284 028d 0400     		.2byte	0x4
+ 2285 028f F3       		.byte	0xf3
+ 2286 0290 01       		.uleb128 0x1
+ 2287 0291 50       		.byte	0x50
+ 2288 0292 9F       		.byte	0x9f
+ 2289 0293 00000000 		.4byte	0
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 50
+
+
+ 2290 0297 00000000 		.4byte	0
+ 2291              	.LLST15:
+ 2292 029b 78010000 		.4byte	.LVL39-.Ltext0
+ 2293 029f 7E010000 		.4byte	.LVL40-.Ltext0
+ 2294 02a3 0100     		.2byte	0x1
+ 2295 02a5 51       		.byte	0x51
+ 2296 02a6 7E010000 		.4byte	.LVL40-.Ltext0
+ 2297 02aa 9C010000 		.4byte	.LFE44-.Ltext0
+ 2298 02ae 0400     		.2byte	0x4
+ 2299 02b0 F3       		.byte	0xf3
+ 2300 02b1 01       		.uleb128 0x1
+ 2301 02b2 51       		.byte	0x51
+ 2302 02b3 9F       		.byte	0x9f
+ 2303 02b4 00000000 		.4byte	0
+ 2304 02b8 00000000 		.4byte	0
+ 2305              	.LLST16:
+ 2306 02bc 78010000 		.4byte	.LVL39-.Ltext0
+ 2307 02c0 94010000 		.4byte	.LVL43-.Ltext0
+ 2308 02c4 0100     		.2byte	0x1
+ 2309 02c6 52       		.byte	0x52
+ 2310 02c7 94010000 		.4byte	.LVL43-.Ltext0
+ 2311 02cb 9C010000 		.4byte	.LFE44-.Ltext0
+ 2312 02cf 0400     		.2byte	0x4
+ 2313 02d1 F3       		.byte	0xf3
+ 2314 02d2 01       		.uleb128 0x1
+ 2315 02d3 52       		.byte	0x52
+ 2316 02d4 9F       		.byte	0x9f
+ 2317 02d5 00000000 		.4byte	0
+ 2318 02d9 00000000 		.4byte	0
+ 2319              	.LLST17:
+ 2320 02dd 78010000 		.4byte	.LVL39-.Ltext0
+ 2321 02e1 88010000 		.4byte	.LVL42-.Ltext0
+ 2322 02e5 0200     		.2byte	0x2
+ 2323 02e7 30       		.byte	0x30
+ 2324 02e8 9F       		.byte	0x9f
+ 2325 02e9 88010000 		.4byte	.LVL42-.Ltext0
+ 2326 02ed 94010000 		.4byte	.LVL43-.Ltext0
+ 2327 02f1 0900     		.2byte	0x9
+ 2328 02f3 72       		.byte	0x72
+ 2329 02f4 00       		.sleb128 0
+ 2330 02f5 08       		.byte	0x8
+ 2331 02f6 FF       		.byte	0xff
+ 2332 02f7 1A       		.byte	0x1a
+ 2333 02f8 73       		.byte	0x73
+ 2334 02f9 00       		.sleb128 0
+ 2335 02fa 24       		.byte	0x24
+ 2336 02fb 9F       		.byte	0x9f
+ 2337 02fc 00000000 		.4byte	0
+ 2338 0300 00000000 		.4byte	0
+ 2339              	.LLST18:
+ 2340 0304 78010000 		.4byte	.LVL39-.Ltext0
+ 2341 0308 98010000 		.4byte	.LVL44-.Ltext0
+ 2342 030c 0200     		.2byte	0x2
+ 2343 030e 30       		.byte	0x30
+ 2344 030f 9F       		.byte	0x9f
+ 2345 0310 98010000 		.4byte	.LVL44-.Ltext0
+ 2346 0314 9C010000 		.4byte	.LFE44-.Ltext0
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 51
+
+
+ 2347 0318 0100     		.2byte	0x1
+ 2348 031a 53       		.byte	0x53
+ 2349 031b 00000000 		.4byte	0
+ 2350 031f 00000000 		.4byte	0
+ 2351              		.section	.debug_aranges,"",%progbits
+ 2352 0000 1C000000 		.4byte	0x1c
+ 2353 0004 0200     		.2byte	0x2
+ 2354 0006 00000000 		.4byte	.Ldebug_info0
+ 2355 000a 04       		.byte	0x4
+ 2356 000b 00       		.byte	0
+ 2357 000c 0000     		.2byte	0
+ 2358 000e 0000     		.2byte	0
+ 2359 0010 00000000 		.4byte	.Ltext0
+ 2360 0014 9C010000 		.4byte	.Letext0-.Ltext0
+ 2361 0018 00000000 		.4byte	0
+ 2362 001c 00000000 		.4byte	0
+ 2363              		.section	.debug_line,"",%progbits
+ 2364              	.Ldebug_line0:
+ 2365 0000 3D020000 		.section	.debug_str,"MS",%progbits,1
+ 2365      02009501 
+ 2365      00000201 
+ 2365      FB0E0D00 
+ 2365      01010101 
+ 2366              	.LASF20:
+ 2367 0000 50555044 		.ascii	"PUPDR\000"
+ 2367      5200
+ 2368              	.LASF24:
+ 2369 0006 4C434B52 		.ascii	"LCKR\000"
+ 2369      00
+ 2370              	.LASF40:
+ 2371 000b 4750494F 		.ascii	"GPIO_PuPd_UP\000"
+ 2371      5F507550 
+ 2371      645F5550 
+ 2371      00
+ 2372              	.LASF17:
+ 2373 0018 4F545950 		.ascii	"OTYPER\000"
+ 2373      455200
+ 2374              	.LASF32:
+ 2375 001f 4750494F 		.ascii	"GPIO_OType_PP\000"
+ 2375      5F4F5479 
+ 2375      70655F50 
+ 2375      5000
+ 2376              	.LASF13:
+ 2377 002d 44495341 		.ascii	"DISABLE\000"
+ 2377      424C4500 
+ 2378              	.LASF16:
+ 2379 0035 4D4F4445 		.ascii	"MODER\000"
+ 2379      5200
+ 2380              	.LASF10:
+ 2381 003b 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2381      206C6F6E 
+ 2381      6720756E 
+ 2381      7369676E 
+ 2381      65642069 
+ 2382              	.LASF29:
+ 2383 0052 4750494F 		.ascii	"GPIO_Mode_AF\000"
+ 2383      5F4D6F64 
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 52
+
+
+ 2383      655F4146 
+ 2383      00
+ 2384              	.LASF48:
+ 2385 005f 4750494F 		.ascii	"GPIO_Speed\000"
+ 2385      5F537065 
+ 2385      656400
+ 2386              	.LASF30:
+ 2387 006a 4750494F 		.ascii	"GPIO_Mode_AN\000"
+ 2387      5F4D6F64 
+ 2387      655F414E 
+ 2387      00
+ 2388              	.LASF53:
+ 2389 0077 4750494F 		.ascii	"GPIO_Init\000"
+ 2389      5F496E69 
+ 2389      7400
+ 2390              	.LASF68:
+ 2391 0081 42697456 		.ascii	"BitVal\000"
+ 2391      616C00
+ 2392              	.LASF9:
+ 2393 0088 6C6F6E67 		.ascii	"long long int\000"
+ 2393      206C6F6E 
+ 2393      6720696E 
+ 2393      7400
+ 2394              	.LASF0:
+ 2395 0096 7369676E 		.ascii	"signed char\000"
+ 2395      65642063 
+ 2395      68617200 
+ 2396              	.LASF23:
+ 2397 00a2 42535252 		.ascii	"BSRR\000"
+ 2397      00
+ 2398              	.LASF27:
+ 2399 00a7 4750494F 		.ascii	"GPIO_Mode_IN\000"
+ 2399      5F4D6F64 
+ 2399      655F494E 
+ 2399      00
+ 2400              	.LASF6:
+ 2401 00b4 6C6F6E67 		.ascii	"long int\000"
+ 2401      20696E74 
+ 2401      00
+ 2402              	.LASF14:
+ 2403 00bd 454E4142 		.ascii	"ENABLE\000"
+ 2403      4C4500
+ 2404              	.LASF4:
+ 2405 00c4 75696E74 		.ascii	"uint16_t\000"
+ 2405      31365F74 
+ 2405      00
+ 2406              	.LASF76:
+ 2407 00cd 474E5520 		.ascii	"GNU C 4.8.3 20131129 (release) [ARM/embedded-4_8-br"
+ 2407      4320342E 
+ 2407      382E3320 
+ 2407      32303133 
+ 2407      31313239 
+ 2408 0100 616E6368 		.ascii	"anch revision 205641] -mcpu=cortex-m0 -mthumb -gdwa"
+ 2408      20726576 
+ 2408      6973696F 
+ 2408      6E203230 
+ 2408      35363431 
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 53
+
+
+ 2409 0133 72662D32 		.ascii	"rf-2 -Os -fomit-frame-pointer\000"
+ 2409      202D4F73 
+ 2409      202D666F 
+ 2409      6D69742D 
+ 2409      6672616D 
+ 2410              	.LASF34:
+ 2411 0151 4750494F 		.ascii	"GPIOOType_TypeDef\000"
+ 2411      4F547970 
+ 2411      655F5479 
+ 2411      70654465 
+ 2411      6600
+ 2412              	.LASF19:
+ 2413 0163 4F535045 		.ascii	"OSPEEDR\000"
+ 2413      45445200 
+ 2414              	.LASF79:
+ 2415 016b 5243435F 		.ascii	"RCC_AHBPeriphResetCmd\000"
+ 2415      41484250 
+ 2415      65726970 
+ 2415      68526573 
+ 2415      6574436D 
+ 2416              	.LASF57:
+ 2417 0181 63757272 		.ascii	"currentpin\000"
+ 2417      656E7470 
+ 2417      696E00
+ 2418              	.LASF60:
+ 2419 018c 62697473 		.ascii	"bitstatus\000"
+ 2419      74617475 
+ 2419      7300
+ 2420              	.LASF45:
+ 2421 0196 42697441 		.ascii	"BitAction\000"
+ 2421      6374696F 
+ 2421      6E00
+ 2422              	.LASF38:
+ 2423 01a0 4750494F 		.ascii	"GPIOSpeed_TypeDef\000"
+ 2423      53706565 
+ 2423      645F5479 
+ 2423      70654465 
+ 2423      6600
+ 2424              	.LASF46:
+ 2425 01b2 4750494F 		.ascii	"GPIO_Pin\000"
+ 2425      5F50696E 
+ 2425      00
+ 2426              	.LASF74:
+ 2427 01bb 74656D70 		.ascii	"temp\000"
+ 2427      00
+ 2428              	.LASF11:
+ 2429 01c0 756E7369 		.ascii	"unsigned int\000"
+ 2429      676E6564 
+ 2429      20696E74 
+ 2429      00
+ 2430              	.LASF55:
+ 2431 01cd 4750494F 		.ascii	"GPIO_InitStruct\000"
+ 2431      5F496E69 
+ 2431      74537472 
+ 2431      75637400 
+ 2432              	.LASF8:
+ 2433 01dd 6C6F6E67 		.ascii	"long unsigned int\000"
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 54
+
+
+ 2433      20756E73 
+ 2433      69676E65 
+ 2433      6420696E 
+ 2433      7400
+ 2434              	.LASF26:
+ 2435 01ef 4750494F 		.ascii	"GPIO_TypeDef\000"
+ 2435      5F547970 
+ 2435      65446566 
+ 2435      00
+ 2436              	.LASF72:
+ 2437 01fc 4750494F 		.ascii	"GPIO_PinSource\000"
+ 2437      5F50696E 
+ 2437      536F7572 
+ 2437      636500
+ 2438              	.LASF5:
+ 2439 020b 73686F72 		.ascii	"short unsigned int\000"
+ 2439      7420756E 
+ 2439      7369676E 
+ 2439      65642069 
+ 2439      6E7400
+ 2440              	.LASF58:
+ 2441 021e 4750494F 		.ascii	"GPIO_StructInit\000"
+ 2441      5F537472 
+ 2441      75637449 
+ 2441      6E697400 
+ 2442              	.LASF42:
+ 2443 022e 4750494F 		.ascii	"GPIOPuPd_TypeDef\000"
+ 2443      50755064 
+ 2443      5F547970 
+ 2443      65446566 
+ 2443      00
+ 2444              	.LASF69:
+ 2445 023f 4750494F 		.ascii	"GPIO_Write\000"
+ 2445      5F577269 
+ 2445      746500
+ 2446              	.LASF44:
+ 2447 024a 4269745F 		.ascii	"Bit_SET\000"
+ 2447      53455400 
+ 2448              	.LASF39:
+ 2449 0252 4750494F 		.ascii	"GPIO_PuPd_NOPULL\000"
+ 2449      5F507550 
+ 2449      645F4E4F 
+ 2449      50554C4C 
+ 2449      00
+ 2450              	.LASF71:
+ 2451 0263 4750494F 		.ascii	"GPIO_PinAFConfig\000"
+ 2451      5F50696E 
+ 2451      4146436F 
+ 2451      6E666967 
+ 2451      00
+ 2452              	.LASF12:
+ 2453 0274 73697A65 		.ascii	"sizetype\000"
+ 2453      74797065 
+ 2453      00
+ 2454              	.LASF49:
+ 2455 027d 4750494F 		.ascii	"GPIO_OType\000"
+ 2455      5F4F5479 
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 55
+
+
+ 2455      706500
+ 2456              	.LASF63:
+ 2457 0288 4750494F 		.ascii	"GPIO_ReadOutputDataBit\000"
+ 2457      5F526561 
+ 2457      644F7574 
+ 2457      70757444 
+ 2457      61746142 
+ 2458              	.LASF51:
+ 2459 029f 4750494F 		.ascii	"GPIO_InitTypeDef\000"
+ 2459      5F496E69 
+ 2459      74547970 
+ 2459      65446566 
+ 2459      00
+ 2460              	.LASF15:
+ 2461 02b0 46756E63 		.ascii	"FunctionalState\000"
+ 2461      74696F6E 
+ 2461      616C5374 
+ 2461      61746500 
+ 2462              	.LASF43:
+ 2463 02c0 4269745F 		.ascii	"Bit_RESET\000"
+ 2463      52455345 
+ 2463      5400
+ 2464              	.LASF73:
+ 2465 02ca 4750494F 		.ascii	"GPIO_AF\000"
+ 2465      5F414600 
+ 2466              	.LASF67:
+ 2467 02d2 4750494F 		.ascii	"GPIO_WriteBit\000"
+ 2467      5F577269 
+ 2467      74654269 
+ 2467      7400
+ 2468              	.LASF18:
+ 2469 02e0 52455345 		.ascii	"RESERVED0\000"
+ 2469      52564544 
+ 2469      3000
+ 2470              	.LASF21:
+ 2471 02ea 52455345 		.ascii	"RESERVED1\000"
+ 2471      52564544 
+ 2471      3100
+ 2472              	.LASF22:
+ 2473 02f4 52455345 		.ascii	"RESERVED2\000"
+ 2473      52564544 
+ 2473      3200
+ 2474              	.LASF25:
+ 2475 02fe 52455345 		.ascii	"RESERVED3\000"
+ 2475      52564544 
+ 2475      3300
+ 2476              	.LASF1:
+ 2477 0308 756E7369 		.ascii	"unsigned char\000"
+ 2477      676E6564 
+ 2477      20636861 
+ 2477      7200
+ 2478              	.LASF2:
+ 2479 0316 73686F72 		.ascii	"short int\000"
+ 2479      7420696E 
+ 2479      7400
+ 2480              	.LASF54:
+ 2481 0320 4750494F 		.ascii	"GPIOx\000"
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 56
+
+
+ 2481      7800
+ 2482              	.LASF77:
+ 2483 0326 2E2E5C2E 		.ascii	"..\\..\\STM32F0-Discovery_FW_V1.0.0\\Libraries\\STM"
+ 2483      2E5C5354 
+ 2483      4D333246 
+ 2483      302D4469 
+ 2483      73636F76 
+ 2484 0355 33324630 		.ascii	"32F0xx_StdPeriph_Driver\\src\\stm32f0xx_gpio.c\000"
+ 2484      78785F53 
+ 2484      74645065 
+ 2484      72697068 
+ 2484      5F447269 
+ 2485              	.LASF7:
+ 2486 0382 75696E74 		.ascii	"uint32_t\000"
+ 2486      33325F74 
+ 2486      00
+ 2487              	.LASF50:
+ 2488 038b 4750494F 		.ascii	"GPIO_PuPd\000"
+ 2488      5F507550 
+ 2488      6400
+ 2489              	.LASF52:
+ 2490 0395 4750494F 		.ascii	"GPIO_DeInit\000"
+ 2490      5F446549 
+ 2490      6E697400 
+ 2491              	.LASF35:
+ 2492 03a1 4750494F 		.ascii	"GPIO_Speed_Level_1\000"
+ 2492      5F537065 
+ 2492      65645F4C 
+ 2492      6576656C 
+ 2492      5F3100
+ 2493              	.LASF36:
+ 2494 03b4 4750494F 		.ascii	"GPIO_Speed_Level_2\000"
+ 2494      5F537065 
+ 2494      65645F4C 
+ 2494      6576656C 
+ 2494      5F3200
+ 2495              	.LASF37:
+ 2496 03c7 4750494F 		.ascii	"GPIO_Speed_Level_3\000"
+ 2496      5F537065 
+ 2496      65645F4C 
+ 2496      6576656C 
+ 2496      5F3300
+ 2497              	.LASF66:
+ 2498 03da 4750494F 		.ascii	"GPIO_ResetBits\000"
+ 2498      5F526573 
+ 2498      65744269 
+ 2498      747300
+ 2499              	.LASF56:
+ 2500 03e9 70696E70 		.ascii	"pinpos\000"
+ 2500      6F7300
+ 2501              	.LASF47:
+ 2502 03f0 4750494F 		.ascii	"GPIO_Mode\000"
+ 2502      5F4D6F64 
+ 2502      6500
+ 2503              	.LASF61:
+ 2504 03fa 4750494F 		.ascii	"GPIO_ReadInputDataBit\000"
+ 2504      5F526561 
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 57
+
+
+ 2504      64496E70 
+ 2504      75744461 
+ 2504      74614269 
+ 2505              	.LASF33:
+ 2506 0410 4750494F 		.ascii	"GPIO_OType_OD\000"
+ 2506      5F4F5479 
+ 2506      70655F4F 
+ 2506      4400
+ 2507              	.LASF59:
+ 2508 041e 4750494F 		.ascii	"GPIO_PinLockConfig\000"
+ 2508      5F50696E 
+ 2508      4C6F636B 
+ 2508      436F6E66 
+ 2508      696700
+ 2509              	.LASF62:
+ 2510 0431 4750494F 		.ascii	"GPIO_ReadInputData\000"
+ 2510      5F526561 
+ 2510      64496E70 
+ 2510      75744461 
+ 2510      746100
+ 2511              	.LASF3:
+ 2512 0444 75696E74 		.ascii	"uint8_t\000"
+ 2512      385F7400 
+ 2513              	.LASF41:
+ 2514 044c 4750494F 		.ascii	"GPIO_PuPd_DOWN\000"
+ 2514      5F507550 
+ 2514      645F444F 
+ 2514      574E00
+ 2515              	.LASF70:
+ 2516 045b 506F7274 		.ascii	"PortVal\000"
+ 2516      56616C00 
+ 2517              	.LASF78:
+ 2518 0463 493A5C70 		.ascii	"I:\\project\\stm\\SBC\\code\\try\\iotogglem0\000"
+ 2518      726F6A65 
+ 2518      63745C73 
+ 2518      746D5C53 
+ 2518      42435C63 
+ 2519              	.LASF75:
+ 2520 048a 74656D70 		.ascii	"temp_2\000"
+ 2520      5F3200
+ 2521              	.LASF31:
+ 2522 0491 4750494F 		.ascii	"GPIOMode_TypeDef\000"
+ 2522      4D6F6465 
+ 2522      5F547970 
+ 2522      65446566 
+ 2522      00
+ 2523              	.LASF65:
+ 2524 04a2 4750494F 		.ascii	"GPIO_SetBits\000"
+ 2524      5F536574 
+ 2524      42697473 
+ 2524      00
+ 2525              	.LASF28:
+ 2526 04af 4750494F 		.ascii	"GPIO_Mode_OUT\000"
+ 2526      5F4D6F64 
+ 2526      655F4F55 
+ 2526      5400
+ 2527              	.LASF64:
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 58
+
+
+ 2528 04bd 4750494F 		.ascii	"GPIO_ReadOutputData\000"
+ 2528      5F526561 
+ 2528      644F7574 
+ 2528      70757444 
+ 2528      61746100 
+ 2529              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 4.8.3 20131129 (release) [ARM/embedded-4_8-br
+ARM GAS  C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s 			page 59
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 stm32f0xx_gpio.c
+C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s:73     .text:00000000 $t
+C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s:78     .text:00000000 GPIO_DeInit
+C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s:183    .text:00000078 $d
+C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s:190    .text:00000088 $t
+C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s:195    .text:00000088 GPIO_Init
+C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s:311    .text:00000102 GPIO_StructInit
+C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s:337    .text:00000114 $d
+C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s:341    .text:00000118 $t
+C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s:346    .text:00000118 GPIO_PinLockConfig
+C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s:390    .text:0000013c GPIO_ReadInputDataBit
+C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s:417    .text:00000148 GPIO_ReadInputData
+C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s:439    .text:0000014e GPIO_ReadOutputDataBit
+C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s:466    .text:0000015a GPIO_ReadOutputData
+C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s:488    .text:00000160 GPIO_SetBits
+C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s:506    .text:00000164 GPIO_ResetBits
+C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s:524    .text:00000168 GPIO_WriteBit
+C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s:550    .text:00000174 GPIO_Write
+C:\Users\Patrick\AppData\Local\Temp\cc7hK0kh.s:568    .text:00000178 GPIO_PinAFConfig
+                     .debug_frame:00000010 $d
+
+UNDEFINED SYMBOLS
+RCC_AHBPeriphResetCmd
