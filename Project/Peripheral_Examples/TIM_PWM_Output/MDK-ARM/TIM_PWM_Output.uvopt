@@ -231,10 +231,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>21</ColumnNumber>
+      <ColumnNumber>15</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>175</TopLine>
-      <CurrentLine>182</CurrentLine>
+      <TopLine>1108</TopLine>
+      <CurrentLine>1142</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
@@ -247,10 +247,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>54</ColumnNumber>
+      <ColumnNumber>12</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>82</TopLine>
+      <CurrentLine>116</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\stm32f0xx_it.c</PathWithFileName>
       <FilenameWithoutPath>stm32f0xx_it.c</FilenameWithoutPath>
@@ -263,10 +263,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>12</ColumnNumber>
+      <ColumnNumber>15</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>341</TopLine>
+      <CurrentLine>375</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\system_stm32f0xx.c</PathWithFileName>
       <FilenameWithoutPath>system_stm32f0xx.c</FilenameWithoutPath>
@@ -287,10 +287,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>67</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>17</TopLine>
+      <CurrentLine>33</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\..\Utilities\STM32F0-Discovery\stm32f0_discovery.c</PathWithFileName>
       <FilenameWithoutPath>stm32f0_discovery.c</FilenameWithoutPath>
@@ -301,7 +301,7 @@
 
   <Group>
     <GroupName>STM32F0xx_StdPeriph_Driver</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -311,10 +311,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>11</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>1513</TopLine>
+      <CurrentLine>1547</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\..\Libraries\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c</PathWithFileName>
       <FilenameWithoutPath>stm32f0xx_rcc.c</FilenameWithoutPath>
@@ -327,10 +327,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>12</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>127</TopLine>
+      <CurrentLine>161</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\..\Libraries\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_misc.c</PathWithFileName>
       <FilenameWithoutPath>stm32f0xx_misc.c</FilenameWithoutPath>
@@ -343,10 +343,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>22</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>461</TopLine>
+      <CurrentLine>495</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\..\Libraries\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_gpio.c</PathWithFileName>
       <FilenameWithoutPath>stm32f0xx_gpio.c</FilenameWithoutPath>
@@ -359,10 +359,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>16</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>262</TopLine>
+      <CurrentLine>296</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\..\Libraries\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_syscfg.c</PathWithFileName>
       <FilenameWithoutPath>stm32f0xx_syscfg.c</FilenameWithoutPath>
@@ -375,10 +375,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>20</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>277</TopLine>
+      <CurrentLine>311</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\..\Libraries\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_exti.c</PathWithFileName>
       <FilenameWithoutPath>stm32f0xx_exti.c</FilenameWithoutPath>
@@ -391,10 +391,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>72</ColumnNumber>
+      <ColumnNumber>20</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>3166</TopLine>
+      <CurrentLine>3200</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\..\Libraries\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_tim.c</PathWithFileName>
       <FilenameWithoutPath>stm32f0xx_tim.c</FilenameWithoutPath>
@@ -407,10 +407,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>16</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>1176</TopLine>
+      <CurrentLine>1210</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\..\Libraries\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_adc.c</PathWithFileName>
       <FilenameWithoutPath>stm32f0xx_adc.c</FilenameWithoutPath>
@@ -423,10 +423,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>16</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>883</TopLine>
-      <CurrentLine>884</CurrentLine>
+      <TopLine>1972</TopLine>
+      <CurrentLine>2006</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\..\Libraries\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_usart.c</PathWithFileName>
       <FilenameWithoutPath>stm32f0xx_usart.c</FilenameWithoutPath>
@@ -437,12 +437,12 @@
       <GroupNumber>3</GroupNumber>
       <FileNumber>13</FileNumber>
       <FileType>1</FileType>
-      <tvExp>1</tvExp>
+      <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>16</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>660</TopLine>
-      <CurrentLine>667</CurrentLine>
+      <TopLine>1523</TopLine>
+      <CurrentLine>1557</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\..\Libraries\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_i2c.c</PathWithFileName>
       <FilenameWithoutPath>stm32f0xx_i2c.c</FilenameWithoutPath>
@@ -455,10 +455,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>17</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>1253</TopLine>
+      <CurrentLine>1287</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\..\Libraries\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_spi.c</PathWithFileName>
       <FilenameWithoutPath>stm32f0xx_spi.c</FilenameWithoutPath>
@@ -469,7 +469,7 @@
 
   <Group>
     <GroupName>MDK-ARM</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -481,8 +481,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>1</TopLine>
+      <CurrentLine>18</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\..\Libraries\CMSIS\ST\STM32F0xx\Source\Templates\arm\startup_stm32f0xx.s</PathWithFileName>
       <FilenameWithoutPath>startup_stm32f0xx.s</FilenameWithoutPath>

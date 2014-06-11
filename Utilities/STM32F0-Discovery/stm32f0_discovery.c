@@ -5,18 +5,9 @@
   * @version V1.0.0
   * @date    23-March-2012
   * @brief   This file provides set of firmware functions to manage Leds and
-  *          push-button available on STM32F0-DISCOVERY Kit from STMicroelectronics.
+  *          push-button available on STM32F0-DISCOVERY Kit from CLT.
   ******************************************************************************
   * @attention
-  *
-  * <h2><center>&copy; COPYRIGHT 2012 STMicroelectronics</center></h2>
-  *
-  * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
-  * You may not use this file except in compliance with the License.
-  * You may obtain a copy of the License at:
-  *
-  *        http://www.st.com/software_license_agreement_liberty_v2
-  *
   * Unless required by applicable law or agreed to in writing, software 
   * distributed under the License is distributed on an "AS IS" BASIS, 
   * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -39,7 +30,7 @@
     
 /** @defgroup STM32F0_DISCOVERY_LOW_LEVEL 
   * @brief This file provides firmware functions to manage Leds and push-buttons, 
-  *        available on STM32F0_DISCOVERY evaluation board from STMicroelectronics.
+  *        available on STM32F0_DISCOVERY evaluation board from CLT.
   * @{
   */ 
 
@@ -253,4 +244,4 @@ uint32_t STM_EVAL_PBGetState(Button_TypeDef Button)
   * @}
   */ 
     
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+/********************END OF FILE****/
