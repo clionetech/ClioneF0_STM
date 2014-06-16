@@ -1,0 +1,20 @@
+--cpu Cortex-M0
+".\pwm\main.o"
+".\pwm\stm32f0xx_it.o"
+".\pwm\system_stm32f0xx.o"
+".\pwm\arduino_pwm.o"
+".\pwm\stm32f0xx_rcc.o"
+".\pwm\stm32f0xx_misc.o"
+".\pwm\stm32f0xx_gpio.o"
+".\pwm\stm32f0xx_syscfg.o"
+".\pwm\stm32f0xx_exti.o"
+".\pwm\stm32f0xx_tim.o"
+".\pwm\stm32f0xx_adc.o"
+".\pwm\stm32f0xx_usart.o"
+".\pwm\stm32f0xx_i2c.o"
+".\pwm\stm32f0xx_spi.o"
+".\pwm\startup_stm32f0xx.o"
+--library_type=microlib --strict --scatter ".\PWM\PWM.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\PWM\PWM.map" -o .\PWM\PWM.axf

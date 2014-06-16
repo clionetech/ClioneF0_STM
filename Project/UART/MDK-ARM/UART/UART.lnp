@@ -1,0 +1,20 @@
+--cpu Cortex-M0
+".\uart\main.o"
+".\uart\stm32f0xx_it.o"
+".\uart\system_stm32f0xx.o"
+".\uart\arduino_uart.o"
+".\uart\stm32f0xx_rcc.o"
+".\uart\stm32f0xx_misc.o"
+".\uart\stm32f0xx_gpio.o"
+".\uart\stm32f0xx_syscfg.o"
+".\uart\stm32f0xx_exti.o"
+".\uart\stm32f0xx_tim.o"
+".\uart\stm32f0xx_adc.o"
+".\uart\stm32f0xx_usart.o"
+".\uart\stm32f0xx_i2c.o"
+".\uart\stm32f0xx_spi.o"
+".\uart\startup_stm32f0xx.o"
+--library_type=microlib --strict --scatter ".\UART\UART.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\UART\UART.map" -o .\UART\UART.axf

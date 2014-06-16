@@ -1,0 +1,20 @@
+--cpu Cortex-M0
+".\i2c\main.o"
+".\i2c\stm32f0xx_it.o"
+".\i2c\system_stm32f0xx.o"
+".\i2c\arduino_i2c.o"
+".\i2c\stm32f0xx_rcc.o"
+".\i2c\stm32f0xx_misc.o"
+".\i2c\stm32f0xx_gpio.o"
+".\i2c\stm32f0xx_syscfg.o"
+".\i2c\stm32f0xx_exti.o"
+".\i2c\stm32f0xx_tim.o"
+".\i2c\stm32f0xx_adc.o"
+".\i2c\stm32f0xx_usart.o"
+".\i2c\stm32f0xx_i2c.o"
+".\i2c\stm32f0xx_spi.o"
+".\i2c\startup_stm32f0xx.o"
+--library_type=microlib --strict --scatter ".\I2C\I2C.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\I2C\I2C.map" -o .\I2C\I2C.axf

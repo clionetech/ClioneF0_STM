@@ -1,0 +1,20 @@
+--cpu Cortex-M0
+".\spi\main.o"
+".\spi\stm32f0xx_it.o"
+".\spi\system_stm32f0xx.o"
+".\spi\arduino_spi.o"
+".\spi\stm32f0xx_rcc.o"
+".\spi\stm32f0xx_misc.o"
+".\spi\stm32f0xx_gpio.o"
+".\spi\stm32f0xx_syscfg.o"
+".\spi\stm32f0xx_exti.o"
+".\spi\stm32f0xx_tim.o"
+".\spi\stm32f0xx_adc.o"
+".\spi\stm32f0xx_usart.o"
+".\spi\stm32f0xx_i2c.o"
+".\spi\stm32f0xx_spi.o"
+".\spi\startup_stm32f0xx.o"
+--library_type=microlib --strict --scatter ".\SPI\SPI.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\SPI\SPI.map" -o .\SPI\SPI.axf
