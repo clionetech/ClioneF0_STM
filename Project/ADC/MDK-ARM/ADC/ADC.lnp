@@ -1,0 +1,20 @@
+--cpu Cortex-M0
+".\adc\main.o"
+".\adc\stm32f0xx_it.o"
+".\adc\system_stm32f0xx.o"
+".\adc\arduino_adc.o"
+".\adc\stm32f0xx_rcc.o"
+".\adc\stm32f0xx_misc.o"
+".\adc\stm32f0xx_gpio.o"
+".\adc\stm32f0xx_syscfg.o"
+".\adc\stm32f0xx_exti.o"
+".\adc\stm32f0xx_tim.o"
+".\adc\stm32f0xx_adc.o"
+".\adc\stm32f0xx_usart.o"
+".\adc\stm32f0xx_i2c.o"
+".\adc\stm32f0xx_spi.o"
+".\adc\startup_stm32f0xx.o"
+--library_type=microlib --strict --scatter ".\ADC\ADC.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\ADC\ADC.map" -o .\ADC\ADC.axf
