@@ -35,7 +35,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 
-
+uint16_t adc_reading=0;
 
 /* Private functions ---------------------------------------------------------*/
 
@@ -52,9 +52,7 @@ int main(void)
        To reconfigure the default setting of SystemInit() function, refer to
        system_stm32f0xx.c file
      */
-		
-	uint16_t adc_reading;
-
+	
 	// ***** Initialize ADC engine if AD converter needed *****
 	ADC1_CH_Config();
 
@@ -63,12 +61,14 @@ int main(void)
 	
   while (1)
   {
+		ADC_delay();
 		adc_reading=analogRead(A0);			// read A0 value
-		//adc_reading=analogRead(A1);	
-		//adc_reading=analogRead(A2);
-		//adc_reading=analogRead(A3);		
-		//adc_reading=analogRead(A4);		
-		//adc_reading=analogRead(A5);	
+		adc_reading=analogRead(A1);			// read A1 value
+		adc_reading=analogRead(A2);
+		adc_reading=analogRead(A3);	
+ 		adc_reading=analogRead(A4);	
+		adc_reading=analogRead(A5);	
+		ADC_delay();
 	}
 
 }

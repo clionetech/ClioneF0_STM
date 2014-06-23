@@ -53,20 +53,20 @@ int main(void)
        system_stm32f0xx.c file
      */
 		
-	Serial_begin(115200);
+		Serial_begin(115200);
   	
-	Serial_write('A');
+		Serial_write('A');
 		Delay_tx();
 		Serial_write('T');
 		Delay_tx();
 		Delay_1s()	;	
 		
-			Serial_write('A');
+		Serial_write('A');
 		Delay_tx();
 		Serial_write('T');
 		Delay_tx();
 		Serial_write('+');
-	Delay_tx();
+		Delay_tx();
 		Serial_write('B');
 		Delay_tx();
 		Serial_write('A');
@@ -83,8 +83,8 @@ int main(void)
 		
 		
 	
-	Serial_begin(9600);
-	Delay_tx();
+		Serial_begin(9600);
+		Delay_tx();
 	
 	
 	
@@ -96,7 +96,7 @@ int main(void)
 		Serial_write('T');
 		Delay_tx();
 		Serial_write('+');
-	Delay_tx();
+		Delay_tx();
 		Serial_write('V');
 		Delay_tx();
 		Serial_write('E');
@@ -113,10 +113,7 @@ int main(void)
 		Delay_tx();
 
 
-	Delay_1s()	;	
-	
-		
-
+		Delay_1s()	;	
 }
 }
 

@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\ADC\ADC.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\ADC\ADC.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Sun Jun 15 14:20:13 2014
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Tue Jun 17 12:33:48 2014
 <BR><P>
 <H3>Maximum Stack Usage =        116 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -376,6 +376,7 @@ Global Symbols
 
 <P><STRONG><a name="[49]"></a>ADC_delay</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, arduino_adc.o(i.ADC_delay))
 <BR><BR>[Called By]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;analogRead
+<LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
 <P><STRONG><a name="[31]"></a>GPIO_Init</STRONG> (Thumb, 112 bytes, Stack size 20 bytes, stm32f0xx_gpio.o(i.GPIO_Init))
@@ -482,21 +483,22 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = analogRead &rArr; ADC5_Config &rArr; ADC_Channel_Init &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_GetConversionValue
-<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_delay
 <LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC5_Config
 <LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC4_Config
 <LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC3_Config
 <LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC2_Config
 <LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC1_Config
 <LI><a href="#[29]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_Config
+<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_delay
 </UL>
 <BR>[Called By]<UL><LI><a href="#[23]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[23]"></a>main</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, main.o(i.main))
+<P><STRONG><a name="[23]"></a>main</STRONG> (Thumb, 64 bytes, Stack size 0 bytes, main.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = main &rArr; analogRead &rArr; ADC5_Config &rArr; ADC_Channel_Init &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;analogRead
+<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC_delay
 <LI><a href="#[2d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC1_CH_Config
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)

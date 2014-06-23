@@ -20,12 +20,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "arduino_i2c.h"
 
-#define I2C_Speed              300000
- #define I2C1_SLAVE_ADDRESS7    0xA0
- #define I2C_PageSize           8
-
-
-
+ 
 /**********************************************************************/
 /*IIC??		         				                              */
 /*																	  */
@@ -34,33 +29,55 @@ void GPIO_Configuration(void)
 { 
 	GPIO_InitTypeDef GPIO_InitStruct;
 	
-	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOB, ENABLE);	//??GPIO?? 
-	RCC_APB1PeriphClockCmd(RCC_APB1Periph_I2C1 , ENABLE); //??i2c?? 
+	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOB, ENABLE);	//enable scl sda pb6,pb7 clock 
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_I2C1 , ENABLE); //enable i2c1 clock 
 	
-	GPIO_InitStruct.GPIO_Pin = GPIO_Pin_8; 
-	GPIO_InitStruct.GPIO_Mode = GPIO_Mode_AF;//?????? 
-	GPIO_InitStruct.GPIO_Speed = GPIO_Speed_Level_3; 
-	GPIO_InitStruct.GPIO_OType = GPIO_OType_OD; 
+	/* Configure I2C1 pins: SCL and SDA */
+	GPIO_InitStruct.GPIO_Pin = GPIO_Pin_6; // gpb6-i2c1_scl
+	GPIO_InitStruct.GPIO_Mode = GPIO_Mode_AF;//gpio alternage function mode
+	GPIO_InitStruct.GPIO_Speed = GPIO_Speed_Level_2;  // high speed
+	GPIO_InitStruct.GPIO_OType = GPIO_OType_OD; // open drain mode
 	GPIO_Init(GPIOB , &GPIO_InitStruct); 
-	GPIO_InitStruct.GPIO_Pin = GPIO_Pin_9; 
+	
+	GPIO_InitStruct.GPIO_Pin = GPIO_Pin_7;		// gpb7-i2c1_sda
 	GPIO_Init(GPIOB , &GPIO_InitStruct); 
-	GPIO_PinAFConfig( GPIOB , GPIO_PinSource8, GPIO_AF_1);
-	GPIO_PinAFConfig( GPIOB ,GPIO_PinSource9, GPIO_AF_1); //??????
+	
+	GPIO_PinAFConfig( GPIOB , GPIO_PinSource6, GPIO_AF_1); // multi channel
+	GPIO_PinAFConfig( GPIOB ,GPIO_PinSource7, GPIO_AF_1); 
 	}
 
-void I2C_Configuration(void)//i2c????
+void I2C_Configuration(void)//i2c1 setting
 { 
 	I2C_InitTypeDef I2C_InitStruct;  
-	I2C_InitStruct.I2C_Mode = I2C_Mode_I2C;//???? 
-	I2C_InitStruct.I2C_AnalogFilter = I2C_AnalogFilter_Enable;//???????? 
+	I2C_InitStruct.I2C_Mode = I2C_Mode_I2C;// i2c mode
+	I2C_InitStruct.I2C_AnalogFilter = I2C_AnalogFilter_Enable;// 
 	I2C_InitStruct.I2C_DigitalFilter = 0x00; 
 	I2C_InitStruct.I2C_OwnAddress1 =0x00; 
-	I2C_InitStruct.I2C_Ack = I2C_Ack_Enable;//???? 
+	I2C_InitStruct.I2C_Ack = I2C_Ack_Enable;// ack setting
 	I2C_InitStruct.I2C_AcknowledgedAddress = I2C_AcknowledgedAddress_7bit; //?????7bit 
-	I2C_InitStruct.I2C_Timing = 0x00210507;//????????? 
-	I2C_Cmd(I2C1, ENABLE);//??i2c 
-	I2C_Init(I2C1, &I2C_InitStruct);//?????
+	I2C_InitStruct.I2C_Timing =0x00210507;// set scl and sda timing
+	
+	I2C_Cmd(I2C1, ENABLE);				//i2c peripheral enable
+	I2C_Init(I2C1, &I2C_InitStruct);//
+	
 	}
+
+/*******************************************************************************
+* Function Name  : I2C_EE_Init
+* Description    : Initializes peripherals used by the I2C EEPROM driver.
+* Input          : None
+* Output         : None
+* Return         : None
+*******************************************************************************/
+void I2C_EE_Init(void)
+{
+  /* GPIO configuration */
+  GPIO_Configuration();
+
+  /* I2C configuration */
+  I2C_Configuration();
+	
+}
 
 /**********************************************************************/
 /*IIC write a byte         				                              */

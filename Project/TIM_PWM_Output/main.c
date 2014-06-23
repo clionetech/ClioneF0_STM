@@ -103,7 +103,7 @@ int main(void)
        system_stm32f0xx.c file
      */
 	
-	SPI_IO_Config(); 
+	//SPI_IO_Config(); 
 	
 	//WAIT TO RECEIVE A BYTE
 //	
@@ -113,7 +113,7 @@ int main(void)
   /* TIM Configuration */
  // TIM_PWM_Config();
 
-	Serial_begin(115200);
+	//Serial_begin(115200);
   
 
   /* Infinite loop */
@@ -143,7 +143,8 @@ adc_reading =0;
 		
 		//Serial_write(0x0D);
 		//Serial_write(0x0A);
-			Serial_write('A');
+/*	
+	Serial_write('A');
 		Delay_tx();
 		Serial_write('T');
 		Delay_tx();
@@ -167,17 +168,18 @@ adc_reading =0;
 	
 		Delay_1s()	;	
 		
-		
+	*/	
 		
 		
 	
-	Serial_begin(9600);
-	Delay_tx();
+//	Serial_begin(9600);
+//	Delay_tx();
 
 	
   while (1)
   {
-		
+	
+/*		
 		Serial_write('A');
 		Delay_tx();
 		Serial_write('T');
@@ -198,20 +200,20 @@ adc_reading =0;
 		Delay_tx();
 		Serial_write('N');
 		Delay_tx();
-
+*/
 
 	Delay_1s()	;	
 	
 		
-			while(SPI_I2S_GetFlagStatus(SPI1, SPI_I2S_FLAG_TXE) == RESET);
+//			while(SPI_I2S_GetFlagStatus(SPI1, SPI_I2S_FLAG_TXE) == RESET);
    /* Send byte through the SPI1 peripheral */
-   SPI_SendData8(SPI1, 0x55);
+//   SPI_SendData8(SPI1, 0x55);
 		
 		 /* Wait to receive a byte */
-   while(SPI_I2S_GetFlagStatus(SPI1, SPI_I2S_FLAG_RXNE) == RESET);
+//   while(SPI_I2S_GetFlagStatus(SPI1, SPI_I2S_FLAG_RXNE) == RESET);
  
   /* Return the byte read from the SPI bus */
-   ADC_Channel_No=SPI_ReceiveData8(SPI1);
+//   ADC_Channel_No=SPI_ReceiveData8(SPI1);
 				
 		 
 
@@ -224,7 +226,7 @@ adc_reading =0;
 	
 	
 		
-	//adc_reading=analogRead(PA0);
+	adc_reading=analogRead(A0);
 	//adc_reading=analogRead(PA1);	
 	//adc_reading=analogRead(PA4);
  //adc_reading=analogRead(PA5);		

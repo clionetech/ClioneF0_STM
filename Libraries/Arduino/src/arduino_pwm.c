@@ -78,7 +78,7 @@ void AnalogWrite(uint16_t pin, uint8_t value)
  
   
 
-	if (pin==D5){
+	if (pin==D6){
 			 /* Channel 1 Configuration in PWM mode */
 		/* TIM16 clock enable */
   RCC_APB2PeriphClockCmd(RCC_APB2Periph_TIM16 , ENABLE);
@@ -109,7 +109,7 @@ void AnalogWrite(uint16_t pin, uint8_t value)
   TIM_CtrlPWMOutputs(TIM16, ENABLE);
 	}
 	
-	if (pin==D6){
+	if (pin==D5){
 		
 				 /* Channel 1 Configuration in PWM mode */
 		/* TIM17 clock enable */

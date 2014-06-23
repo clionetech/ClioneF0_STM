@@ -63,7 +63,7 @@ int main(void)
   {
 				while(SPI_I2S_GetFlagStatus(SPI1, SPI_I2S_FLAG_TXE) == RESET);
    /* Send byte through the SPI1 peripheral */
-   SPI_SendData8(SPI1, 0x55);
+   SPI_SendData8(SPI1, 0x85);
 		
 		
 	}

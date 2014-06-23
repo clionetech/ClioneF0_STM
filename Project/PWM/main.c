@@ -53,21 +53,21 @@ int main(void)
        system_stm32f0xx.c file
      */
 		
-	 /* TIM Configuration */
+	 /* PWM TIM Configuration */
     TIM_PWM_Config();
 
 
-	AnalogWrite(D3, 50);
+//	 AnalogWrite(D3, 50);							// pin 3
 	
-	//AnalogWrite(D5, 100);
-	
-	//AnalogWrite(D6, 100);
+	AnalogWrite(D5, 50);							//pin 5
 		
-	//AnalogWrite(D11, 50);
+	//AnalogWrite(D6, 100);								//pin 6
+		
+//	AnalogWrite(D11, 50);									//pin 11
 	
-	//AnalogWrite(D9, 50);
+	//  AnalogWrite(D9, 50);							//pin 9
 	
-	//AnalogWrite(D10, 50);
+	//AnalogWrite(D10, 50);									//pin 10
 
 
 	 while (1)

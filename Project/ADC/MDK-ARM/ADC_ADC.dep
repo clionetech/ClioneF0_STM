@@ -1,5 +1,5 @@
 Dependencies for Project 'ADC', Target 'ADC': (DO NOT MODIFY !)
-F (..\main.c)(0x539D3C40)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I..\ -I..\..\..\Libraries\CMSIS\Include -I..\..\..\Libraries\CMSIS\ST\STM32F0xx\Include -I..\..\..\Libraries\STM32F0xx_StdPeriph_Driver\inc -I..\..\..\Libraries\Arduino\inc-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F0xx-DUSE_STDPERIPH_DRIVER -DSTM32F0XX -o .\adc\main.o --omf_browse .\adc\main.crf --depend .\adc\main.d)
+F (..\main.c)(0x539FE187)(-c --cpu Cortex-M0 -D__MICROLIB -g -O3 --apcs=interwork --split_sections -I..\ -I..\..\..\Libraries\CMSIS\Include -I..\..\..\Libraries\CMSIS\ST\STM32F0xx\Include -I..\..\..\Libraries\STM32F0xx_StdPeriph_Driver\inc -I..\..\..\Libraries\Arduino\inc-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\ST\STM32F0xx-DUSE_STDPERIPH_DRIVER -DSTM32F0XX -o .\adc\main.o --omf_browse .\adc\main.crf --depend .\adc\main.d)
 I (C:\Users\Administrator\Documents\GitHub\ClioneF0_STM\Libraries\CMSIS\ST\STM32F0xx\Include\stm32f0xx.h)(0x5396C540)
 I (C:\Users\Administrator\Documents\GitHub\ClioneF0_STM\Libraries\CMSIS\Include\core_cm0.h)(0x4F6C6026)
 I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C7B744)

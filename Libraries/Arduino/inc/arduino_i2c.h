@@ -4,7 +4,7 @@
   * @author  Clione Team
   * @version V1.0.0
   * @date    23-March-2012
-  * @brief   library for Arduino ADC
+  * @brief   library for Arduino I2C
   *          
   ******************************************************************************
   * @attention
@@ -32,6 +32,7 @@
 
 void GPIO_Configuration(void);
 void I2C_Configuration(void);
+	 void I2C_EE_Init(void);
  void I2C_WriteOneByte(uint16_t deviceAddr, unsigned char WriteAddr, unsigned char DataToWrite);
 
  unsigned char I2C_ReadOneByte(uint16_t deviceAddr, uint8_t ReadAddr);

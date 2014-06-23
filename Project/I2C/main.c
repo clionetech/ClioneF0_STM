@@ -35,7 +35,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 
-
+void  Delay_1s(void);
 
 /* Private functions ---------------------------------------------------------*/
 
@@ -53,18 +53,42 @@ int main(void)
        system_stm32f0xx.c file
      */
 	
+	// i2c configuration
+	I2C_EE_Init();
+	
 	
 	
   while (1)
   {
+		Delay_1s();
 	
+		I2C_SendData(I2C1, 0x11);
+	//	I2C_WriteOneByte(0x11, 0x00, 0x55);
+		Delay_1s();
+		
 	}
 
 }
 
 
  
-
+void  Delay_1s(void) {
+	uint16_t  i;
+	uint8_t  j;
+	
+	for(j=0;j<120;j++){
+	
+	for(i=0;i<62550;i++){
+		__NOP;
+		__NOP;
+		__NOP;
+		__NOP;
+		__NOP;
+		__NOP;
+		}
+	}
+	
+}
 
 
 

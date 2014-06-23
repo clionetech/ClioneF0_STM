@@ -147,13 +147,41 @@
         </SetRegEntry>
       </TargetDriverDllRegistry>
       <Breakpoint/>
+      <WatchWindow1>
+        <Ww>
+          <count>0</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>adc_reading</ItemText>
+        </Ww>
+      </WatchWindow1>
+      <MemoryWindow1>
+        <Mm>
+          <WinNumber>1</WinNumber>
+          <SubType>2</SubType>
+          <ItemText>0x08000000</ItemText>
+        </Mm>
+      </MemoryWindow1>
+      <MemoryWindow2>
+        <Mm>
+          <WinNumber>2</WinNumber>
+          <SubType>2</SubType>
+          <ItemText>0x40013800</ItemText>
+        </Mm>
+      </MemoryWindow2>
+      <MemoryWindow3>
+        <Mm>
+          <WinNumber>3</WinNumber>
+          <SubType>2</SubType>
+          <ItemText>0xE000E100</ItemText>
+        </Mm>
+      </MemoryWindow3>
       <Tracepoint>
         <THDelay>0</THDelay>
       </Tracepoint>
       <DebugFlag>
         <trace>0</trace>
         <periodic>0</periodic>
-        <aLwin>1</aLwin>
+        <aLwin>0</aLwin>
         <aCover>0</aCover>
         <aSer1>0</aSer1>
         <aSer2>0</aSer2>
@@ -193,10 +221,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>73</ColumnNumber>
+      <ColumnNumber>7</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>35</TopLine>
-      <CurrentLine>50</CurrentLine>
+      <CurrentLine>54</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
@@ -227,8 +255,8 @@
       <Focus>0</Focus>
       <ColumnNumber>49</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>82</TopLine>
-      <CurrentLine>7</CurrentLine>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\system_stm32f0xx.c</PathWithFileName>
       <FilenameWithoutPath>system_stm32f0xx.c</FilenameWithoutPath>
@@ -249,10 +277,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>2</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>284</TopLine>
-      <CurrentLine>323</CurrentLine>
+      <TopLine>291</TopLine>
+      <CurrentLine>314</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\Libraries\Arduino\src\arduino_adc.c</PathWithFileName>
       <FilenameWithoutPath>arduino_adc.c</FilenameWithoutPath>
@@ -273,10 +301,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>19</ColumnNumber>
+      <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1</TopLine>
-      <CurrentLine>65</CurrentLine>
+      <TopLine>1325</TopLine>
+      <CurrentLine>1342</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\Libraries\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_rcc.c</PathWithFileName>
       <FilenameWithoutPath>stm32f0xx_rcc.c</FilenameWithoutPath>
@@ -307,8 +335,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>189</TopLine>
+      <CurrentLine>200</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\Libraries\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_gpio.c</PathWithFileName>
       <FilenameWithoutPath>stm32f0xx_gpio.c</FilenameWithoutPath>
@@ -355,8 +383,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>0</TopLine>
-      <CurrentLine>0</CurrentLine>
+      <TopLine>1022</TopLine>
+      <CurrentLine>1041</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\Libraries\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_tim.c</PathWithFileName>
       <FilenameWithoutPath>stm32f0xx_tim.c</FilenameWithoutPath>
@@ -371,8 +399,8 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>847</TopLine>
-      <CurrentLine>866</CurrentLine>
+      <TopLine>0</TopLine>
+      <CurrentLine>0</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\Libraries\STM32F0xx_StdPeriph_Driver\src\stm32f0xx_adc.c</PathWithFileName>
       <FilenameWithoutPath>stm32f0xx_adc.c</FilenameWithoutPath>
@@ -459,7 +487,7 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>114</TopLine>
+      <TopLine>111</TopLine>
       <CurrentLine>123</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\Libraries\CMSIS\ST\STM32F0xx\Source\Templates\arm\startup_stm32f0xx.s</PathWithFileName>

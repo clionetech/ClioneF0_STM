@@ -32,7 +32,7 @@
 
 //SPI
 #define D10 GPIO_Pin_11					// PA11
-#define D11 GPIO_Pin_5					// PB5
+#define D11 GPIO_Pin_5					// PB5 mosi
 #define D12 GPIO_Pin_4					// PB4 miso
 #define D13 GPIO_Pin_3					// PB3 SCk
 	 
